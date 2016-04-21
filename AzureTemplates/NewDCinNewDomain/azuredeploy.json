@@ -77,16 +77,15 @@
     "adVMSize": {
       "type": "string",
       "allowedValues": [
-        "Basic_A0",
-        "Basic_A1",
-        "Basic_A2",
-        "Basic_A3",
-        "Basic_A4"
+        "Standard_A0",
+        "Standard_A1",
+        "Standard_A2",
+        "Standard_A3"
       ],
       "metadata": {
         "description": "The size of the VM Created"
       },
-      "defaultValue": "Basic_A2"
+      "defaultValue": "Standard_A2"
     },
     "domainName": {
       "type": "string",
