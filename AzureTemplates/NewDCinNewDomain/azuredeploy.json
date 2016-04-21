@@ -87,6 +87,13 @@
       },
       "defaultValue": "Standard_A2"
     },
+    "adVMName": {
+        "type": "string",
+        "metadata": {
+            "description" : "The name of the VM to be created"
+        },
+        "defaultValue": "adVM"
+    },
     "domainName": {
       "type": "string",
       "metadata": {
@@ -134,7 +141,7 @@
     "adLBBE": "LBBE",
     "adRDPNAT": "adRDP",
     "adNicName": "adNic",
-    "adVMName": "adVM",
+    // "adVMName": "adVM",
     "publicIPAddressName": "adPublicIP",
     "adAvailabilitySetName": "adAvailabiltySet",
     "imagePublisher": "MicrosoftWindowsServer",
@@ -290,7 +297,7 @@
     {
       "apiVersion": "[variables('apiVersion')]",
       "type": "Microsoft.Compute/virtualMachines",
-      "name": "[variables('adVMName')]",
+      "name": "[parameters('adVMName')]",
       "location": "[variables('location')]",
       "dependsOn": [
         "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]",
