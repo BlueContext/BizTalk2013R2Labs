@@ -3,25 +3,25 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "storageAccountType": {
-      "value": "Standard_GRS"
+      "value": "Standard_LRS"
     },
     "adminUsername": {
-      "value": "azureuser"
+      "value": "devadmin"
     },
     "adminPassword": {
       "value": "GEN-PASSWORD"
     },
     "adVMSize": {
-      "value": "Standard_D2_v2"
+      "value": "Basic_V2"
     },
     "domainName": {
-      "value": "mydomain.local"
+      "value": "contoso.labs"
     },
     "dnsPrefix": {
       "value": "GEN-UNIQUE"
     },
     "assetLocation": {
-      "value": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/active-directory-new-domain/"
+      "value": "https://raw.githubusercontent.com/BlueContext/BizTalk2013R2Labs/master/AzureTemplates/NewDCinNewDomain/"
     }
   }
 }
