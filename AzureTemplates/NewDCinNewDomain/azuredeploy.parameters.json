@@ -14,6 +14,9 @@
     "adVMSize": {
       "value": "Basic_V2"
     },
+    "adVMName" : {
+        "value": "13R2-ADDC01"
+    },
     "domainName": {
       "value": "contoso.labs"
     },

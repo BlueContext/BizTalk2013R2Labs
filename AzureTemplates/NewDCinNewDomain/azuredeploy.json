@@ -313,7 +313,7 @@
           "id": "[resourceId('Microsoft.Compute/availabilitySets', variables('adAvailabilitySetName'))]"
         },
         "osProfile": {
-          "computerName": "[variables('adVMName')]",
+          "computerName": "[parameters('adVMName')]",
           "adminUsername": "[parameters('adminUsername')]",
           "adminPassword": "[parameters('adminPassword')]"
         },
@@ -337,7 +337,7 @@
               "vhd": {
                 "uri": "[concat('http://', variables('storageAccountName'),'.blob.core.windows.net/vhds/', variables('adDataDisk'),'-1.vhd')]"
               },
-              "name": "[concat(variables('adVMName'),'-data-disk1')]",
+              "name": "[concat(parameters('adVMName'),'-data-disk1')]",
               "caching": "None",
               "createOption": "Empty",
               "diskSizeGB": "[variables('adDataDiskSize')]",
@@ -356,11 +356,11 @@
       "resources": [
         {
           "type": "Microsoft.Compute/virtualMachines/extensions",
-          "name": "[concat(variables('adVMName'),'/CreateADForest')]",
+          "name": "[concat(parameters('adVMName'),'/CreateADForest')]",
           "apiVersion": "[variables('apiVersion')]",
           "location": "[variables('location')]",
           "dependsOn": [
-            "[resourceId('Microsoft.Compute/virtualMachines', variables('adVMName'))]"
+            "[resourceId('Microsoft.Compute/virtualMachines', parameters('adVMName'))]"
           ],
           "properties": {
             "publisher": "Microsoft.Powershell",
@@ -392,7 +392,7 @@
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2015-01-01",
       "dependsOn": [
-        "[concat('Microsoft.Compute/virtualMachines/', variables('adVMName'),'/extensions/CreateADForest')]"
+        "[concat('Microsoft.Compute/virtualMachines/', parameters('adVMName'),'/extensions/CreateADForest')]"
       ],
       "properties": {
         "mode": "Incremental",
