@@ -29,7 +29,7 @@
     },
     "vmSize": {
       "type": "string",
-      "defaultValue": "Standard_A2",
+      "defaultValue": "Standard_A3",
       "metadata": {
         "description": "The size of the virtual machines"
       }
@@ -37,15 +37,19 @@
     "imageSKU": {
       "type": "string",
       "allowedValues": [
-        "2008-R2-SP1",
-        "2012-Datacenter",
-        "2012-R2-Datacenter",
-        "Windows-Server-Technical-Preview"
+        "2013-Professional-Update-4-ws2012-az26",
+        "VS-2013-Premium-VSU5-AzureSDK-2.7-SQL-WS2012R2",
+        "VS-2013-Prem-VSU5-AzureSDK-2.8-Win8.1-N-x64",
+        "VS-2013-Prem-VSU5-AzureSDK-2.8-WS2012R2",
+        "VS-2015-Ent-VSU2-AzureSDK-29-W10T-N-x64",
+        "VS-2015-Ent-VSU2-AzureSDK-29-WS2012R2",
+        "VS-Next-Preview-Ent-AzureSDK-2.9-W10-N",
+        "VS-Next-Preview-Ent-AzureSDK-2.9-WS2012R2"
       ],
       "metadata": {
-        "description": "Windows server SKU"
+        "description": "Developer workstation SKU"
       },
-      "defaultValue": "2012-R2-Datacenter"
+      "defaultValue": "VS-2013-Premium-VSU5-AzureSDK-2.7-SQL-WS2012R2"
     },
     "domainToJoin": {
       "type": "string",
@@ -94,9 +98,9 @@
   },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id, deployment().name))]",
-    "imagePublisher": "MicrosoftWindowsServer",
-    "imageOffer": "WindowsServer",
-    "windowsOSVersion": "2012-R2-Datacenter",
+    "imagePublisher": "MicrosoftVisualStudio",
+    "imageOffer": "VisualStudio",
+    "windowsOSVersion": "[parameters('imageSKU')]",
     "apiVersion": "2015-06-15",
     "nicName": "[concat(parameters('dnsLabelPrefix'),'Nic')]",
     "publicIPName": "[concat(parameters('dnsLabelPrefix'),'Pip')]",
@@ -172,7 +176,7 @@
           "imageReference": {
             "publisher": "[variables('imagePublisher')]",
             "offer": "[variables('imageOffer')]",
-            "sku": "[variables('windowsOSVersion')]",
+            "sku": "[parameters('imageSKU')]",
             "version": "latest"
           },
           "osDisk": {
