@@ -37,14 +37,19 @@
     "imageSKU": {
       "type": "string",
       "allowedValues": [
-        "2013-R2-Developer",
-        "2013-R2-Enterprise",
-        "2016-PreRelease",
+        "2013-Professional-Update-4-ws2012-az26",
+        "VS-2013-Premium-VSU5-AzureSDK-2.7-SQL-WS2012R2",
+        "VS-2013-Prem-VSU5-AzureSDK-2.8-Win8.1-N-x64",
+        "VS-2013-Prem-VSU5-AzureSDK-2.8-WS2012R2",
+        "VS-2015-Ent-VSU2-AzureSDK-29-W10T-N-x64",
+        "VS-2015-Ent-VSU2-AzureSDK-29-WS2012R2",
+        "VS-Next-Preview-Ent-AzureSDK-2.9-W10-N",
+        "VS-Next-Preview-Ent-AzureSDK-2.9-WS2012R2"
       ],
       "metadata": {
         "description": "Developer workstation SKU"
       },
-      "defaultValue": "2013-R2-Enterprise"
+      "defaultValue": "VS-2013-Premium-VSU5-AzureSDK-2.7-SQL-WS2012R2"
     },
     "domainToJoin": {
       "type": "string",
@@ -93,8 +98,8 @@
   },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id, deployment().name))]",
-    "imagePublisher": "MicrosoftBizTalkServer",
-    "imageOffer": "BizTalk-Server",
+    "imagePublisher": "MicrosoftVisualStudio",
+    "imageOffer": "VisualStudio",
     "windowsOSVersion": "[parameters('imageSKU')]",
     "apiVersion": "2015-06-15",
     "nicName": "[concat(parameters('dnsLabelPrefix'),'Nic')]",
