@@ -39,7 +39,7 @@
       "allowedValues": [
         "2013-R2-Developer",
         "2013-R2-Enterprise",
-        "2016-PreRelease",
+        "2016-PreRelease"
       ],
       "metadata": {
         "description": "Developer workstation SKU"
