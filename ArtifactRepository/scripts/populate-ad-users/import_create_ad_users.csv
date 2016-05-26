@@ -1,8 +1,8 @@
-Implement,GivenName,LastName,Description,Mail,Password,PasswordNeverExpires,Enabled
-Yes,Kevin,Baker,Kevin Baker,kevin.baker@energytransfer.com,Welcome123456,TRUE,TRUE
-Yes,Jamiel,Rico,Jamiel Rico,jamiel.rico@energytransfer.com,Welcome123456,TRUE,TRUE
-Yes,Komali,Uppugandla,Komali Uppugandla,komali.uppugandla@energytransfer.com,Welcome123456,TRUE,TRUE
-Yes,Kevin,Flanagan,Kevin Flanagan,kevin.flanagan@energytransfer.com,Welcome123456,TRUE,TRUE
-Yes,John,Denman,John Denman,john.denman@energytransfer.com,Welcome123456,TRUE,TRUE
-Yes,Bruce,Charron,Bruce Charron,bruce.charron@energytransfer.com,Welcome123456,TRUE,TRUE
-Yes,Travis,Vanderpool,Travis Vanderpool,travis.vanderpool@energytransfer.com,Welcome123456,TRUE,TRUE
+Implement,GivenName,LastName,Description,Mail,Password,PasswordNeverExpires,Enabled,DomainAdmin
+Yes,Kevin,Baker,Kevin Baker,kevin.baker@energytransfer.com,Welcome123456,TRUE,TRUE,TRUE
+Yes,Jamiel,Rico,Jamiel Rico,jamiel.rico@energytransfer.com,Welcome123456,TRUE,TRUE,TRUE
+Yes,Komali,Uppugandla,Komali Uppugandla,komali.uppugandla@energytransfer.com,Welcome123456,TRUE,TRUE,TRUE
+Yes,Kevin,Flanagan,Kevin Flanagan,kevin.flanagan@energytransfer.com,Welcome123456,TRUE,TRUE,TRUE
+Yes,John,Denman,John Denman,john.denman@energytransfer.com,Welcome123456,TRUE,TRUE,TRUE
+Yes,Bruce,Charron,Bruce Charron,bruce.charron@energytransfer.com,Welcome123456,TRUE,TRUE,TRUE
+Yes,Travis,Vanderpool,Travis Vanderpool,travis.vanderpool@energytransfer.com,Welcome123456,TRUE,TRUE,TRUE
