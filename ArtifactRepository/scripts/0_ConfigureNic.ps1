@@ -1,6 +1,7 @@
 param
 (
-    [string]$pointless = " "
+    [string]$pointless = " ",
+    [string]$dnsServerAddress
 )
 
 $nic = Get-NetAdapter
