@@ -1,14 +1,9 @@
-###########################################################
-# AUTHOR  : Kevin Baker 
-# DATE    : 26-05-2016
-###########################################################
+param
+(
+    [string]$pointless = " "
+)
 
-# ERROR REPORTING ALL
-Set-StrictMode -Version latest
-
-#----------------------------------------------------------
 # LOAD ASSEMBLIES AND MODULES
-#----------------------------------------------------------
 Try
 {
   Import-Module ActiveDirectory -ErrorAction Stop
@@ -19,9 +14,7 @@ Catch
   Exit 1
 }
 
-#----------------------------------------------------------
 #STATIC VARIABLES
-#----------------------------------------------------------
 $path     = Split-Path -parent $MyInvocation.MyCommand.Definition
 $newsvcpath = $path + "\import_create_ad_svcaccts.csv"
 $log      = $path + "\create_ad_svcaccts.log"
@@ -30,9 +23,7 @@ $date     = Get-Date
 $dnsroot  = (Get-ADDomain).DNSRoot
 $i        = 1
 
-#----------------------------------------------------------
 #START FUNCTIONS
-#----------------------------------------------------------
 Function Start-Commands
 {
   Create-ServiceAccounts
@@ -47,7 +38,7 @@ Function Create-ServiceAccounts
     {
       If (($_.GivenName -eq "") -Or ($_.LastName -eq ""))
       {
-        Write-Host "[ERROR]`t Please provide valid GivenName, LastName and Initials. Processing skipped for line $($i)`r`n"
+#        Write-Host "[ERROR]`t Please provide valid GivenName, LastName and Initials. Processing skipped for line $($i)`r`n"
         "[ERROR]`t Please provide valid GivenName, LastName and Initials. Processing skipped for line $($i)`r`n" | Out-File $log -append
       }
       Else
@@ -68,16 +59,11 @@ Function Create-ServiceAccounts
 
           Try
           {
-            Write-Host "[INFO]`t Creating service account : $($sam)"
+#            Write-Host "[INFO]`t Creating service account : $($sam)"
             "[INFO]`t Creating service account : $($sam)" | Out-File $log -append
-            New-ADUser $sam -GivenName $_.GivenName `
-            -Surname $_.LastName ` 
-            -DisplayName ($_.LastName + "," + " " + $_.GivenName) `
-            -Description $_.Description -EmailAddress $_.Mail `
-            -UserPrincipalName ($sam + "@" + $dnsroot) `
-            -AccountPassword $setpass  `
-            -Enabled $enabled -PasswordNeverExpires $expires
-            Write-Host "[INFO]`t Created new service account : $($sam)"
+            New-ADUser $sam -GivenName $_.GivenName -Surname $_.LastName -DisplayName ($_.LastName + "," + " " + $_.GivenName) -Description $_.Description `
+            -UserPrincipalName ($sam + "@" + $dnsroot) -AccountPassword $setpass  -Enabled $enabled -PasswordNeverExpires $expires
+#            Write-Host "[INFO]`t Created new service account : $($sam)"
             "[INFO]`t Created new service account : $($sam)" | Out-File $log -append
      
             #$dn = (Get-ADUser $sam).DistinguishedName
@@ -99,19 +85,19 @@ Function Create-ServiceAccounts
           }
           Catch
           {
-            Write-Host "[ERROR]`t Oops, something went wrong: $($_.Exception.Message)`r`n"
+#            Write-Host "[ERROR]`t Oops, something went wrong: $($_.Exception.Message)`r`n"
           }
         }
         Else
         {
-          Write-Host "[SKIP]`t Service Account $($sam) ($($_.GivenName) $($_.LastName)) already exists or returned an error!`r`n"
+#          Write-Host "[SKIP]`t Service Account $($sam) ($($_.GivenName) $($_.LastName)) already exists or returned an error!`r`n"
           "[SKIP]`t Service Account $($sam) ($($_.GivenName) $($_.LastName)) already exists or returned an error!" | Out-File $log -append
         }
       }
     }
     Else
     {
-      Write-Host "[SKIP]`t Service Account ($($_.GivenName) $($_.LastName)) will be skipped for processing!`r`n"
+#      Write-Host "[SKIP]`t Service Account ($($_.GivenName) $($_.LastName)) will be skipped for processing!`r`n"
       "[SKIP]`t Service Account ($($_.GivenName) $($_.LastName)) will be skipped for processing!" | Out-File $log -append
     }
     $i++
@@ -119,6 +105,6 @@ Function Create-ServiceAccounts
   "--------------------------------------------" + "`r`n" | Out-File $log -append
 }
 
-Write-Host "STARTED SCRIPT`r`n"
+#Write-Host "STARTED SCRIPT`r`n"
 Start-Commands
-Write-Host "STOPPED SCRIPT"
+#Write-Host "STOPPED SCRIPT"

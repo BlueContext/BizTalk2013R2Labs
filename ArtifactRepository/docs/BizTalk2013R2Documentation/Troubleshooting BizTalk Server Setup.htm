@@ -1,0 +1,757 @@
+﻿<html DIR="LTR" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink"><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8"></META><META NAME="save" CONTENT="history"></META><title>Troubleshooting BizTalk Server Setup</title><STYLE TYPE="text/css">
+/* RelNote */
+
+table#columnTable
+{
+    table-layout: fixed;
+    background:    #FFFFFF;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+td#EdgeBorderColumn
+{
+    width: 10px;
+    border: 0px;
+    margin: 0;    
+    height: 100%;
+    background-color:  #666666;
+}
+  
+td#ToCColumn
+{
+    background:    #FFFFFF;
+    width: 300px;
+    border: 0;
+    margin: 0;
+    vertical-align: top;
+    padding-left:    14px;
+    padding-right:   10px;
+    padding-top: 7px;
+    text-decoration: none;
+}
+
+td#contentColumn
+{
+    background:    #FFFFFF;	
+    border: 0;
+    margin: 0;
+    padding: 14px 5% 22px 10px;             		
+    vertical-align: top;
+    max-width: 590;	
+}
+
+.ToCLevel1
+{
+    font-weight: bold;
+    line-height: 140%;
+}
+
+.ToCLevel2
+{
+    margin-left: 8px;
+}
+	
+a
+{
+    color: #000000;
+}
+
+@media print
+{
+    P.TopOfPage
+    {
+    	margin: 5 0 18 0;		
+    }
+}
+
+@media screen
+{
+    P.TopOfPage
+    {
+    	margin: 0 0 18 0;		
+    }
+}
+
+#contentColumn A.TopOfPageLink
+{
+	text-decoration: none;	
+}
+
+#contentColumn A.TopOfPageLink:hover
+{
+    text-decoration: underline;
+}
+
+#ToCColumn A
+{
+    text-decoration: none;
+}
+
+#ToCColumn A:hover
+{
+    text-decoration: underline;
+}
+
+/* WSUA CHM presentation */
+
+
+/********/
+/* BODY */
+body
+{
+    background:#FFFFFF;
+    color:#000000;
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size:70%;
+    font-style:normal;
+    font-weight:normal;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    width:100%;
+    height: 100%;
+    border-style:none;
+    border-width:0;
+}
+
+
+/*********/
+/* LINKS */
+a
+{
+	color:#0000FF;
+}
+
+a:visited
+{
+	color:#0000FF;
+	text-decoration:underline;
+}
+
+a:link
+{
+	color:#0000FF;
+	text-decoration:underline;
+}
+
+a:hover
+{
+	color:#FF0000;
+	cursor:hand;
+	text-decoration:underline;
+}
+
+a:active
+{
+	color:#FF0000;
+	cursor:hand;
+	text-decoration:underline;
+}
+
+
+/************/
+/* SECTIONS */
+
+/* running header*/
+.runningHeader
+{
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+
+div#techCenterLink
+{
+	background-color:#5F5F5F;
+	color:#FFFFFF;
+	padding:5pt 12px 5pt 12px;
+	margin:0 0 0 0;
+	border-bottom:solid 1pt #919193;
+	width:100%;
+}
+
+div#techCenterLink a
+{
+	color:#FFFFFF;
+	text-decoration:underline;
+	cursor:hand;
+}
+
+div#techCenterLink a:active
+{
+	color:#FFFFFF;
+	text-decoration:underline;
+	cursor:hand;
+}
+
+/* title */
+div#header
+{
+	background-color:#666666;
+	padding:15 13 15 20;	
+	margin:0 0 0 0;
+	width:100%;
+	border-style: solid;
+	border-width: 1 0 0 0;
+	border-color: #333333;
+	vertical-align: middle;
+}
+
+div#header h1
+{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	color:#FFFFFF;
+	font-size:160%;
+}
+
+
+/* main section */
+div#mainSection
+{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	width:100%;
+        height: 100%;
+	border-width:0;
+}
+
+div#mainBody
+{
+	padding:0 9 0 0;
+	margin:0 0 0 0;
+	width:100%;
+        height: 100%;
+	border-style:none;
+	border-width:0;
+}
+
+
+/* footer */
+div#footer
+{
+	font-size:81%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	width:100%;
+	border:0;
+}
+
+
+/************/
+/* HEADINGS */
+div.section
+{
+	width:	100%;
+}
+
+.heading
+{
+	color:#000000;
+	margin:9px 0px 9px 0px;
+}
+
+h1.heading
+{
+	font-size:155%;
+}
+
+.subHeading
+{
+	color:#000000;
+	margin:9px 0px 9px 0px;
+}
+
+h3.subHeading
+{
+	font-size:130%;
+}
+
+td#ToCColumn h4.subHeading
+{
+	font-size:120%;
+}
+
+h4.subHeading
+{
+	font-size:110%;
+}
+
+h5.subHeading
+{
+	font-size:100%;
+}
+
+h6
+{
+	font-weight:normal;
+	font-size:100%;
+}
+
+img.procedure
+{
+	border: 0;
+	margin-right:8;
+}
+
+.howToHeadingTable
+{
+	background-color:Transparent;
+	border:0;
+	font-size:100%;
+	width:100%;
+}
+
+.howToHeadingImgCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding-bottom:0;
+	padding-top:3px;
+	padding-left:0;
+	padding-right:0;
+	vertical-align:top;
+	width:24px;
+}
+
+.howToHeadingTextCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	padding-left:0;
+	padding-right:0;
+	vertical-align:middle;
+}
+
+
+/**********/
+/* TABLES */
+table
+{
+	border:0;
+	font-size:100%;
+	margin:3 0 9 0;
+	width:100%;
+}
+
+th
+{
+	background-color:#DDDDDD;
+	vertical-align:bottom;
+	text-align:left;
+	font-weight:bold;
+	color:#000000;
+	padding:.2em;
+	padding-left:.45em;
+	padding-right:.5em;
+}
+
+td
+{
+	background-color:#EEEEEE;
+	vertical-align:top;
+	padding:.2em;
+	padding-left:.45em;
+	padding-right:.5em;
+}
+
+
+/**********/
+/* ALERTS */
+img.note
+{
+	border: 0;
+	margin-right:5;
+}
+
+span.alertTitle
+{
+	padding:0;
+	margin:0;
+	font-weight:bold;
+	vertical-align:text-bottom;
+	height:100px;
+	display:block;
+}
+
+.alertTable
+{
+	background-color:Transparent;
+	border:0;
+	font-size:100%;
+	margin:3 0 0 0;
+	width:85%;
+}
+
+.alertTable tr
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+.imgCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:top;
+	width:21px;
+}
+
+.txtCell
+{
+	background-color:Transparent;
+	font-weight:bold;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+.procHeadingCell
+{
+	background-color:Transparent;
+	font-weight:bold;
+	margin:0 0 0 0;
+	padding:1px 0 0 0;
+	vertical-align:middle;
+}
+
+.alertCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+p.alertImg
+{
+	border:0;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	vertical-align:top;
+	height:100%;
+	width:100%;
+}
+
+div.alert
+{
+	border:0;
+	/*padding-left:21px;*/
+	margin-right:15%;
+	width:100%;
+}
+
+div.alert ul
+{
+	margin:3px 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+/********/
+/* COMPUTEROUTPUT */
+div.computerOutput
+{
+	width: 98%;
+}
+div.computerOutput pre
+{
+    font-family:    Monospace, Courier New, Courier;
+    font-size: 105%;
+    color:  #000000;
+/*  word-wrap:  break-word;*/
+}
+
+computerOutput
+{
+    font-family:    Monospace, Courier New, Courier;
+    font-size: 105%;
+    color:  #000000;
+}
+
+
+/********/
+/* CODE */
+div.code
+{
+	padding:0;
+	margin:0;
+}
+
+div.code pre
+{
+	font-family:Courier New;
+	font-size:1.1em;
+	color:#000000;
+	padding:0;
+	margin:3 0 9 0;	
+	word-wrap: break-word;
+}
+
+code
+{
+	font-family:Courier New;
+	font-size:1.1em;
+	color:#000000;
+}
+
+
+/*********/
+/* LISTS */
+
+/* Definitions */
+dl
+{
+	margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+dt
+{
+    margin:3px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+dd
+{
+	margin-bottom:9px;
+    padding:0px 0px 0px 0px;
+}
+
+/* Lists */
+ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ul ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ol ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:decimal;
+}
+
+ol ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:lower-alpha;
+}
+
+ul ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:decimal;
+}
+
+li
+{
+	clear:both;
+	margin-bottom: 3;
+}
+
+
+/**************/
+/* PARAGRAPHS */
+p
+{
+    margin:3px 0px 9px 0px;
+}
+
+
+/*****************/
+/* MISCELLANEOUS */
+img.embedded
+{
+	padding:0;
+	margin:0;
+}
+
+img.selfstanding
+{
+	margin-top:3;
+	margin-bottom:9;
+}
+
+img.toggle
+{
+	border: 0;
+	margin-right: 5;
+}
+
+img#toggleAllImage
+{
+	margin-left: 4;
+	vertical-align: middle;
+}
+
+.tip
+{
+	font-style:italic;
+}
+
+.math
+{
+	font-family: Times New Roman;
+	font-size: 125%
+}
+
+.sourceCodeList
+{
+	font-family: Verdana;
+	font-size: 90%;	
+}
+
+pre.viewCode
+{
+	width: 100%;
+	overflow: auto;
+}
+
+/* * * End of file. * * */
+
+</STYLE>
+</head><body><a name="pagetop"></a><div id="header"><h1>Troubleshooting BizTalk Server Setup</h1></div><div id="mainSection"><div id="mainBody"><p class="runningHeader"></p><table cellspacing="0" id="columnTable"><tr><td id="EdgeBorderColumn" valign="top"></td><td id="ToCColumn" valign="top"><h4 class="subHeading"></h4><P class="ToCLevel1"><A href="#ID0EFB">Introduction</A></P><P class="ToCLevel2"><A href="#ID0EQB">Review Installation Steps</A></P><P class="ToCLevel2"><A href="#ID0ETG">Some BizTalk EDI/AS2 artifacts are still active after unconfiguring</A></P><P class="ToCLevel2"><A href="#ID0EPAAC">If the BizTalk Server Computer or SQL Server computer is renamed after BizTalk Server configuration, the Configuration Wizard will fail</A></P><P class="ToCLevel2"><A href="#ID0E5CAC">The BizTalk Server Business Rules Configuration Wizard fails</A></P><P class="ToCLevel2"><A href="#ID0EZFAC">Configuration Logging</A></P><P class="ToCLevel2"><A href="#ID0EMGAC">Troubleshooting Tools</A></P><P class="ToCLevel2"><A href="#"></A></P><P class="ToCLevel2"><A href="#ID0E6OAE">Known Issues with Enterprise Single Sign-On</A></P><P class="ToCLevel2"><A href="#ID0E5YAE">Custom Action</A></P><P class="ToCLevel1"><A href="#ID0ET3AG">Copyright</A></P></td><td id="contentColumn" valign="top"><h1 class="heading"><A name="ID0EFB"></A>Introduction</h1><div id="sectionSection0" class="section"><p>This Troubleshooting Guide lists  known issues as well as the most common problems you may encounter while installing BizTalk Server. This guide also includes Custom actions which provides details about BizTalk Server certification for the Windows Server logo program.  It provides you a list of custom actions that might be performed during BizTalk Server Setup operation.</p><A name="ID0EQB"></A><h3 class="subHeading">Review Installation Steps</h3><div class="subSection"><p>The majority of BizTalk Server setup problems occur because the BizTalk Server computer was not properly prepared before BizTalk Server was installed, or a previous installation of BizTalk Server was not fully uninstalled before a new installation was attempted. </p><p>Review the two checklists below, which you can also find in the BizTalk Server Installation Guides, to ensure that your computer(s) are properly configured to support BizTalk Server. If, after reviewing this information, your setup still does not succeed, the troubleshooting tips in the rest of this document may be useful.</p><p><b>Preparing your computer for installation</b></p><ul><li class="unordered">
+									Install any critical updates for Windows<br /><br /></li><li class="unordered">
+									Enable Internet Information Services (IIS) - <a href="http://msdn.microsoft.com/library/jj248697(v=bts.80).aspx" alt="" target="_blank">Hardware and Software Requirements</a><br /><br /></li><li class="unordered">
+									Install Microsoft Office Excel - <a href="http://msdn.microsoft.com/library/jj248697(v=bts.80).aspx" alt="" target="_blank">Hardware and Software Requirements</a><br /><br /></li><li class="unordered">
+									Install Visual Studio® - <a href="http://msdn.microsoft.com/library/jj248697(v=bts.80).aspx" alt="" target="_blank">Hardware and Software Requirements</a><br /><br /></li><li class="unordered">
+									Install SQL Server as listed in <a href="http://msdn.microsoft.com/library/jj248697(v=bts.80).aspx" alt="" target="_blank">Hardware and Software Requirements</a>.<br /><br /></li><li class="unordered">
+									Install prerequisites for MQSeries Agent (required only for MQSeries Agent)<br /><br /></li><li class="unordered">
+									Install .Net Framework - <a href="http://msdn.microsoft.com/library/jj248697(v=bts.80).aspx" alt="" target="_blank">Hardware and Software Requirements</a><br /><br /></li><li class="unordered">
+									Install SharePoint - <a href="http://msdn.microsoft.com/library/jj248697(v=bts.80).aspx" alt="" target="_blank">Hardware and Software Requirements</a><br /><br /></li><li class="unordered">
+									Configure Windows SharePoint Services*<br /><br /></li><li class="unordered">
+									Disable shared Memory Protocol<br /><br /></li><li class="unordered">
+									Join the local Administrators group<br /><br /></li><li class="unordered">
+									Configure the Application Event Log<br /><br /></li></ul><p><b>Installing and configuring BizTalk Server</b></p><ul><li class="unordered">
+									Install BizTalk Server<br /><br /></li><li class="unordered">
+									Verify your installation<br /><br /></li><li class="unordered">
+									Configure BizTalk Server<br /><br /></li><li class="unordered">
+									Enable TCP/IP and named pipes in the SQL Server Configuration Manager<br /><br /></li><li class="unordered">
+									Enable Microsoft Distributed Transaction Coordinator (MS DTC) on the Local Host Server (LHS)<br /><br /></li></ul></div><A name="ID0ETG"></A><h3 class="subHeading">Some BizTalk EDI/AS2 artifacts are still active after unconfiguring</h3><div class="subSection"><div class="subSection"><div class="subSection"><div class="subSection"><p class="heading6"><b>Problem</b> After you unconfigure the BizTalk EDI/AS2 feature of BizTalk Server, some BizTalk Server artifacts related to EDI and AS2 processing will still be active in the context of the BizTalk group configuration. These artifacts will include EDI and AS2 pipelines and the batching orchestration. As a result, you will still be able to perform basic EDI and AS2 processing even after unconfiguring the BizTalk EDI/AS2 feature. </p></div><div class="subSection"><p class="heading6"><b>Cause</b> There are active ports associated with EDI and AS2 processing. Some artifacts will continue to function while these ports remain active.</p></div><div class="subSection"><p class="heading6"><b>Resolution</b> To disable all EDI/AS2 artifacts, you should disable, stop, or delete the ports associated with EDI and AS2 processing.</p></div></div></div></div><A name="ID0EPAAC"></A><h3 class="subHeading">If the BizTalk Server Computer or SQL Server computer is renamed after BizTalk Server configuration, the Configuration Wizard will fail</h3><div class="subSection"><div class="subSection"><div class="subSection"><div class="subSection"><h6>Problem</h6>
+													This problem may manifest itself in several ways:
+													<ul><li class="unordered">
+															The configuration manager will load the Overview page correctly, but when attempting to configure a feature, the feature options do not display on the screen.<br /><br /></li><li class="unordered">
+															The configuration wizard cannot connect to the SQL Server.<br /><br /></li><li class="unordered">
+															Attempting to Unconfigure All unconfigures some features, but not all.<br /><br /></li></ul></div><div class="subSection"><p class="heading6"><b>Cause</b> The BizTalk Server configuration stores the computer network name. When the computer is renamed, the configuration manager and configuration wizard cannot locate the BizTalk Server. A similar problem will occur if the SQL Server computer is renamed after BizTalk Server is configured.</p></div><div class="subSection"><p class="heading6"><b>Resolution</b> Do not rename the BizTalk Server computer or the SQL Server computer. If a server must be renamed, unconfigure all BizTalk features before renaming the computer. After renaming the computer, reconfigure BizTalk Server features.</p></div></div></div></div><A name="ID0E5CAC"></A><h3 class="subHeading">The BizTalk Server Business Rules Configuration Wizard fails</h3><div class="subSection"><h4 class="subHeading">Problem</h4><div class="subSection"><ul><li class="unordered">
+											The Business Rules Configuration Wizard fails with the error “Configuration failed for some components and no settings were applied for those components.”<br /><br /></li><li class="unordered">
+											On BizTalk Server computers for which the Business Rules Engine has already been successfully configured, the Rules Engine Update service fails to start and cannot be started manually.<br /><br /></li></ul><p>When this problem occurs, an error similar to the following may be generated in the BizTalk Server computer Application log:</p><div class="code"><pre>Service could not be started. : System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it ::1:3132
+</pre></div></div><h4 class="subHeading">Cause</h4><div class="subSection"><p>The Microsoft Malware Protection Center released an updated signature file on March 9th, 2010 to address a possible threat from SettingsModifier:Win32/PossibleHostsFileHijack. This updated signature file can cause Microsoft Malware Detection software such as Windows Defender to update the local HOSTS file to mitigate threats from SettingsModifier:Win32/PossibleHostsFileHijack. As a result of these changes, the BizTalk Server Rules Engine Update service may fail to start.</p></div><h4 class="subHeading">Resolution</h4><div class="subSection"><p>Update the local HOSTS file to include the following line:</p><p></p><div class="code"><pre>127.0.0.1         localhost</pre></div><p>The HOSTS file is located in the %systemroot%\drivers\etc\ directory.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>For more information about the Microsoft Malware Protection Center signature update that addresses a possible threat from SettingsModifier:Win32/PossibleHostsFileHijack, see <a href="http://go.microsoft.com/fwlink/?LinkID=146221" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=146221</a>.</p></td></tr></table></div></div><A name="ID0EZFAC"></A><h3 class="subHeading">Configuration Logging</h3><div class="subSection"><p>The configuration program writes detailed information to a configuration log file which by default is located in the temp directory of the computer running BizTalk Server. To determine the folder that is specified by the TEMP environment variable open a command prompt on this computer, type the following command, and then press ENTER:</p><p><b>echo %TEMP%</b></p><p>The configuration log file contains a summary of the configuration steps performed, as well as diagnostic information about any failures that may occur during the configuration process. If a configuration error occurs, open the configuration log in a text editor such as Notepad and check the log file for possible causes of the error.</p></div><A name="ID0EMGAC"></A><h3 class="subHeading">Troubleshooting Tools</h3><div class="subSection"><p>Use SQL Server Profiler, Filemon, or Regmon to gather additional information about configuration failures. For more information about these tools, see <a href="http://go.microsoft.com/fwlink/?LinkID=191830" target="_blank" alt="" target="_blank">Tools and Utilities to use for Troubleshooting</a> (http://go.microsoft.com/fwlink/?LinkID=191830).</p></div><div class="subSection"><div class="subSection"><div class="subSection"><h5 class="subHeading">Configuration fails when BizTalk Server and SQL Server are installed on separate computers</h5><div class="subSection"><h6>Problem</h6>
+													Configuration fails with errors similar to the following when attempting to configure the Enterprise Single Sign-On (SSO) component:
+													An error occurred while attempting to access the SSO database. 
+													Function: FieldInfoCreate
+													 -or-
+													Failed to enable the Single Sign-On (SSO) Service (error code 0X800706BA)
+												</div><div class="subSection"><p class="heading6"><b>Cause</b> If BizTalk Server and SQL Server are installed on different computers, then the configuration operations are performed under the context of a Microsoft Distributed Transaction Coordinator (MSDTC) transaction and MSDTC functionality must be available over the network between these computers. If MSDTC functionality is not available over the network between the computers running BizTalk Server and SQL Server, then this error can occur.</p></div><div class="subSection"><p class="heading6"><b>Resolution</b> Follow the steps in <a href="http://go.microsoft.com/fwlink/?LinkId=72203" target="_blank" alt="" target="_blank">Troubleshooting Problems with MSDTC</a> (http://go.microsoft.com/fwlink/?LinkID=72203) to ensure MSDTC functionality over the network between the computers running BizTalk Server and SQL Server.</p></div></div><div class="subSection"><h5 class="subHeading">Antivirus software interferes with configuration and causes configuration failures</h5><div class="subSection"><p class="heading6"><b>Problem</b> 
+														BizTalk Server configuration fails when antivirus software incorrectly determines that the configuration program is a virus.</p></div><div class="subSection"><p class="heading6"><b>Cause</b> The antivirus software has not been updated to include the BizTalk Server configuration program as a legitimate (non-virus) program.</p></div><div class="subSection"><p class="heading6"><b>Resolution</b> Configure the antivirus program to recognize the BizTalk Server configuration program as a legitimate (non-virus) program or else temporarily disable the antivirus software while the configuration program is running.</p></div></div><div class="subSection"><h5 class="subHeading">Configuration fails with a "File or assembly name FileName.dll, or one of its dependencies, was not found" error</h5><div class="subSection"><h6>Problem</h6>
+													An error similar to the following is displayed during the configuration process:
+													Failed to deploy BizTalk system assembly "C:\Program Files\Microsoft\BizTalk Server 20xx\Microsoft.BizTalk.DefaultPipelines.dll. Unspecified exception: File or assembly name FileName .dll, or one of its dependencies, was not found."
+												</div><div class="subSection"><p class="heading6"><b>Cause</b> This error can occur if the Network Service account does not have write permissions to the temp folder on the computer running BizTalk Server. During configuration, BizTalk Server configuration uses Windows Management Instrumentation (WMI) to deploy .NET assemblies to the BizTalk Management database. WMI impersonates the Network Service account while deploying these assemblies to the BizTalk Management database and so the Network Service account must have write access to the temp folder on the computer running BizTalk Server.</p></div><div class="subSection"><h6>Resolution</h6>
+													Grant the Network Service account write access to the temp folder on the computer running BizTalk Server and run the configuration program again. To determine the folder that is specified by the TEMP environment variable, open a command prompt on the computer, type the following command, and then press ENTER:
+													<div class="code"><pre>echo %TEMP%</pre></div></div></div><div class="subSection"><h5 class="subHeading">Configuration fails if a SQL Server database file that has the same name as the specified database already exists in the SQL Server data folder</h5><div class="subSection"><h6>Problem</h6>
+													Configuration fails with an error similar to the following:
+													Failed to set up BAM database(s)
+													Cannot open database requested in login 'BAMPrimaryImport'
+													Logon fails. Logon failed for user '<i>BizTalk\BizTalkUser</i>'
+												</div><div class="subSection"><p class="heading6"><b>Cause</b> This error can occur if an .mdf file or an .ldf file already exists in the \MSSQL\data folder of the computer running SQL Server that has the same name as the .mdf file or the .ldf file that the BizTalk Server configuration program is trying to create. The names of the .mdf file and the .ldf file that are created for the databases are derived from the name of the database that is specified in the BizTalk Server configuration program with an .mdf and an .ldf extension appended.</p></div><div class="subSection"><h6>Resolution</h6>
+													To resolve this behavior, use one of the following methods:
+													<ul><li class="unordered">
+															Delete any .mdf files or .ldf files that have names that match the names of any databases that you are creating.<br /><br /></li><li class="unordered">
+															Choose database names that do not match the names of any .mdf files or .ldf files that already exist in the \Program Files\Microsoft SQL Server\MSSQL\data folder of your SQL server.  <br /><br /></li></ul></div></div><div class="subSection"><h5 class="subHeading">Configuration fails on a domain controller when specifying local accounts</h5><div class="subSection"><p class="heading6"><b>Problem</b> When running the BizTalk Server configuration program on a domain controller, configuration fails if you specified a local group (for example, BizTalk Host Users Group) for either the BizTalkServerApplication host or the BizTalkIsolatedHost host.</p></div><div class="subSection"><p class="heading6"><b>Cause</b> A domain controller automatically treats a local Windows group as a domain Windows group (there is no such thing as local Windows group on a domain controller). If you specified a local Windows group for the host while running the configuration program, configuration will fail when trying to create a SQL Server logon for the group. The configuration program does not disable the local Windows group option when the server is a domain controller.</p></div><div class="subSection"><p class="heading6"><b>Resolution</b> Specify domain groups for the hosts that are created during configuration.</p></div></div><div class="subSection"><h5 class="subHeading">Configuration fails to create SQL Server Analysis database if the SQL server has been renamed</h5><div class="subSection"><h6>Problem</h6>
+													If you have renamed the computer on which you installed SQL Server Analysis Server, the configuration program fails when it tries to create the new SQL Server Analysis database and an error similar to the following is generated:
+													Cannot connect to the repository.
+													Analysis server: &lt;machine name&gt;
+													Error:
+													'\\&lt;machine name&gt;\MsOLAPRepository$\msmdrep.mdb' is not a valid path.
+													Make sure that you correctly spell the path name and that you are
+													connected to the server on which the file resides.
+												</div><div class="subSection"><p class="heading6"><b>Cause</b> The configuration program is unable to determine the new name of the computer on which you installed SQL Server Analysis Server.</p></div><div class="subSection"><h6>Resolution</h6>
+													Perform the following manual steps to update Analysis Server with the new computer name:
+													<ol class="ordered"><li>
+															Click <b>Start</b>, point to <b>All Programs</b>, point to <b>Microsoft SQL Server</b>, point to <b>Analysis Services</b>, and then click <b>Analysis Manager</b>.<br /><br /></li><li>
+															In the <b>Analysis Manager</b> navigation panel, double-click the <b>Analysis Servers</b> node to expand it.<br /><br /></li><li>
+															Right-click the server with the repository connection string you want to edit, and then select <b>Edit Repository Connection String</b>.<br /><br /></li><li>
+															In the <b>Edit Repository Connection String</b> dialog box, verify the server name in this string and update it to the new computer name if it is incorrect.<br /><br /></li><li>
+															Navigate to the following location: &lt;<i>installation directory</i>&gt;\Program Files\Microsoft Analysis Services\Bin.<br /><br /></li><li>
+															Right-click the <b>Bin</b> folder, and then click <b>Sharing and Security</b>. The <b>Bin Properties</b> dialog box appears.<br /><br /></li><li>
+															In the <b>Bin Properties</b> dialog box, click the <b>Sharing</b> tab to verify that all Online Analytical Processing (OLAP) administrators have full permissions to this folder.<br /><br /></li></ol></div></div><div class="subSection"><h5 class="subHeading">Artifacts disappear from Configuration Database on redeployment of assemblies from Visual Studio</h5><div class="subSection"><p class="heading6"><b>Problem</b> When a BizTalk Server project is redeployed at the project level within Visual Studio, all artifacts contained within the project that reference the project being redeployed will appear to vanish when the BizTalk Server MMC is refreshed.</p></div><div class="subSection"><h6>Cause</h6>
+													To illustrate the cause of this problem, consider the following example based on a sample BizTalk Server solution where a user wants to redeploy the Maps project. Note that compiling projects yields individual assemblies. The following figure indicates the state of the solution before the user does a redeployment. The relationships among the artifacts are as follows:
+													<ul><li class="unordered">
+															Orch1, Orch2, Maps, Pipelines, and Schemas are projects.<br /><br /></li><li class="unordered">
+															Orch1 references Maps, which in turn references Schemas.<br /><br /></li><li class="unordered">
+															Orch2 references Schemas.<br /><br /></li><li class="unordered">
+															Pipelines references Schemas.<br /><br /></li></ul>
+													
+													If the user redeploys the Maps project using the default Visual Studio project settings, the Orch1, Orch2, and Pipeline artifacts vanish, as shown in the following figure.
+													
+													Redeploying Maps is a two-step process of undeploying the currently deployed Maps.dll assembly, and then deploying the new Maps.dll file. Visual Studio performs these steps automatically as part of the redeployment process.
+													<table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell">
+														The preceding sentence is not strictly correct because these are steps that Visual Studio always does so there is no notion of it being the proper way.
+													</td></tr></table>
+													The key point is that in order to undeploy a BizTalk Server assembly, Visual Studio has to undeploy all assemblies that are dependent upon that assembly that have the deploy flag set. In our example, to perform the first undeployment step of the redeployment, BizTalk Server needs to undeploy Orch1.dll (which depends on Maps.dll). During the undeployment of Maps.dll, Visual Studio also undeploys Schemas.dll (assuming it has the deploy flag set). In order to undeploy Schemas.dll, Visual Studio needs to undeploy Orch2.dll and Pipelines.dll (both of which depend on Schemas.dll).
+													A problem exists in that Visual Studio redeploys only Maps.dll and the assemblies that it depends upon: in this case, Schemas.dll. So when the user refreshes the BizTalk Server MMC, the Orch1, Orch2, and Pipeline assemblies seem to have vanished, but Maps.dll and Schemas.dll are still visible.
+												</div><div class="subSection"><h6>Resolution</h6>
+													For the main project (that references other projects) do the following: 
+													<ol class="ordered"><li>
+															In Solution Explorer, right-click the solution node. <br /><br /></li><li>
+															Click <b>Properties</b> to open the <b>Solution Property Pages</b> dialog box.<br /><br /></li><li>
+															Click <b>Configuration Properties</b>, and then click <b>Configuration</b>.<br /><br /></li><li>
+															Clear the <b>Deploy</b> check box for the referenced project.<br /><br /></li><li>
+															In Solution Explorer, execute a new solution-level deployment. To do this, right-click the solution node and then click <b>Deploy Solution</b>.<br /><br /></li></ol></div></div><div class="subSection"><h5 class="subHeading">Supported Virtual Directory Types</h5><p>When referencing Web services from an orchestration and attempting to do an MSI export, the export operation will succeed only if the associated virtual directories are of type <b>IIsWebVirtualDir</b> or <b>IIsWebDirectory</b>. <b>IIsWebVirtualDir</b> and <b>IIsWebDirectory</b> are the node types that appear in the IIS metabase. <b>IIsWebVirtualDir</b> is a virtual directory with a <b>Path</b> property that points to an absolute file folder. <b>IIsWebDirectory</b> is a virtual directory without a <b>Path</b> property and thus refers to a relative file folder, typically a subfolder of another <b>IIsWebVirtualDir</b> or <b>IIsWebDirectory</b> node. These two types are the ones typically seen in the metabase hierarchy to describe folders. </p><p>Virtual directories of type <b>IIsConfigObject</b> are not supported and the MSI export will fail in this case. <b>IIsConfigObject</b> is an unexpected metabase node type that is either a valid node type that BizTalk Server is not handling properly or an indication of an improperly created (and thus invalid) metabase entry. In this situation BizTalk Server will display an error message something like the following: Unexpected directory entry " IIS://LM/W3SVC/1/ROOT/BadVdir/" of type IIsConfigObject.</p></div><div class="subSection"><h5 class="subHeading">Unable to view Group information after removing stale logons</h5><div class="subSection"><p class="heading6"><b>Problem</b> If, during configuration, you encounter and delete stale logons, you may not be able to view Group information. </p></div><div class="subSection"><p class="heading6"><b>Cause</b> This is a known configuration issue. </p></div><div class="subSection"><p class="heading6"><b>Resolution</b> It may help to delete the Host Windows group logons and then reconfigure. If the Group information is still not available, contact Microsoft Product Support.</p></div><div class="subSection"><h6>Cannot change computer name after BizTalk Server is installed</h6><div class="subSection"><p class="heading6"><b>Problem</b> When you change the computer name on a computer running BizTalk Server, and you restart (reboot) the computer, error messages may occur.</p></div><div class="subSection"><p class="heading6"><b>Cause</b> SQL Server does not support changing the computer name, so BizTalk Server does not support changing the computer name once BizTalk Server is installed and configured. </p></div><div class="subSection"><p class="heading6"><b>Resolution</b> We recommend that you do not change computer names after you install BizTalk Server. </p></div></div><div class="subSection"><h6></h6><div class="subSection"><p class="heading6"><b></b> 
+															</p></div><div class="subSection"><h6></h6><ol class="ordered"><li><br /><br /></li><li><br /><br /></li><li><br /><br /></li><li><br /><br /></li></ol></div></div></div></div></div><A name="ID0E6OAE"></A><h3 class="subHeading">Known Issues with Enterprise Single Sign-On</h3><div class="subSection"><p></p><p>This section describes setup and configuration problems that may be related to Enterprise Single Sign-On (SSO). </p><div class="subSection"><div class="subSection"><h5 class="subHeading">ENTSSO Service fails to start</h5><div class="subSection"><p class="heading6"><b>Problem</b> The ENTSSO service fails to start.</p></div><div class="subSection"><p class="heading6"><b>Cause</b> If the ENTSSO service is not running under a valid SSO Administrator account, it will fail to start.</p></div><div class="subSection"><p class="heading6"><b>Resolution</b> Specify a valid SSO administrator account for the ENTSSO Service and restart the service from Services Control Manager (SCM) snap-in.</p></div></div><div class="subSection"><h5 class="subHeading">BizTalk Services dependent on the Enterprise Single Sign-On Service (ENTSSO) fail to start after a reboot</h5><div class="subSection"><p class="heading6"><b>Problem</b>  BTSSvc$BizTalkServerApplication has a dependency on the Enterprise Single Sign-On Service (ENTSSO) and may timeout during start up after a reboot.</p></div><div class="subSection"><p class="heading6"><b>Cause</b> The Enterprise Single Sign-On Service may take around 3 minutes to start.</p></div><div class="subSection"><p class="heading6"><b>Resolution</b> Configure the “BizTalk Service BizTalk Group: BizTalkServerApplication” service with the Automatic (Delayed Start) startup type option. This will initiate the start of the service after all Automatic services have completed their startup routines.</p></div></div><div class="subSection"><h5 class="subHeading">Cannot access an affiliate application</h5><div class="subSection"><p class="heading6"><b>Problem</b> The Enterprise Single Sign-On service disables an affiliate application if the application administrator account associated with it is not valid.</p></div><div class="subSection"><p class="heading6"><b>Cause</b> The SSO application administrator account is not valid.</p></div><div class="subSection"><p class="heading6"><b>Resolution</b> Ensure that the SSO application administrator account is valid before you create an affiliate application. You must then enable the affiliate application to use the application.</p></div></div><div class="subSection"><h5 class="subHeading">RPC error occurs when connecting to a client computer</h5><div class="subSection"><p class="heading6"><b>Problem</b> When you run a command such as <b>ssomanage -displayapp</b><b></b><i>&lt;applicationname&gt;</i>, where the computer attempt to connect to a remote SSO Server to retrieve the information, you receive the following error: ERROR: 0x800706BA: The RPC server is unavailable. </p></div><div class="subSection"><p class="heading6"><b>Cause</b> This error occurs when you specify the wrong server information, or when the SSO Service is not available on the remote server.</p></div><div class="subSection"><h6>Resolution</h6><ul><li class="unordered">
+															Follow the steps in <b>How to Set the SSO Server</b> in BizTalk Server Help to make sure you are connected to the correct SSO Server.<br /><br /></li><li class="unordered">
+															Make sure the SSO Service is enabled and running in the SSO Server to which you are connecting.<br /><br /></li></ul></div></div><div class="subSection"><h5 class="subHeading">Master Secret is missing or corrupt</h5><div class="subSection"><h6>Problem</h6>
+													The master secret is missing or corrupt. It normally generates during configuration. If the secret is missing, one of the following messages will display in the event log as the Enterprise Single Sign-On service starts.
+													MessageId=10520
+													Severity=Warning
+													SSO_WARN_NO_SECRETS
+													MessageId=10565
+													Severity=Error
+													SSO_ERROR_SECRET_VALIDATE_FAILED
+													MessageId=10521
+													Severity=Error
+													SSO_ERROR_SECRETS_NOT_LOADED
+												</div><div class="subSection"><p class="heading6"><b>Cause</b> This problem can occur if a secret is generated while the Enterprise Single Sign-On service (SSO) was running under one service account, and then the service account was changed. The secret is stored in the registry in encrypted form, and is encrypted using a key based on the identity of the service account (which ENTSSO runs under).</p></div><div class="subSection"><h6>Resolution</h6>
+													Change the service account ENTSSO is running under to the original service account when the master secret was created.
+													To change the ENTSSO service account:
+													<ol class="ordered"><li>
+															Back up the master secret. For more information, see <a href="http://go.microsoft.com/fwlink/?LinkID=191831" target="_blank" alt="" target="_blank">How to Back Up the Master Secret</a> (http://go.microsoft.com/fwlink/?LinkID=191831).<br /><br /></li><li>
+															Stop Enterprise Single Sign-On Services.<br /><br /></li><li>
+															Change the service account.<br /><br /></li><li>
+															Restart SSO and ignore any event log errors about a corrupted secret.<br /><br /></li><li>
+															Restore the master secret. For more information, see <a href="http://go.microsoft.com/fwlink/?LinkID=191832" target="_blank" alt="" target="_blank">How to Restore the Master Secret</a> (http://go.microsoft.com/fwlink/?LinkID=191832).<br /><br /></li></ol></div></div></div></div><A name="ID0E5YAE"></A><h3 class="subHeading">Custom Action</h3><div class="subSection"><p>This topic provides details about BizTalk Server certification for the Windows Server logo program. The following custom actions might be performed during BizTalk Server Setup operations.</p><p><b></b></p><table><tr><th>
+											Custom action
+										</th><th>
+											Description
+										</th></tr><tr><td><p>ReadComplusData</p></td><td><p>Reads custom COM+ tables, creates XML document, and saves it in the Complus_XML_Data property.</p></td></tr><tr><td><p>SchedXmlConfig</p></td><td><p>Used for configuring machines having RFID data.</p></td></tr><tr><td><p>CheckBaseEDI</p></td><td><p>Checks the presence of an old version of EDI</p></td></tr><tr><td><p>CheckMQSeries</p></td><td><p>Checks the presence of MQSeries</p></td></tr><tr><td><p>CheckNET30Vista</p></td><td><p>Checks the presence of WCF</p></td></tr><tr><td><p>CheckWSSV3SP1</p></td><td><p>Checks the presence of Windows SharePoint Services 3.0 SP1.</p></td></tr><tr><td><p>CheckWSSV4</p></td><td><p>Checks the presence of Windows SharePoint Services 4</p></td></tr><tr><td><p>GetFrameworkPath</p></td><td><p>Sets installer properties in the installer that holds installation path to Microsoft .Net framework 4 and 2.0.</p></td></tr><tr><td><p>Set_BAMClientExcelDir</p></td><td><p>Creates an Excel application object for setting a property to hold the Microsoft Office library path in the installer.</p></td></tr><tr><td><p>Set_CurrentUser</p></td><td><p>Sets domain\username information of the current user</p></td></tr><tr><td><p>ViewInstallGuide</p></td><td><p>Launches the BizTalk Server installation guide from the installation source directory.</p></td></tr><tr><td><p>CA_CheckSTSLanguage</p></td><td><p>Sets STS_Language_Property property when the language set for WSS and BizTalk are same.</p></td></tr><tr><td><p>CA_CleanupRegistry</p></td><td><p>When you uninstall BizTalk Server, it cleans the registry entries that were created during BizTalk Server configuration.</p></td></tr><tr><td><p>CA_CleanupRegistry_OldProducts</p></td><td><p>Cleans the registry entries that belong to an older version of BizTalk Server and are not required for a fresh installation of BizTalk Server.</p></td></tr><tr><td><p>CA_RemovePatches</p></td><td><p>Removes Microsoft BizTalk Server updates when you uninstall BizTalk Server.</p></td></tr><tr><td><p>CA_ResolveWellKnownNames</p></td><td><p>Creates installer properties with well-known names and assigns them their corresponding SID.</p></td></tr><tr><td><p>CA_SaveTargetVSVersionToRegistry</p></td><td><p>Sets a TargetVSVersion_Property property to the value of a supported version of Visual Studio.</p></td></tr><tr><td><p>CA_StopServices</p></td><td><p>Stops IISAdmin, Rules Engine Update and EDI Subsystem services.</p></td></tr><tr><td><p>CleanupUsersKeys</p></td><td><p>Removes BizTalk Server related entries from the HKEY_CURRENT_USER registry key.</p></td></tr><tr><td><p>DevEnvRunning</p></td><td><p>Checks whether Visual Studio is running</p></td></tr><tr><td><p>ValidateINSTALLDIR</p></td><td><p>Validates BizTalk Server installation directory format</p></td></tr><tr><td><p>StartHostInstances</p></td><td><p>Starts BizTalk Server Host Instances.</p></td></tr><tr><td><p>StopHostInstances</p></td><td><p>Stops BizTalk Server Host Instances.</p></td></tr><tr><td><p>MQSUnConfig</p></td><td><p>Launches MQSeries Configuration wizard for un-configuring MQSeries agent.</p></td></tr><tr><td><p>LaunchConfigFmk</p></td><td><p>Launches BizTalk Server Configuration Wizard</p></td></tr><tr><td><p>CHKASPNET</p></td><td><p>Checks the install state of ASP.NET</p></td></tr><tr><td><p>CHKIIS</p></td><td><p>Checks the install state of IIS</p></td></tr><tr><td><p>TBExpired</p></td><td><p>Checks if the BizTalk Server TimeBomb has expired</p></td></tr><tr><td><p>BrandSKU</p></td><td><p>Updates the value of BizTalk Server timebomb which depends on SKU installation.</p></td></tr><tr><td><p>CA_ERROR</p></td><td><p>Returns installation failure</p></td></tr><tr><td><p>InstallComplus</p></td><td><p>Installs Complus applications and components.</p></td></tr><tr><td><p>BAM_Add_Perf_Silent</p></td><td><p>Installs performance counters for BAM</p></td></tr><tr><td><p>RegsvcsApplicationDeployment</p></td><td><p>Runs Regsvcs.exe (.NET Services Installation Tool) on BizTalk Deployment COM+ application DLLs</p></td></tr><tr><td><p>RegsvcsDeployment</p></td><td><p>Runs Regsvcs.exe on DLLs</p></td></tr><tr><td><p>RegsvcsMQSAdapter</p></td><td><p>Runs Regsvcs.exe on DLLs</p></td></tr><tr><td><p>RegsvcsSQLAdapter</p></td><td><p>Runs Regsvcs.exe on DLLs</p></td></tr><tr><td><p>WMI_Add_MSBTS_Silent</p></td><td><p>Registers BizTalk Server namespace and classes to WMI.</p></td></tr><tr><td><p>LaunchConfigFmk_SlashUP</p></td><td><p>Un-configures BizTalk Server</p></td></tr><tr><td><p>CleanupComplus</p></td><td><p>Uninstalls Complus Applications and components.</p></td></tr><tr><td><p>RemoveSKU</p></td><td><p>Removes BizTalk Server TimeBomb data.</p></td></tr><tr><td><p>BAM_Remove_Perf</p></td><td><p>Uninstalls performance counters for BAM.</p></td></tr><tr><td><p>LoadBTSCounters</p></td><td><p>Loads BizTalk Server performance counters.</p></td></tr><tr><td><p>RegisterBtprojExtn</p></td><td><p>Registers BizTalk project file (.btproj) extension.</p></td></tr><tr><td><p>UnRegisterBtprojExtn</p></td><td><p>Un-registers BizTalk project file (.btproj) extension.</p></td></tr><tr><td><p>UnRegsvcsApplicationDeployment</p></td><td><p>Runs Regsvcs.exe on certain DLLs when you uninstall BizTalk Server</p></td></tr><tr><td><p>UnRegsvcsDeployment</p></td><td><p>Runs Regsvcs.exe on certain DLLs when you uninstall BizTalk Server</p></td></tr><tr><td><p>UnRegsvcsMQSAdapter</p></td><td><p>Runs Regsvcs.exe on certain DLLs when you uninstall BizTalk Server</p></td></tr><tr><td><p>UnRegsvcsSQLAdapter</p></td><td><p>Runs Regsvcs.exe on certain DLLs when you uninstall BizTalk Server</p></td></tr><tr><td><p>UnloadBTSCounters</p></td><td><p>Unloads BizTalk Server performance counters.</p></td></tr><tr><td><p>WMI_Remove_MSBTS</p></td><td><p>Removes BizTalk Server namespace from WMI.</p></td></tr><tr><td><p>RegisterComsvcs</p></td><td><p>Runs regsvr32.exe on comsvcs.dll silently.</p></td></tr><tr><td><p>DevenvSetupUninstall</p></td><td><p>Runs DevEnv.exe /Setup/resetskippkgs.</p></td></tr><tr><td><p>RollbackComplus</p></td><td><p>Rollbacks the installation of Complus applications and components.</p></td></tr><tr><td><p>ResRegsvcsMQSAdapter</p></td><td><p>Runs regsvcs.exe on a given binary</p></td></tr><tr><td><p>ResRegsvcsSQLAdapter</p></td><td><p>Runs regsvcs.exe on a given binary</p></td></tr><tr><td><p>RestoreRegsvcsApplicationDeployment</p></td><td><p>Appends the path of framework with Microsoft.BizTalk.ApplicationDeployment.Engine.dll.</p></td></tr><tr><td><p>RestoreRegsvcsDeployment</p></td><td><p>Appends the path of framework with Microsoft.BizTalk.ApplicationDeployment.Engine.dll.</p></td></tr><tr><td><p>BrandSKURollback</p></td><td><p>Rollbacks registered SKU information if installation failure occurs.</p></td></tr><tr><td><p>CA_RestartServices_rollback</p></td><td><p>Restarts the stopped services.</p></td></tr><tr><td><p>RemoveSKURollback</p></td><td><p>Updates the SKU values from the registry.</p></td></tr><tr><td><p>BAM_Res_Perf_Silent</p></td><td><p>Registers Microsoft.BizTalk.Bam.EventObservation.dll as the BAM performance counter DLLs during silent installation.</p></td></tr><tr><td><p>BAM_Rollback_Perf</p></td><td><p>Unregisters  Microsoft.BizTalk.Bam.EventObservation.dll as the BAM performance counter DLL</p></td></tr><tr><td><p>RBKRegsvcsMQSAdapter</p></td><td><p>Runs regsvcs.exe on a given binary.</p></td></tr><tr><td><p>RBKRegsvcsSQLAdapter</p></td><td><p>Runs regsvcs.exe on a given binary.</p></td></tr><tr><td><p>RestoreBTSCounters</p></td><td><p>Restores the property with the performance counter .ini file name.</p></td></tr><tr><td><p>RollbackBTSCounters</p></td><td><p>Runs command unlodctr BTSSvc.3.0.</p></td></tr><tr><td><p>RollbackRegsvcsApplicationDeployment</p></td><td><p>Sets up [FrameworkPath]|[INSTALLDIR]Microsoft.BizTalk.ApplicationDeployment.Engine.dll for the failed installation scenarios.</p></td></tr><tr><td><p>RollbackRegsvcsDeployment</p></td><td><p>Invokes regsvcs.exe during uninstall/rollback scenarios.</p></td></tr><tr><td><p>WMI_Restore_MSBTS_Silent</p></td><td><p>Calls mofcomp to register WMI schemas</p></td></tr><tr><td><p>WMI_Rollback_MSBTS</p></td><td><p>Removes BizTalk Server namespace from WMI.</p></td></tr><tr><td><p>CA_RestartServices_commit</p></td><td><p>Restarts the stopped services</p></td></tr><tr><td><p>DevenvSetup</p></td><td><p>Runs DevEnv.exe /Setup /resetskippkgs both during BizTalk Server install/uninstall process. </p></td></tr><tr><td><p>ExecXmlConfig</p></td><td><p>Used to make configuration changes to machine.config for RFID related data.</p></td></tr><tr><td><p>ExecXmlConfigRollback</p></td><td><p>Used to make configuration changes to machine.config for RFID related data.</p></td></tr></table><h4 class="subHeading">Running BizTalk Components </h4><div class="subSection"><p>The following table lists BizTalk components that must be run using administrative privileges or with highest available privilege.</p><p><b></b></p><table><tr><th>
+													Folder path
+												</th><th>
+													File name
+												</th><th>
+													User privileges
+												</th></tr><tr><td><p>C:\Program Files (x86)\C ommon Files\Microsoft shared\Help 9\Microsoft Document Explorer 2008  </p></td><td><p>Install.exe</p></td><td><p>Highest available privilege</p></td></tr><tr><td><p>C:\Program Files (x86)\Microsoft BizTalk Server 20xx </p></td><td><p>BTSHatApp.exe </p></td><td><p>Highest available privilege</p></td></tr><tr><td><p>C:\Program Files (x86)\Microsoft BizTalk Server 20xx</p></td><td><p>BTSMMCLauncher.exe </p></td><td><p>Highest available privilege</p></td></tr><tr><td><p>C:\Program Files (x86)\Microsoft BizTalk Server 20xx</p></td><td><p>BtsWcfServicePublishingWizard.exe </p></td><td><p>Highest available privilege</p></td></tr><tr><td><p>C:\Program Files (x86)\Microsoft BizTalk Server 20xx</p></td><td><p>BTSWebSvcWiz.exe </p></td><td><p>Highest available privilege</p></td></tr><tr><td><p>C:\Program Files (x86)\Microsoft BizTalk Server 20xx</p></td><td><p>Configuration.exe </p></td><td><p>Highest available privilege</p></td></tr><tr><td><p>C:\Program Files (x86)\Microsoft BizTalk Server 20xx</p></td><td><p>REDeployWiz.exe </p></td><td><p>Highest available privilege</p></td></tr><tr><td><p>C:\Program Files (x86)\Microsoft BizTalk Server 20xx</p></td><td><p>Setup.exe </p></td><td><p>Administrative privilege </p></td></tr><tr><td><p>C:\Program Files (x86)\Microsoft BizTalk Server 20xx \XSD Schema\EDI  </p></td><td><p>MicrosoftEdiXSDTemplates.exe </p></td><td><p>Self-extracting .exe file. </p></td></tr><tr><td><p>C:\Program Files (x86)\Microsoft UDDI Services\config</p></td><td><p>Configuration .exe</p></td><td><p>Administrative privilege</p></td></tr><tr><td><p>C:\Program Files\ Microsoft BizTalk RFID\bin  </p></td><td><p>BTSMMCLauncher.exe</p></td><td><p>Highest available privilege</p></td></tr><tr><td><p>C:\Program Files\Microsoft BizTalk RFID\BREConfi guration </p></td><td><p>Configuration .exe</p></td><td><p>Administrative privilege</p></td></tr></table></div></div></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><A name="ID0ET3AG"></A>Copyright</h1><div id="sectionSection1" class="section"><p>Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in examples herein are fictitious.  No association with any real company, organization, product, domain name, e-mail address, logo, person, place, or event is intended or should be inferred.  Complying with all applicable copyright laws is the responsibility of the user.  Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation. </p><p></p><p>Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document.  Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.</p><p></p><p>© 2014 Microsoft Corporation. All rights reserved.</p><p></p><p>Microsoft, MS-DOS, Visual Studio, Windows, Windows Server, Windows 7, Windows 8, and BizTalk are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.</p><p></p><p>All other trademarks are property of their respective owners.</p></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p></td></tr></table></div><div id="footer"><hr></hr><p></p></div></div></body></html>

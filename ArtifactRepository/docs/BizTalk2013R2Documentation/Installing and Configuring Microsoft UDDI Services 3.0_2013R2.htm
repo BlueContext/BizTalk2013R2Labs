@@ -1,0 +1,759 @@
+﻿<html DIR="LTR" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink"><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8"></META><META NAME="save" CONTENT="history"></META><title>Installing and Configuring Microsoft UDDI Services 3.0</title><STYLE TYPE="text/css">
+/* RelNote */
+
+table#columnTable
+{
+    table-layout: fixed;
+    background:    #FFFFFF;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+td#EdgeBorderColumn
+{
+    width: 10px;
+    border: 0px;
+    margin: 0;    
+    height: 100%;
+    background-color:  #666666;
+}
+  
+td#ToCColumn
+{
+    background:    #FFFFFF;
+    width: 300px;
+    border: 0;
+    margin: 0;
+    vertical-align: top;
+    padding-left:    14px;
+    padding-right:   10px;
+    padding-top: 7px;
+    text-decoration: none;
+}
+
+td#contentColumn
+{
+    background:    #FFFFFF;	
+    border: 0;
+    margin: 0;
+    padding: 14px 5% 22px 10px;             		
+    vertical-align: top;
+    max-width: 590;	
+}
+
+.ToCLevel1
+{
+    font-weight: bold;
+    line-height: 140%;
+}
+
+.ToCLevel2
+{
+    margin-left: 8px;
+}
+	
+a
+{
+    color: #000000;
+}
+
+@media print
+{
+    P.TopOfPage
+    {
+    	margin: 5 0 18 0;		
+    }
+}
+
+@media screen
+{
+    P.TopOfPage
+    {
+    	margin: 0 0 18 0;		
+    }
+}
+
+#contentColumn A.TopOfPageLink
+{
+	text-decoration: none;	
+}
+
+#contentColumn A.TopOfPageLink:hover
+{
+    text-decoration: underline;
+}
+
+#ToCColumn A
+{
+    text-decoration: none;
+}
+
+#ToCColumn A:hover
+{
+    text-decoration: underline;
+}
+
+/* WSUA CHM presentation */
+
+
+/********/
+/* BODY */
+body
+{
+    background:#FFFFFF;
+    color:#000000;
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size:70%;
+    font-style:normal;
+    font-weight:normal;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    width:100%;
+    height: 100%;
+    border-style:none;
+    border-width:0;
+}
+
+
+/*********/
+/* LINKS */
+a
+{
+	color:#0000FF;
+}
+
+a:visited
+{
+	color:#0000FF;
+	text-decoration:underline;
+}
+
+a:link
+{
+	color:#0000FF;
+	text-decoration:underline;
+}
+
+a:hover
+{
+	color:#FF0000;
+	cursor:hand;
+	text-decoration:underline;
+}
+
+a:active
+{
+	color:#FF0000;
+	cursor:hand;
+	text-decoration:underline;
+}
+
+
+/************/
+/* SECTIONS */
+
+/* running header*/
+.runningHeader
+{
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+
+div#techCenterLink
+{
+	background-color:#5F5F5F;
+	color:#FFFFFF;
+	padding:5pt 12px 5pt 12px;
+	margin:0 0 0 0;
+	border-bottom:solid 1pt #919193;
+	width:100%;
+}
+
+div#techCenterLink a
+{
+	color:#FFFFFF;
+	text-decoration:underline;
+	cursor:hand;
+}
+
+div#techCenterLink a:active
+{
+	color:#FFFFFF;
+	text-decoration:underline;
+	cursor:hand;
+}
+
+/* title */
+div#header
+{
+	background-color:#666666;
+	padding:15 13 15 20;	
+	margin:0 0 0 0;
+	width:100%;
+	border-style: solid;
+	border-width: 1 0 0 0;
+	border-color: #333333;
+	vertical-align: middle;
+}
+
+div#header h1
+{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	color:#FFFFFF;
+	font-size:160%;
+}
+
+
+/* main section */
+div#mainSection
+{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	width:100%;
+        height: 100%;
+	border-width:0;
+}
+
+div#mainBody
+{
+	padding:0 9 0 0;
+	margin:0 0 0 0;
+	width:100%;
+        height: 100%;
+	border-style:none;
+	border-width:0;
+}
+
+
+/* footer */
+div#footer
+{
+	font-size:81%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	width:100%;
+	border:0;
+}
+
+
+/************/
+/* HEADINGS */
+div.section
+{
+	width:	100%;
+}
+
+.heading
+{
+	color:#000000;
+	margin:9px 0px 9px 0px;
+}
+
+h1.heading
+{
+	font-size:155%;
+}
+
+.subHeading
+{
+	color:#000000;
+	margin:9px 0px 9px 0px;
+}
+
+h3.subHeading
+{
+	font-size:130%;
+}
+
+td#ToCColumn h4.subHeading
+{
+	font-size:120%;
+}
+
+h4.subHeading
+{
+	font-size:110%;
+}
+
+h5.subHeading
+{
+	font-size:100%;
+}
+
+h6
+{
+	font-weight:normal;
+	font-size:100%;
+}
+
+img.procedure
+{
+	border: 0;
+	margin-right:8;
+}
+
+.howToHeadingTable
+{
+	background-color:Transparent;
+	border:0;
+	font-size:100%;
+	width:100%;
+}
+
+.howToHeadingImgCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding-bottom:0;
+	padding-top:3px;
+	padding-left:0;
+	padding-right:0;
+	vertical-align:top;
+	width:24px;
+}
+
+.howToHeadingTextCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	padding-left:0;
+	padding-right:0;
+	vertical-align:middle;
+}
+
+
+/**********/
+/* TABLES */
+table
+{
+	border:0;
+	font-size:100%;
+	margin:3 0 9 0;
+	width:100%;
+}
+
+th
+{
+	background-color:#DDDDDD;
+	vertical-align:bottom;
+	text-align:left;
+	font-weight:bold;
+	color:#000000;
+	padding:.2em;
+	padding-left:.45em;
+	padding-right:.5em;
+}
+
+td
+{
+	background-color:#EEEEEE;
+	vertical-align:top;
+	padding:.2em;
+	padding-left:.45em;
+	padding-right:.5em;
+}
+
+
+/**********/
+/* ALERTS */
+img.note
+{
+	border: 0;
+	margin-right:5;
+}
+
+span.alertTitle
+{
+	padding:0;
+	margin:0;
+	font-weight:bold;
+	vertical-align:text-bottom;
+	height:100px;
+	display:block;
+}
+
+.alertTable
+{
+	background-color:Transparent;
+	border:0;
+	font-size:100%;
+	margin:3 0 0 0;
+	width:85%;
+}
+
+.alertTable tr
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+.imgCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:top;
+	width:21px;
+}
+
+.txtCell
+{
+	background-color:Transparent;
+	font-weight:bold;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+.procHeadingCell
+{
+	background-color:Transparent;
+	font-weight:bold;
+	margin:0 0 0 0;
+	padding:1px 0 0 0;
+	vertical-align:middle;
+}
+
+.alertCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+p.alertImg
+{
+	border:0;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	vertical-align:top;
+	height:100%;
+	width:100%;
+}
+
+div.alert
+{
+	border:0;
+	/*padding-left:21px;*/
+	margin-right:15%;
+	width:100%;
+}
+
+div.alert ul
+{
+	margin:3px 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+/********/
+/* COMPUTEROUTPUT */
+div.computerOutput
+{
+	width: 98%;
+}
+div.computerOutput pre
+{
+    font-family:    Monospace, Courier New, Courier;
+    font-size: 105%;
+    color:  #000000;
+/*  word-wrap:  break-word;*/
+}
+
+computerOutput
+{
+    font-family:    Monospace, Courier New, Courier;
+    font-size: 105%;
+    color:  #000000;
+}
+
+
+/********/
+/* CODE */
+div.code
+{
+	padding:0;
+	margin:0;
+}
+
+div.code pre
+{
+	font-family:Courier New;
+	font-size:1.1em;
+	color:#000000;
+	padding:0;
+	margin:3 0 9 0;	
+	word-wrap: break-word;
+}
+
+code
+{
+	font-family:Courier New;
+	font-size:1.1em;
+	color:#000000;
+}
+
+
+/*********/
+/* LISTS */
+
+/* Definitions */
+dl
+{
+	margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+dt
+{
+    margin:3px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+dd
+{
+	margin-bottom:9px;
+    padding:0px 0px 0px 0px;
+}
+
+/* Lists */
+ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ul ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ol ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:decimal;
+}
+
+ol ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:lower-alpha;
+}
+
+ul ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:decimal;
+}
+
+li
+{
+	clear:both;
+	margin-bottom: 3;
+}
+
+
+/**************/
+/* PARAGRAPHS */
+p
+{
+    margin:3px 0px 9px 0px;
+}
+
+
+/*****************/
+/* MISCELLANEOUS */
+img.embedded
+{
+	padding:0;
+	margin:0;
+}
+
+img.selfstanding
+{
+	margin-top:3;
+	margin-bottom:9;
+}
+
+img.toggle
+{
+	border: 0;
+	margin-right: 5;
+}
+
+img#toggleAllImage
+{
+	margin-left: 4;
+	vertical-align: middle;
+}
+
+.tip
+{
+	font-style:italic;
+}
+
+.math
+{
+	font-family: Times New Roman;
+	font-size: 125%
+}
+
+.sourceCodeList
+{
+	font-family: Verdana;
+	font-size: 90%;	
+}
+
+pre.viewCode
+{
+	width: 100%;
+	overflow: auto;
+}
+
+/* * * End of file. * * */
+
+</STYLE>
+</head><body><a name="pagetop"></a><div id="header"><h1>Installing and Configuring Microsoft UDDI Services 3.0</h1></div><div id="mainSection"><div id="mainBody"><p class="runningHeader"></p><table cellspacing="0" id="columnTable"><tr><td id="EdgeBorderColumn" valign="top"></td><td id="ToCColumn" valign="top"><h4 class="subHeading"></h4><P class="ToCLevel1"><a href="#ID0EPB">About the Installation and Configuration Process</A></P><P class="ToCLevel2"><A href="#ID0E1B">Software Requirements</A></P><P class="ToCLevel2"><A href="#ID0E5C">Overview of Installation and Configuration Tasks</A></P><P class="ToCLevel2"><A href="#ID0ECH">Supported Deployment Configurations</A></P><P class="ToCLevel1"><A href="#ID0EYAAC">Installable Components</A></P><P class="ToCLevel1"><A href="#ID0ERDAC">Installing UDDI Services 3.0</A></P><P class="ToCLevel2"><A href="#ID0E4DAC">Configuring Windows Firewall</A></P><P class="ToCLevel2"><A href="#ID0EPGAC">Installing UDDI Services in Interactive Mode</A></P><P class="ToCLevel1"><A href="#ID0EGKAC">Configuring UDDI Services 3.0</A></P><P class="ToCLevel2"><A href="#ID0EJMAC">Basic Configuration</A></P><P class="ToCLevel2"><A href="#ID0EQOAC">Custom Configuration</A></P><P class="ToCLevel1"><A href="#ID0EWPAC">Installing and Configuring UDDI Services in Silent Mode</A></P><P class="ToCLevel1"><A href="#ID0EXDAE">Verifying UDDI Services 3.0</A></P><P class="ToCLevel1"><A href="#ID0EKFAE">Uninstalling UDDI Services 3.0</A></P><P class="ToCLevel1"><A href="#ID0EIKAE">Known Issues</A></P><P class="ToCLevel1"><A href="#ID0E4NAE">Copyright</A></P></td><td id="contentColumn" valign="top"><p>This document provides detailed instructions for installing and configuring UDDI Services 3.0 included with Microsoft BizTalk Server 2013 R2.</p><p>For information about installing and configuring BizTalk Server 2013 R2 see the installation guides at <a href="http://go.microsoft.com/fwlink/p/?LinkId=269585" alt="" target="_blank">http://go.microsoft.com/fwlink/p/?LinkId=269585</a></p><h1 class="heading"><A name="ID0EPB"></A>About the Installation and Configuration Process</h1><div id="sectionSection0" class="section"><p>This section provides an overview of the UDDI Services 3.0 installation and configuration process.</p><A name="ID0E1B"></A><h3 class="subHeading">Software Requirements</h3><div class="subSection"><p>This version requires the following software prerequisites prior to installing:</p><ul><li class="unordered">
+									
+										Windows Server 2012 R2, Windows Server 2012, Windows 7 SP1, Windows 8.1.<br /><br /></li><li class="unordered">
+									Internet Information Services (IIS). IIS 8.0 or IIS 7.5 is required for hosting the UDDI Web Application.<br /><br /></li><li class="unordered">
+									
+										.NET Framework 4.5 or .NET Framework 4.5.1<br /><br /></li><li class="unordered">
+									
+										SQL Server 2014 or SQL Server 2012 SP1. SQL Server Compact edition is not supported. SQL Server Express edition is supported only in a standalone installation. Windows Internal Database (WID) is not supported for this release of UDDI Services.<br /><br /></li></ul></div><A name="ID0E5C"></A><h3 class="subHeading">Overview of Installation and Configuration Tasks</h3><div class="subSection"><p>The following table provides an overview of the tasks needed to install and configure UDDI Services 3.0 on a new computer with no operating system installed. </p><p><b></b></p><table><tr><th>
+											Task
+										</th><th>
+											Notes
+										</th></tr><tr><td><p>Task 1: Install Windows operating system</p></td><td><p>After installing Windows, you must be logged on as an administrator to complete the full installation process of UDDI Services.</p></td></tr><tr><td><p>Task 2: Install critical updates for Windows</p></td><td><p>Install any high priority updates listed at the Windows Update Web site.</p></td></tr><tr><td><p>Task 3: Install Internet Information Services</p></td><td><p>You must enable following IIS features:</p><ul><li class="unordered">
+												ASP.NET<br /><br /></li><li class="unordered">
+												Basic Authentication<br /><br /></li><li class="unordered">
+												Windows Authentication<br /><br /></li><li class="unordered">
+												IIS Metabase Compatibility<br /><br /></li></ul></td></tr><tr><td><p>Task 4: Install SQL Server</p></td><td><p>When installing SQL Server:
+</p><ul><li class="unordered">
+												Install using default settings<br /><br /></li><li class="unordered">
+												A local SQL Server instance is required for installing UDDI Services Database Component<br /><br /></li></ul></td></tr><tr><td><p>Task 5: Install UDDI Services components</p></td><td><p>Default components are installed automatically. You can also choose optional components such as Notification Service.</p></td></tr><tr><td><p>Task 6: Configure UDDI Services components using UDDI Services Configuration Wizard</p></td><td><p>UDDI Services configuration wizard can be run in basic or custom mode.</p></td></tr></table></div><A name="ID0ECH"></A><h3 class="subHeading">Supported Deployment Configurations</h3><div class="subSection"><p>A basic installation requires an instance of the UDDI Services Database and one or multiple instances of the UDDI Services Web Application. If you choose to enable the optional notifications feature, an instance of Notification Service is also required. You can deploy UDDI Services as either a stand-alone installation or a distributed installation.</p><h4 class="subHeading">Stand Alone Installation</h4><div class="subSection"><p>In a stand-alone installation, all default and optional components are installed on a single server. An instance of SQL Server must be installed before installing UDDI Services. When installing UDDI Services, the local instance of SQL Server is used to host the UDDI Services Database. UDDI Services Web Application and Notification Service are then configured to use the local UDDI Services Database.
+</p></div><h4 class="subHeading">Distributed Installation</h4><div class="subSection"><p>If you require high-availability for UDDI Services, use a distributed installation. In a distributed installation, you install the UDDI Services Database, one or more instances of the UDDI Services Web Application, and the optional Notification Service on different servers. 
+You can set up UDDI Service Database on a clustered SQL Server. You must install and configure the UDDI Services Database component on both the active node and the passive node of the cluster, though the actual UDDI database is only created during the configuration on the active node. The recommended sequence is that you install and configure the UDDI Services Database component on the passive node first and then on the active node.</p><p>You can also set up a web farm that consists of multiple UDDI Services Web servers. You must install and configure the UDDI Services Web Application on each Web server box that is configured in the farm.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>For a distributed installation, Windows Firewall must be configured to allow Remote Access and Remote Administration.</p></td></tr></table></div></div></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><A name="ID0EYAAC"></A>Installable Components</h1><div id="sectionSection1" class="section"><p>This version of UDDI Services includes the following primary components:</p><p><b>Database component</b>: This component provides data storage services for a site using an instance of SQL Server. In addition to storing site data, the UDDI Services Database also stores all site-wide configuration settings, such as the name of a site, user group mappings, and all security settings for the site.</p><p><b>Web Application</b>: This component uses Internet Information Services. The Web user interface provides search, publishing, subscription, and coordination capabilities. This component provides support for the UDDI APIs and Windows Integrated Authentication, UDDI publisher authentication, or a combination of the two on both the Web UI and API interfaces. </p><p><b>Notification Service</b>: This Windows service component can send subscriber’s notifications of data changes in services registered in UDDI Services.</p><p><b>Administration Tools</b>: This component includes the following administration tools:</p><ul><li class="unordered">
+							UDDI Services Management Console: This MMC snap-in can be used to change the configuration settings of UDDI Services to customize runtime policies. For example, you can configure user groups for different roles or change the authentication method. You can launch UDDI Services Management console by clicking Start, point to All Programs, point to Microsoft UDDI Services, and then click UDDI Services Management Console.<br /><br /></li><li class="unordered">
+							Data Export Tool: A wizard that you can use to select providers or tModels that are hosted in a UDDI Services site and export their details to an XML file. You can run this tool by clicking Start, point to All Programs, point to Microsoft UDDI Services, point to UDDI Tools, and then click Data Export Tool.<br /><br /></li><li class="unordered">
+							Categorization Scheme Editor: A UI tool for creating and modifying categorization schemes that comply with UDDI Services. You can run this tool by clicking Start, point to All Programs, point to Microsoft UDDI Services, point to UDDI Tools, and then click Categorization Scheme Editor.<br /><br /></li><li class="unordered">
+							uddiconfig.exe: A command-line tool that applies configuration settings from an XML document to UDDI Services components or retrieves configuration settings from UDDI Services components and stores them in an XML document. This tool provides a command line interface to the same functionality that the UDDI Service MMC snap-in provides. This tool is located under the bin/ folder in the UDDI Services installation folder.<br /><br /></li><li class="unordered">
+							Backup.exe: A command-line tool that backs up or restores the UDDI Services Database. This tool is located under the bin/ folder in the UDDI Services installation folder.<br /><br /></li><li class="unordered">
+							Bootstrap.exe: A command-line tool that loads XML data such as exported UDDI data entities and categorization schemes into the UDDI Services Database. This tool is located under the bin/ folder in the UDDI Services installation folder.<br /><br /></li><li class="unordered">
+							Uddimigrate.exe: A command-line tool that enables data migration from a UDDI Service v2.0 site to a UDDI Service v3.0 site. This tool is located under the bin/ folder in the UDDI Services installation folder.<br /><br /></li></ul><p><b>Developer Tools and SDK</b>: The developer tools include the Publish Wizard tool, Digital signing tool, and UDDI Services software development kit.</p></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><A name="ID0ERDAC"></A>Installing UDDI Services 3.0</h1><div id="sectionSection2" class="section"><p></p><A name="ID0E4DAC"></A><h3 class="subHeading">Configuring Windows Firewall</h3><div class="subSection"><p>For a distributed installation of UDDI Services, you must configure Windows Firewall on each server to allow remote access. How to enable Windows Firewall will depend on the operating system and SQL Server.</p><p>To configure Windows Firewall for remote access on a SQL Server computer, see Configuring the Windows Firewall to Allow SQL Server Access
+at <a href="http://msdn.microsoft.com/en-us/library/cc646023.aspx" alt="" target="_blank">http://msdn.microsoft.com/en-us/library/cc646023.aspx</a>.</p><p>When installing UDDI Services you must enable Remote Administration.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To enable Remote Administration in Windows Firewall</b></td></tr></table><ol class="ordered"><li><p>In <b>Control Panel</b>, click <b>System and Security</b> and then click <b>Windows Firewall</b>.</p></li><li><p>Click <b>Allow a program or feature through Windows Firewall</b>, and then click <b>Change Settings</b>.</p></li><li><p>In the <b>Allowed programs and features</b> list, select the check box for <b>Remote Administration</b>.</p></li></ol></div><A name="ID0EPGAC"></A><h3 class="subHeading">Installing UDDI Services in Interactive Mode</h3><div class="subSection"><p>This section explains how to use the interactive setup to install and specify options and properties of UDDI Services on your computer.</p><p>Before you begin installation, ensure that your computer complies with the requirements listed in Software Prerequisites.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><p>Close all applications before running setup.</p></td></tr></table><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>There is no discernable difference in user instructions when running setup on x86 and\or 64-bit editions.</p></td></tr></table><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To install UDDI Services in Interactive Mode</b></td></tr></table><ol class="ordered"><li><p>From the BizTalk Server 2013 R2 installation media, run <b>Setup.exe</b>. From the splash screen, click <b>Install Microsoft UDDI Services</b>.</p></li><li><p>On the <b>Component Installation</b> page, in <b>Available Components</b>, select and click from the available components you want to install. </p></li><li><p>In <b>Install To:</b> specify a location to install UDDI Services components, and then click <b>Next</b>.</p></li><li><p>On the <b>Summary</b> page, review installation details and then click <b>Install</b>.</p></li></ol></div></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><A name="ID0EGKAC"></A>Configuring UDDI Services 3.0</h1><div id="sectionSection3" class="section"><p>After installing UDDI Services, you must use the Microsoft UDDI Services Configuration wizard to configure and enable components. The configuration wizard supports two modes: Basic or Custom. You can run Microsoft UDDI Services Configuration wizard in Basic mode immediately after running setup by selecting the <b>Launch Configuration Wizard</b> check box on the <b>Installation Completed</b> screen of the Installation Wizard. You can also run the Configuration Wizard at any time after installing UDDI Services by clicking the <b>Start</b> button and searching for <b>UDDI Services Configuration</b>.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>You can only run Custom configuration if you have already run either Basic or Custom configuration after installing UDDI Services.</p></td></tr></table><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><p>Secure Sockets Layer (SSL) encryption is automatically selected during Basic configuration of the UDDI Services Database Component. If you do not want to use SSL encryption, you can use Custom configuration to de-select the Require SSL for publication to this UDDI Services site option on the Configure UDDI Services Database Component page. When using SSL encryption with UDDI Services, you must configure a server certificate for the Internet Information Services (IIS) service that hosts the UDDI Services Web Application and then create an HTTPS binding for the web site. For more information about configuring server certificates on a Web server, see Configuring Server Certificates in IIS 7.0 at <a href="http://go.microsoft.com/fwlink/?LinkID=64327" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=64327</a>.</p></td></tr></table><A name="ID0EJMAC"></A><h3 class="subHeading">Basic Configuration</h3><div class="subSection"><p>Basic configuration is targeted for first-time users. Use this option to configure the server with default settings.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To configure UDDI Services using Basic Configuration</b></td></tr></table><ol class="ordered"><li><p>In <b>Database server name</b>, type the name of the server that hosts the UDDI database.</p></li><li><p>In <b>User name</b>, type the user name for the account that the services will run under. When using Basic configuration, all services will run under this account.</p></li><li><p>Click <b>Configure</b>.</p></li><li><p>On the <b>Summary</b>  screen, review configuration information, and then click <b>Next</b>.</p></li></ol></div><A name="ID0EQOAC"></A><h3 class="subHeading">Custom Configuration</h3><div class="subSection"><p>Custom configuration allows you to configure the server using advanced configuration options. With custom configuration, you can enable and disable features and customize settings.</p><p>Help for Custom configuration is provided in the online Help installed with UDDI Services. You can view information and procedures on how to use Custom configuration by clicking <b>Help</b> on the Microsoft UDDI Services Configuration tool menu.</p><p>You can run the Configuration Wizard in Custom configuration mode at any time after installing UDDI Services by clicking <b>Start</b>, point to <b>All Programs</b>, point to <b>Microsoft UDDI Services</b>, and then click <b>UDDI Services Configuration</b>.</p></div></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><A name="ID0EWPAC"></A>Installing and Configuring UDDI Services in Silent Mode</h1><div id="sectionSection4" class="section"><p>This section explains how to use the silent mode to install and setup different installer options and properties of UDDI on your computer. Using silent mode requires a custom XML configuration file.</p><p>Before you begin installation, ensure that your computer complies with all hardware, software, and security requirements.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><p>Close all applications before you begin installation.</p></td></tr></table><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To install UDDI Services in Silent Mode</b></td></tr></table><ol class="ordered"><li><p>Open a command prompt.</p></li><li><p>To start the silent installation, at the command prompt, type <b>Setup.exe /s &lt;xml config file&gt; /product uddi</b>, and then press <b>Enter</b>.</p></li></ol><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To configure UDDI Services in Silent Mode</b></td></tr></table><ol class="ordered"><li><p>Open a command prompt.</p></li><li><p>To start the silent installation, at the command prompt, type <b>Configuration.exe /s &lt;xml config file&gt;</b>, and then press <b>Enter</b>.</p></li></ol><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>You can export a custom configuration as an xml file. You can then use the custom configuration for identical silent installation and configuration on additional computers  To create your custom xml config file, perform a manual configuration using the UDDI Services Configuration wizard, verify the components are functioning as required, and then export the configuration to an XML file by clicking <b>File</b> menu in the configuration wizard, and then clicking <b>Export Configuration</b>.</p></td></tr></table><p><b>Sample UDDI Services xml config file:</b></p><div class="code"><pre>
+&lt;Configuration&gt;
+  &lt;Feature Name="UDDIDatabaseComponent" DisplayName="UDDI Database Component" Version="1.0" Description="Description" ConfigByDefault="true" ISDIRTY="true"&gt;
+    &lt;Name ID="UDDI_DB_DataLocation" DisplayName="Database Data Files L&amp;amp;ocation:" Description="for description" Hidden="false"&gt;
+      &lt;Value&gt;C:\Program Files (x86)\Microsoft UDDI Services\data\&lt;/Value&gt;
+    &lt;/Name&gt;
+    &lt;Name ID="UDDI_DB_LogLocation" DisplayName="Database &amp;amp;Log Files Location:" Description="for description" Hidden="false"&gt;
+      &lt;Value&gt;C:\Program Files (x86)\Microsoft UDDI Services\data\&lt;/Value&gt;
+    &lt;/Name&gt;
+    &lt;Name ID="UDDI_DB_SiteName" DisplayName="&amp;amp;Site Name:" Description="for description" Hidden="false"&gt;
+      &lt;Value&gt;UDDI&lt;/Value&gt;
+    &lt;/Name&gt;
+    &lt;Question ID="UDDI_DB_SSL" Text="Require the use of SSL for the &amp;amp;publication to this UDDI Services site" Answers="yes,no" Default="yes"&gt;
+      &lt;Answer Value="yes" GUID="{045B7725-AB68-41b6-81F1-8A1DB01FE4F3}" /&gt;
+      &lt;Answer Value="no" GUID="{560AB833-C57C-4461-B62A-33156E767233}" Selected="Yes" /&gt;
+    &lt;/Question&gt;
+    &lt;DatabaseInstance ID="UDDI_DB_Instance" DisplayName="S&amp;amp;QL Server Instance" Description="for description"&gt;
+      &lt;DatabaseInstanceName&gt;(Default)&lt;/DatabaseInstanceName&gt;
+    &lt;/DatabaseInstance&gt;
+  &lt;/Feature&gt;
+  &lt;Feature Name="UDDIWebApplication" DisplayName="UDDI Web Application" Version="1.0" Description="Description" ISDIRTY="true" ConfigByDefault="true"&gt;
+    &lt;SQL ID="UDDI_Web_Database" DisplayName="UDDI Database" Description="for description"&gt;
+      &lt;Server&gt;UDDITEST2K3X64&lt;/Server&gt;
+      &lt;Database&gt;UDDI3&lt;/Database&gt;
+      &lt;WindowsSecurity&gt;yes&lt;/WindowsSecurity&gt;
+      &lt;UserName /&gt;
+      &lt;Password /&gt;
+    &lt;/SQL&gt;
+    &lt;NTService ID="UDDI_Web_ServiceAccount" DisplayName="UDDI Application Pool Account" Description="for description"&gt;
+      &lt;UserName&gt;NETWORK SERVICE&lt;/UserName&gt;
+      &lt;Domain&gt;NT AUTHORITY&lt;/Domain&gt;
+      &lt;Password&gt;
+      &lt;/Password&gt;
+    &lt;/NTService&gt;
+    &lt;Question ID="UDDI_Web_SelfRegister" Text="Self-register services and bindings in A&amp;amp;ctive Directory Domain Services (AD DS)" Answers="yes,no" Default="yes"&gt;
+      &lt;Answer Value="yes" GUID="{A2C86C85-7C59-4c0c-A874-7275297940E8}" Selected="Yes" /&gt;
+      &lt;Answer Value="no" GUID="{A8C07E97-659B-4f0b-A68D-DB42C1337B55}" /&gt;
+    &lt;/Question&gt;
+    &lt;WebSite ID="UDDI_Web_WebSite" DisplayName="UDDI Services Web Si&amp;amp;te" Description="for description"&gt;
+      &lt;WebSiteName&gt;Default Web Site&lt;/WebSiteName&gt;
+    &lt;/WebSite&gt;
+  &lt;/Feature&gt;
+  &lt;Feature Name="UDDINotificationService" DisplayName="UDDI Notification Service" Version="1.0" Description="Description" ConfigByDefault="true" ISDIRTY="true"&gt;
+    &lt;SQL ID="UDDI_Notification_Database" DisplayName="UDDI Database" Description="for description"&gt;
+      &lt;Server&gt;UDDITEST2K3X64&lt;/Server&gt;
+      &lt;Database&gt;UDDI3&lt;/Database&gt;
+      &lt;WindowsSecurity&gt;yes&lt;/WindowsSecurity&gt;
+      &lt;UserName /&gt;
+      &lt;Password /&gt;
+    &lt;/SQL&gt;
+    &lt;NTService ID="UDDI_Notification_ServiceAccount" DisplayName="UDDI Notification Service Account" Description="for description"&gt;
+      &lt;UserName&gt;NETWORK SERVICE&lt;/UserName&gt;
+      &lt;Domain&gt;NT AUTHORITY&lt;/Domain&gt;
+      &lt;Password&gt;
+      &lt;/Password&gt;
+    &lt;/NTService&gt;
+    &lt;Name ID="UDDI_Notification_SMTPServer" DisplayName="&amp;amp;SMTP Server:" Description="for description" Hidden="false"&gt;
+      &lt;Value&gt;smtphost&lt;/Value&gt;
+    &lt;/Name&gt;
+    &lt;Name ID="UDDI_Notification_EmailAddress" DisplayName="E-mail add&amp;amp;ress:" Description="for description" Hidden="false"&gt;
+      &lt;Value&gt;lping@microsoft.com&lt;/Value&gt;
+    &lt;/Name&gt;
+    &lt;Question ID="UDDI_Notification_SMTPAuthentication" Text="Anon&amp;amp;ymous authentication;Windows au&amp;amp;thentication using the windows service credentials;&amp;amp;Basic authentication" Answers="0,1,2" Default="0"&gt;
+      &lt;Answer Value="0" GUID="{513F1301-F23F-43f9-872B-13D219577A3E}" Selected="Yes" /&gt;
+      &lt;Answer Value="1" GUID="{37F818D8-B771-4483-89C3-A36F3A1BE708}" /&gt;
+      &lt;Answer Value="2" GUID="{50EC986A-9694-4b82-B143-62271C2BD8B5}" /&gt;
+    &lt;/Question&gt;
+    &lt;Name ID="UDDI_Notification_UserName" DisplayName="User &amp;amp;name:" Description="for description" Hidden="false"&gt;
+      &lt;Value /&gt;
+    &lt;/Name&gt;
+    &lt;Name ID="UDDI_Notification_Password" DisplayName="Passw&amp;amp;ord:" Description="for description" Hidden="false"&gt;
+      &lt;Value /&gt;
+    &lt;/Name&gt;
+    &lt;Name ID="UDDI_Notification_ConfirmPassword" DisplayName="Confir&amp;amp;m password:" Description="for description" Hidden="false"&gt;
+      &lt;Value /&gt;
+    &lt;/Name&gt;
+  &lt;/Feature&gt;
+  &lt;InstalledFeature&gt;UDDIDatabaseComponent&lt;/InstalledFeature&gt;
+  &lt;InstalledFeature&gt;UDDIWebApplication&lt;/InstalledFeature&gt;
+  &lt;InstalledFeature&gt;UDDINotificationService&lt;/InstalledFeature&gt;
+  &lt;InstalledFeature&gt;UDDIAdministrationTools&lt;/InstalledFeature&gt;
+  &lt;InstalledFeature&gt;UDDIDeveloperToolsAndSDK&lt;/InstalledFeature&gt;
+&lt;/Configuration&gt;
+</pre></div></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><A name="ID0EXDAE"></A>Verifying UDDI Services 3.0</h1><div id="sectionSection5" class="section"><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To verify UDDI Services 3.0 is installed correctly</b></td></tr></table><ol class="ordered"><li><p>Log on to the server hosting the UDDI web application.</p></li><li><p>Open Internet Explorer using "Run as Administrator".</p></li><li><p>Type <b>http://&lt;local host name&gt;/uddi</b>, and then hit <b>Enter</b>. If UDDI Services is installed correctly, you will see the <b>Welcome to Microsoft UDDI Services</b> page.</p></li></ol></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><A name="ID0EKFAE"></A>Uninstalling UDDI Services 3.0</h1><div id="sectionSection6" class="section"><p>To uninstall UDDI Services and all its components, follow these steps in the order shown.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><p>Do not remove prerequisites before you remove UDDI Services.</p></td></tr></table><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To uninstall UDDI Services</b></td></tr></table><ol class="ordered"><li><p>Open <b>Control Panel</b>, and then click <b>Programs and Features</b>.</p></li><li><p>In the <b>Programs and Features</b> dialog box, click <b>Microsoft UDDI Services</b>, and then click <b>Uninstall</b>.</p></li></ol><conclusion xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"><table class="alertTable" cellspacing="0" cellpadding="0" xmlns=""><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>Windows Installer runs a validation at the beginning of the uninstallation process. If any of the files to uninstall are open or are being used by another process, you will be asked to restart your computer after uninstalling UDDI Services 3.0.</p></td></tr></table></conclusion><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To remove UDDI Services databases on SQL Server</b></td></tr></table><ol class="ordered"><li><p>Start <b>SQL Server Management Studio</b>.</p></li><li><p>In <b>Object Explorer</b>, expand <b>Databases</b>.</p></li><li><p>Remove the <b>UDDI3</b> database.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>If you configured the server using Custom configuration and modified the database names, you will need to remove those databases.</p></td></tr></table></li></ol></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><A name="ID0EIKAE"></A>Known Issues</h1><div id="sectionSection7" class="section"><ul><li class="unordered"><b>Installation of UDDI Services 2.0 over UDDI Services 3.0 is not supported</b><br /><br />
+							You can install UDDI Services 2.0 over UDDI Services 3.0, but it corrupts the configured UDDI Services 3.0 in the computer. To get UDDI Services 3.0 fixed, you need to carry out the following procedure:<br /><br /><ol class="ordered"><li>
+									Uninstall all the UDDI Services 2.0 using Server Manager in Windows Server 2008 R2/SP2.<br /><br /></li><li>
+									Launch <i>Setup.exe</i> in the UDDI Services 3.0 installation package, select <b>Repair</b> option and then follow the wizard to complete the Installation.<br /><br /></li><li>
+									In the Installation completion window, uncheck <b>Launch UDDI Services Configuration Wizard</b> and click <b>Finish</b>.<br /><br /></li><li>
+									In the command prompt, Run <i>%ProgramFiles%\Microsoft UDDI Services\bin\backup.exe &lt;SQL Server instance&gt;</i> command to back up the UDDI v3 database.<br /><br /></li><li>
+									Remove the UDDI3 database from the database server using Microsoft SQL Server Management Studio.<br /><br /></li><li>
+									Launch the configuration wizard tool and re-configure the installed components.<br /><br /></li><li>
+									In the command prompt, Run <i>%ProgramFiles%\Microsoft UDDI Services\bin\backup.exe /restore &lt;SQL Server instance&gt;</i> command to restore the UDDI v3 database.<br /><br /></li></ol></li><li class="unordered"><b>UDDI web application cannot work alongside SharePoint Services if both are installed to the Default web site.</b><br /><br /><b>Workaround:</b> Configure SharePoint Services on a non-default website and UDDI Services on the default website.<br /><br /></li><li class="unordered"><b>Uninstalling UDDI services might cause issues</b><br /><br />
+							While removing UDDI Services, the BizTalk configuration window might fail to open with the error <code>Failed to create object of feature: WMI</code>. Also, after you have removed UDDI Services, removing BizTalk Server might fail with error 1722. To fix these issues, you must repair the BizTalk Server installation.<br /><br /></li></ul></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><A name="ID0E4NAE"></A>Copyright</h1><div id="sectionSection8" class="section"><p>Information in this document, including URL and other Internet Web site references, is subject to change without notice.  Unless otherwise noted, the companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in examples herein are fictitious.  No association with any real company, organization, product, domain name, e-mail address, logo, person, place, or event is intended or should be inferred.  Complying with all applicable copyright laws is the responsibility of the user.  Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation. </p><p>Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document.  Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.</p><p>© 2014 Microsoft Corporation. All rights reserved.</p><p>Microsoft, Active Directory, BizTalk, IntelliSense, JScript, MSDN, Visual Basic, Visual C#, Visual C++, Visual Studio, Win32, Windows, Windows Server, Windows Server System, and Windows Vista are trademarks of the Microsoft group of companies.</p><p>All other trademarks are property of their respective owners.</p></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p></td></tr></table></div><div id="footer"><hr></hr><p></p><a href=".htm" target="_blank"></a></div></div></body></html>

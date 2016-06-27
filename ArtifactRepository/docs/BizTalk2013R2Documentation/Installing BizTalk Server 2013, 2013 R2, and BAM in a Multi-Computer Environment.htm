@@ -1,0 +1,792 @@
+﻿<html DIR="LTR" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink"><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8"></META><META NAME="save" CONTENT="history"></META><title>Installing BizTalk Server 2013, 2013 R2, and BAM in a Multi-Computer Environment</title><STYLE TYPE="text/css">
+/* RelNote */
+
+table#columnTable
+{
+    table-layout: fixed;
+    background:    #FFFFFF;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+td#EdgeBorderColumn
+{
+    width: 10px;
+    border: 0px;
+    margin: 0;    
+    height: 100%;
+    background-color:  #666666;
+}
+  
+td#ToCColumn
+{
+    background:    #FFFFFF;
+    width: 300px;
+    border: 0;
+    margin: 0;
+    vertical-align: top;
+    padding-left:    14px;
+    padding-right:   10px;
+    padding-top: 7px;
+    text-decoration: none;
+}
+
+td#contentColumn
+{
+    background:    #FFFFFF;	
+    border: 0;
+    margin: 0;
+    padding: 14px 5% 22px 10px;             		
+    vertical-align: top;
+    max-width: 590;	
+}
+
+.ToCLevel1
+{
+    font-weight: bold;
+    line-height: 140%;
+}
+
+.ToCLevel2
+{
+    margin-left: 8px;
+}
+	
+a
+{
+    color: #000000;
+}
+
+@media print
+{
+    P.TopOfPage
+    {
+    	margin: 5 0 18 0;		
+    }
+}
+
+@media screen
+{
+    P.TopOfPage
+    {
+    	margin: 0 0 18 0;		
+    }
+}
+
+#contentColumn A.TopOfPageLink
+{
+	text-decoration: none;	
+}
+
+#contentColumn A.TopOfPageLink:hover
+{
+    text-decoration: underline;
+}
+
+#ToCColumn A
+{
+    text-decoration: none;
+}
+
+#ToCColumn A:hover
+{
+    text-decoration: underline;
+}
+
+/* WSUA CHM presentation */
+
+
+/********/
+/* BODY */
+body
+{
+    background:#FFFFFF;
+    color:#000000;
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size:70%;
+    font-style:normal;
+    font-weight:normal;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    width:100%;
+    height: 100%;
+    border-style:none;
+    border-width:0;
+}
+
+
+/*********/
+/* LINKS */
+a
+{
+	color:#0000FF;
+}
+
+a:visited
+{
+	color:#0000FF;
+	text-decoration:underline;
+}
+
+a:link
+{
+	color:#0000FF;
+	text-decoration:underline;
+}
+
+a:hover
+{
+	color:#FF0000;
+	cursor:hand;
+	text-decoration:underline;
+}
+
+a:active
+{
+	color:#FF0000;
+	cursor:hand;
+	text-decoration:underline;
+}
+
+
+/************/
+/* SECTIONS */
+
+/* running header*/
+.runningHeader
+{
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+
+div#techCenterLink
+{
+	background-color:#5F5F5F;
+	color:#FFFFFF;
+	padding:5pt 12px 5pt 12px;
+	margin:0 0 0 0;
+	border-bottom:solid 1pt #919193;
+	width:100%;
+}
+
+div#techCenterLink a
+{
+	color:#FFFFFF;
+	text-decoration:underline;
+	cursor:hand;
+}
+
+div#techCenterLink a:active
+{
+	color:#FFFFFF;
+	text-decoration:underline;
+	cursor:hand;
+}
+
+/* title */
+div#header
+{
+	background-color:#666666;
+	padding:15 13 15 20;	
+	margin:0 0 0 0;
+	width:100%;
+	border-style: solid;
+	border-width: 1 0 0 0;
+	border-color: #333333;
+	vertical-align: middle;
+}
+
+div#header h1
+{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	color:#FFFFFF;
+	font-size:160%;
+}
+
+
+/* main section */
+div#mainSection
+{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	width:100%;
+        height: 100%;
+	border-width:0;
+}
+
+div#mainBody
+{
+	padding:0 9 0 0;
+	margin:0 0 0 0;
+	width:100%;
+        height: 100%;
+	border-style:none;
+	border-width:0;
+}
+
+
+/* footer */
+div#footer
+{
+	font-size:81%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	width:100%;
+	border:0;
+}
+
+
+/************/
+/* HEADINGS */
+div.section
+{
+	width:	100%;
+}
+
+.heading
+{
+	color:#000000;
+	margin:9px 0px 9px 0px;
+}
+
+h1.heading
+{
+	font-size:155%;
+}
+
+.subHeading
+{
+	color:#000000;
+	margin:9px 0px 9px 0px;
+}
+
+h3.subHeading
+{
+	font-size:130%;
+}
+
+td#ToCColumn h4.subHeading
+{
+	font-size:120%;
+}
+
+h4.subHeading
+{
+	font-size:110%;
+}
+
+h5.subHeading
+{
+	font-size:100%;
+}
+
+h6
+{
+	font-weight:normal;
+	font-size:100%;
+}
+
+img.procedure
+{
+	border: 0;
+	margin-right:8;
+}
+
+.howToHeadingTable
+{
+	background-color:Transparent;
+	border:0;
+	font-size:100%;
+	width:100%;
+}
+
+.howToHeadingImgCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding-bottom:0;
+	padding-top:3px;
+	padding-left:0;
+	padding-right:0;
+	vertical-align:top;
+	width:24px;
+}
+
+.howToHeadingTextCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	padding-left:0;
+	padding-right:0;
+	vertical-align:middle;
+}
+
+
+/**********/
+/* TABLES */
+table
+{
+	border:0;
+	font-size:100%;
+	margin:3 0 9 0;
+	width:100%;
+}
+
+th
+{
+	background-color:#DDDDDD;
+	vertical-align:bottom;
+	text-align:left;
+	font-weight:bold;
+	color:#000000;
+	padding:.2em;
+	padding-left:.45em;
+	padding-right:.5em;
+}
+
+td
+{
+	background-color:#EEEEEE;
+	vertical-align:top;
+	padding:.2em;
+	padding-left:.45em;
+	padding-right:.5em;
+}
+
+
+/**********/
+/* ALERTS */
+img.note
+{
+	border: 0;
+	margin-right:5;
+}
+
+span.alertTitle
+{
+	padding:0;
+	margin:0;
+	font-weight:bold;
+	vertical-align:text-bottom;
+	height:100px;
+	display:block;
+}
+
+.alertTable
+{
+	background-color:Transparent;
+	border:0;
+	font-size:100%;
+	margin:3 0 0 0;
+	width:85%;
+}
+
+.alertTable tr
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+.imgCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:top;
+	width:21px;
+}
+
+.txtCell
+{
+	background-color:Transparent;
+	font-weight:bold;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+.procHeadingCell
+{
+	background-color:Transparent;
+	font-weight:bold;
+	margin:0 0 0 0;
+	padding:1px 0 0 0;
+	vertical-align:middle;
+}
+
+.alertCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+p.alertImg
+{
+	border:0;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	vertical-align:top;
+	height:100%;
+	width:100%;
+}
+
+div.alert
+{
+	border:0;
+	/*padding-left:21px;*/
+	margin-right:15%;
+	width:100%;
+}
+
+div.alert ul
+{
+	margin:3px 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+/********/
+/* COMPUTEROUTPUT */
+div.computerOutput
+{
+	width: 98%;
+}
+div.computerOutput pre
+{
+    font-family:    Monospace, Courier New, Courier;
+    font-size: 105%;
+    color:  #000000;
+/*  word-wrap:  break-word;*/
+}
+
+computerOutput
+{
+    font-family:    Monospace, Courier New, Courier;
+    font-size: 105%;
+    color:  #000000;
+}
+
+
+/********/
+/* CODE */
+div.code
+{
+	padding:0;
+	margin:0;
+}
+
+div.code pre
+{
+	font-family:Courier New;
+	font-size:1.1em;
+	color:#000000;
+	padding:0;
+	margin:3 0 9 0;	
+	word-wrap: break-word;
+}
+
+code
+{
+	font-family:Courier New;
+	font-size:1.1em;
+	color:#000000;
+}
+
+
+/*********/
+/* LISTS */
+
+/* Definitions */
+dl
+{
+	margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+dt
+{
+    margin:3px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+dd
+{
+	margin-bottom:9px;
+    padding:0px 0px 0px 0px;
+}
+
+/* Lists */
+ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ul ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ol ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:decimal;
+}
+
+ol ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:lower-alpha;
+}
+
+ul ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:decimal;
+}
+
+li
+{
+	clear:both;
+	margin-bottom: 3;
+}
+
+
+/**************/
+/* PARAGRAPHS */
+p
+{
+    margin:3px 0px 9px 0px;
+}
+
+
+/*****************/
+/* MISCELLANEOUS */
+img.embedded
+{
+	padding:0;
+	margin:0;
+}
+
+img.selfstanding
+{
+	margin-top:3;
+	margin-bottom:9;
+}
+
+img.toggle
+{
+	border: 0;
+	margin-right: 5;
+}
+
+img#toggleAllImage
+{
+	margin-left: 4;
+	vertical-align: middle;
+}
+
+.tip
+{
+	font-style:italic;
+}
+
+.math
+{
+	font-family: Times New Roman;
+	font-size: 125%
+}
+
+.sourceCodeList
+{
+	font-family: Verdana;
+	font-size: 90%;	
+}
+
+pre.viewCode
+{
+	width: 100%;
+	overflow: auto;
+}
+
+/* * * End of file. * * */
+
+</STYLE>
+</head><body><a name="pagetop"></a><div id="header"><h1>Installing BizTalk Server 2013, 2013 R2, and BAM in a Multi-Computer Environment</h1></div><div id="mainSection"><div id="mainBody"><p class="runningHeader"></p><table cellspacing="0" id="columnTable"><tr><td id="EdgeBorderColumn" valign="top"></td><td id="ToCColumn" valign="top"><h4 class="subHeading"></h4><P class="ToCLevel1"><A href="#ID0EWF">High Availability</A></P><P class="ToCLevel1"><A href="#ID0EWG">Separate Runtime and Administration</A></P><P class="ToCLevel1"><A href="#ID0EGAAC">Enable Distributed Transaction Coordinator</A></P><P class="ToCLevel1"><A href="#ID0EGCAC">SQL Server Considerations</A></P><P class="ToCLevel2"><A href="#ID0E4DAC">Supported SQL Server Topologies</A></P><P class="ToCLevel2"><A href="#ID0EJIAC">Maintain and troubleshoot BizTalk Server databases</A></P><P class="ToCLevel1"><A href="#ID0E5IAC">Business Activity Monitoring (BAM)</A></P><P class="ToCLevel2"><A href="#ID0EGMAC">Install BAM</A></P><P class="ToCLevel2"><A href="#ID0E2CAE">Configure BAM</A></P><P class="ToCLevel2"><A href="#ID0EZDAE">Install and Configure SQL Server for BAM</A></P><P class="ToCLevel2"><A href="#ID0EUVAE">BAM Portal</A></P><P class="ToCLevel2"><A href="#ID0EFWAE">Enable BAM Add-in from Excel</A></P><P class="ToCLevel2"><A href="#ID0EWWAE">Configure Multiple BizTalk Groups to Reference a Single BAM Database</A></P><P class="ToCLevel2"><A href="#ID0EL2AE">BAM Client Software Requirements</A></P><P class="ToCLevel1"><A href="#ID0EL3AE">Windows Groups and Service Accounts</A></P><P class="ToCLevel2"><A href="#ID0EI5AE">Windows Groups Used In BizTalk Server</A></P><P class="ToCLevel2"><A href="#ID0EQGAG">User and Service Accounts Used In BizTalk Server</A></P><P class="ToCLevel1"><A href="#ID0EJOAG">Databases Used by BizTalk Server</A></P><P class="ToCLevel1"><A href="#ID0EL2AG">Install BizTalk Server in a Multiple Server environment</A></P><P class="ToCLevel1"><A href="#ID0EL6AG">Considerations for clustering BizTalk Server in a Multiple Server environment</A></P><P class="ToCLevel1"><A href="#ID0EMDBG">Use SCOM to Monitor BizTalk Server</A></P><P class="ToCLevel1"><A href="#ID0E4DBG">Copyright</A></P></td><td id="contentColumn" valign="top"><p>Provides a multi-computer installation overview of BizTalk Server 2013 R2, BizTalk Server 2013, and BAM. Specifically:</p><ul><li class="unordered"><a href="#BKMK_HighAvail" xmlns:tool="http://www.microsoft.com/tooltip">High Availability</a><br /><br /></li><li class="unordered"><a href="#BKMK_Separate" xmlns:tool="http://www.microsoft.com/tooltip">Separate Runtime and Administration</a><br /><br /></li><li class="unordered"><a href="#BKMK_DTC" xmlns:tool="http://www.microsoft.com/tooltip">Enable Distributed Transaction Coordinator</a><br /><br /></li><li class="unordered"><a href="#BKMK_SQL" xmlns:tool="http://www.microsoft.com/tooltip">SQL Server Considerations</a><br /><br /></li><li class="unordered"><a href="#BKMK_BAM" xmlns:tool="http://www.microsoft.com/tooltip">Business Activity Monitoring (BAM)</a><br /><br /></li><li class="unordered"><a href="#BKMK_Groups" xmlns:tool="http://www.microsoft.com/tooltip">Windows Groups and Service Accounts</a><br /><br /></li><li class="unordered"><a href="#BKMK_Databases" xmlns:tool="http://www.microsoft.com/tooltip">Databases Used by BizTalk Server</a><br /><br /></li><li class="unordered"><a href="#BKMK_InstallBTS" xmlns:tool="http://www.microsoft.com/tooltip">Install BizTalk Server in a Multiple Server environment</a><br /><br /></li><li class="unordered"><a href="#BKMK_Cluster" xmlns:tool="http://www.microsoft.com/tooltip">Considerations for clustering BizTalk Server in a Multiple Server environment</a><br /><br /></li><li class="unordered"><a href="#BKMK_SCOM" xmlns:tool="http://www.microsoft.com/tooltip">Use SCOM to Monitor BizTalk Server</a><br /><br /></li></ul><p>There are many things to consider when planning a multicomputer installation of Microsoft® BizTalk® Server. Often the network infrastructure exists and BizTalk Server must coexist with other network applications. This guide describes some of the considerations that apply to the BizTalk Server and Business Activity Monitoring (BAM) installation in a multicomputer, distributed deployment. This information helps you plan the installation and configuration of BizTalk Server and Business Activity Monitoring (BAM) and the applications and components it depends on.</p><p>To ensure that you are reading the most up-to-date information, you can download the latest version of this document from <a href="http://go.microsoft.com/fwlink/p/?LinkID=269582" alt="" target="_blank">Installation Guides Related to BizTalk Server 2013</a> (http://go.microsoft.com/fwlink/p/?LinkID=269582). The single server installation guide is available at <a href="http://go.microsoft.com/fwlink/p/?LinkID=320162" alt="" target="_blank">http://go.microsoft.com/fwlink/p/?LinkID=320162</a>. The single server installation guide contains important procedures and more background information that is not duplicated in this document. For example, the following information is discussed in detail in the single server installation guide:</p><ul><li class="unordered">
+						Detailed installation procedures<br /><br /></li><li class="unordered">
+						Descriptions of BizTalk Server features and dependencies<br /><br /></li><li class="unordered">
+						Details of BizTalk Server basic configuration settings<br /><br /></li><li class="unordered">
+						Software and hardware requirements<br /><br /></li><li class="unordered">
+						CAB file redistributable component list<br /><br /></li></ul><a name="BKMK_HighAvail" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0EWF"></A>High Availability</h1><div id="sectionSection0" class="section"><p>BizTalk Server provides a high availability solution that uses network load balancing (NLB) clustering and failover clustering. A high availability solution helps minimize the downtime if there is a hardware or software failure. NLB and failover clusters complement each other in complex architectures. NLB clustering is used for to load balance requests between front-end web servers. Failover clustering provides high availability for the BizTalk Server in-process hosts, the Enterprise Single Sign-On Master Secret Server and BizTalk Server databases.</p><p>For more information, see: </p><p><a href="http://social.technet.microsoft.com/wiki/contents/articles/6532.biztalk-server-high-availability-survival-guide.aspx" alt="" target="_blank">BizTalk Server: High Availability Survival Guide</a></p><p><a href="http://go.microsoft.com/fwlink/p/?LinkId=154499" alt="" target="_blank">Improving Fault Tolerance in BizTalk Server by Using a Windows Server 2008 failover cluster or Windows Server 2003 server cluster</a></p></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_Separate" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0EWG"></A>Separate Runtime and Administration</h1><div id="sectionSection1" class="section"><p>BizTalk Server supports various installation scenarios in the production environment. For example, you can install, configure, and deploy a runtime-only installation on one computer and an administration tools-only installation on a second computer.</p><p>During an Administration tools-only installation, the following components are installed: BizTalk Administration console, BM.exe, and BTSDeploy.exe. Consider the following when creating an Administration Tools-only BizTalk Server installation:</p><ul><li class="unordered">
+							SQL Server Agent must be running on all computers that are hosting BizTalk Server MessageBox databases. SQL Server Agent is required to track message bodies in the BizTalk Server Messaging engine.<br /><br /></li><li class="unordered">
+							When you run the BizTalk Server Configuration Wizard, you create an Analysis Services database.<br /><br /></li><li class="unordered">
+							Using the BizTalk Tracking database with SQL Server Analysis Services is not supported.<br /><br /></li><li class="unordered">
+							Using named instances of SQL Server Analysis Services is not supported.<br /><br /></li></ul><p>To install only Administration tools for BizTalk Server, select only <b>Administration Tools</b> during Setup. After the installation is complete, open the custom configuration manager and join an existing Enterprise Single Sign-On (SSO) system and BizTalk group.</p></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_DTC" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0EGAAC"></A>Enable Distributed Transaction Coordinator</h1><div id="sectionSection2" class="section"><p>Before installing and configuring BizTalk Server in a multicomputer environment, enable network DTC access and network COM+ access on all BizTalk servers and any remote SQL Server instances used by BizTalk Server. See <a href="http://technet.microsoft.com/library/jj248704(v=bts.80).aspx" alt="" target="_blank">Post-installation Steps for BizTalk Server 2013</a> (http://technet.microsoft.com/library/jj248704(v=bts.80).aspx).</p><p><b>Additional</b>:</p><ul><li class="unordered">
+							All BizTalk servers and SQL Servers in a group must have the same remote procedure call (RPC) authentication level applied. The DTC proxy may not correctly authenticate DTC when the computers use different operating systems, are joined to workgroups, or are in different domains that do not trust each other. See <a href="http://go.microsoft.com/fwlink/p/?LinkId=220974" alt="" target="_blank">MSDTC Fails to Mutually Authenticate</a> (http://go.microsoft.com/fwlink/p/?LinkId=220974) in the DTC Administrator's Guide.<br /><br /></li><li class="unordered">
+							If using a firewall, open the required DTC and RPC ports. See <a href="http://support.microsoft.com/kb/832017" alt="" target="_blank">Service overview and network port requirements for Windows</a> (http://support.microsoft.com/kb/832017).<br /><br /></li><li class="unordered">
+							To ensure that the DTC settings are correct, use the DTC Tester and DTC Ping tools. These tools and more DTC troubleshooting are described at <a href="http://go.microsoft.com/fwlink/p/?LinkID=313651" alt="" target="_blank">BizTalk Server - Troubleshooting Problems with MSDTC</a> (http://go.microsoft.com/fwlink/p/?LinkID=313651).<br /><br /></li></ul></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_SQL" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0EGCAC"></A>SQL Server Considerations</h1><div id="sectionSection3" class="section"><p>When SQL Server is installed on a remote computer:</p><ul><li class="unordered">
+							SQL Server Client Tools Connectivity must be installed on the local BizTalk Server computer when SQL Server is remote. The SQL Server Client Tools Connectivity installs the client libraries required to communicate with the remote instance of SQL Server. The version of the SQL Server Client Connectivity tools on the local BizTalk Server computer must be the same version that is installed on the remote SQL Server.<br /><br /></li><li class="unordered">
+							SQL Server OLAP client must be installed on the local computer if you plan to use Analysis Services remotely.<br /><br /></li><li class="unordered">
+							The remote SQL Server must be running during BizTalk Server configuration.<br /><br /></li><li class="unordered">
+							The TCP and UDP ports you specified during the SQL Server setup process must be open during BizTalk Server configuration.<br /><br /></li><li class="unordered">
+							To configure BAM tools, install SQL Server Management Tools - Basic and Complete on the BizTalk BAM Server. For more information about setting up and configuring BAM in a multi-computer environment, see <a href="http://go.microsoft.com/fwlink/p/?LinkID=208597" alt="" target="_blank">Install and Configure BAM (Business Activity Monitoring) in a Multi-Computer Environment</a> (http://go.microsoft.com/fwlink/p/?LinkID=208597).  <br /><br /></li><li class="unordered">
+							Named instances of SQL Server Analysis Services are not supported.<br /><br /></li></ul><A name="ID0E4DAC"></A><h3 class="subHeading">Supported SQL Server Topologies</h3><div class="subSection"><p>The following are the supported configurations for using SQL Server with BizTalk Server 2013 R2 and BizTalk Server 2013:</p><p><b></b></p><table><tr><th>
+											Location of SQL Server in relation to BizTalk Server
+										</th><th>
+											
+												BizTalk Server 2013 R2
+											
+										</th><th>
+											BizTalk Server 2013
+										</th></tr><tr><td><p>
+											SQL Server 2014: Installed locally on the BizTalk Server</p></td><td><p>Yes</p></td><td><p>No</p></td></tr><tr><td><p>
+											SQL Server 2014: Installed on a remote computer</p></td><td><p>Yes</p></td><td><p>No</p></td></tr><tr><td><p>
+											SQL Server 2012: Installed locally on the BizTalk Server</p></td><td><p>Yes</p></td><td><p>Yes</p></td></tr><tr><td><p>
+											SQL Server 2012: Installed on a remote computer</p></td><td><p>Yes</p></td><td><p>Yes</p></td></tr><tr><td><p>
+											SQL Server 2008 R2 SP1: Installed locally on the BizTalk Server</p></td><td><p>No</p></td><td><p>Yes</p></td></tr><tr><td><p>
+											SQL Server 2008 R2 SP1: Installed on a remote computer</p></td><td><p>No</p></td><td><p>Yes</p></td></tr></table><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><p>Any additional service packs and Windows Updates are supported and should be installed.</p></td></tr></table></div><A name="ID0EJIAC"></A><h3 class="subHeading">Maintain and troubleshoot BizTalk Server databases</h3><div class="subSection"><p>See <a href="http://support.microsoft.com/kb/952555" alt="" target="_blank">How to maintain and troubleshoot BizTalk Server databases</a> (http://support.microsoft.com/kb/952555).</p></div></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_BAM" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0E5IAC"></A>Business Activity Monitoring (BAM)</h1><div id="sectionSection4" class="section"><p>BizTalk Server provides several tools for information workers, among them BAM. A basic understanding of the component architecture helps you plan the BizTalk Server installation to utilize the server resources available to you.</p><p>Business Activity Monitoring (BAM) is a collection of tools used to manage aggregations, alerts, and profiles to monitor relevant business metrics, known as key performance indicators or KPIs.<br />BAM is a module that gives you end-to-end visibility into your business processes to provides information about the status and results of various operational processes and transactions. You can use the BAM output to address problem areas and resolve issues within your business.  For more information about BAM life cycle, see Business Activity Monitoring (BAM) poster at <a href="http://go.microsoft.com/fwlink/p/?LinkId=120003" alt="" target="_blank">http://go.microsoft.com/fwlink/p/?LinkId=120003</a>.</p><p>BAM consists of the following layers:</p><p><b></b></p><table><tr><th>
+									Layer
+								</th><th>
+									What it does
+								</th><th>
+									Examples
+								</th><th>
+									Where installed
+								</th></tr><tr><td><p>Presentation and Tools</p></td><td><p>Provides front-end services to business users and developers. Displays data, allows business users and developers define and manage templates and profiles; among other functions.</p></td><td><p>Office Excel, BAM Portal.</p></td><td><p>Excel, management tools, and custom user interfaces are installed on the business user's or developer's workstation. The BAM portal and custom web applications built on the BAM infrastructure are installed on a server.</p></td></tr><tr><td><p>Web Services and Processing</p></td><td><p>Link the presentation and database layers; implementation of business rules and processes; data aggregation and analysis.</p></td><td><p>Windows SharePoint Services (WSS), Trading Partner Management Web Service, BAM Management Web Service, and the BizTalk Server engine.</p></td><td><p>On a server with IIS, SQL Notification service, and possibly custom web services, depending on the application. The BizTalk host services can also be installed on this server, or on a separate server in multiple computer configuration that has three or more computers.</p></td></tr><tr><td><p>Database and Platform Services</p></td><td><p>Data storage and retrieval; security and authentication; networking; operating system functions</p></td><td><p>SQL Server, Windows Server, Enterprise Single Sign-On (SSO), and fail-over and NLB clustering</p></td><td><p>On a server with Windows Server, SQL Server. For performance reasons, this server typically does not run the BizTalk host services.</p></td></tr></table><A name="ID0EGMAC"></A><h3 class="subHeading">Install BAM</h3><div class="subSection"><p><b>Step-by-step guide</b>: <a href="http://go.microsoft.com/fwlink/p/?LinkID=208597" alt="" target="_blank">Install and Configure BAM (Business Activity Monitoring) in a Multi-Computer Environment</a> (http://go.microsoft.com/fwlink/p/?LinkID=208597)</p><p>It is easier to understand BAM, the installation and configuration process, and dependencies by splitting into three BizTalk Server environments described in the following table:</p><p><b></b></p><table><tr><th>
+											Runtime Environment 
+										</th><th>
+											Design-time Environment 
+										</th><th>
+											Usage-time Environment
+										</th></tr><tr><td><p>A basic BizTalk Server runtime environment can include the following servers: </p><ul><li class="unordered">
+												BizTalk Server<br /><br /></li><li class="unordered">
+												SQL Server<br /><br /></li><li class="unordered">
+												BizTalk BAM Server<br /><br /></li><li class="unordered">
+												Web Server<br /><br /></li></ul></td><td><p>There are three roles involved during the BAM development and deployment process. Roles include:  </p><ul><li class="unordered">
+												Business analyst <br /><br /></li><li class="unordered">
+												Business administrator<br /><br /></li><li class="unordered">
+												Application developer<br /><br /></li></ul></td><td><p>After a BAM solution is implemented and deployed, business end users can view the reports generated by various reporting tools. These tools include</p><ul><li class="unordered">
+												BAM Portal <br /><br /></li><li class="unordered">
+												SQL Server Reporting Services<br /><br /></li><li class="unordered">
+												Microsoft PerformancePoint Monitoring Server<br /><br /></li><li class="unordered">
+												Custom BAM reporting applications<br /><br /></li></ul></td></tr></table><p>The following table describes the BAM components to install:</p><p><b></b></p><table><tr><th>
+											Category 
+										</th><th>
+											BAM Component
+										</th><th>
+											Purpose
+										</th></tr><tr><td><p>Portal Components</p></td><td><p>Business Activity Monitoring</p></td><td><p>Selecting the Business Activity Monitoring component installs the software that gives business users a real-time view of their heterogeneous business processes, enabling them to make important business decisions.</p></td></tr><tr><td><p>Additional Software</p></td><td><p>BAM Alerts</p></td><td><p>Installs the necessary software that enables BizTalk Server to provide Business Activity Monitoring (BAM) alerts.</p><p>BAM Alerts on BizTalk Server 2013 R2 uses SQL Server Database Mail. SQL Notification Services is not used or supported.</p><p>BAM Alerts on BizTalk Server 2013 with SQL Server 2012 uses SQL Notification Services. BAM Alerts on BizTalk Server 2013 with SQL Server 2008 R2 uses SQL Notification Services.</p></td></tr><tr><td><p></p></td><td><p>BAM Client</p></td><td><p>Selecting the BAM Client component installs the necessary client-side software that allows business users to work with the Business Activity Monitoring feature of BizTalk Server.</p></td></tr><tr><td><p></p></td><td><p>BAM-Eventing</p></td><td><p>Select the BAM-Eventing Support component installs the software for the BAM-Eventing Interceptors for Windows Workflow Foundation and Windows Communication Foundation. Selecting this component also installs the BAM Event API that is used to send events to the BAM database from custom applications. BAM-Eventing Support is part of the Business Activity Monitoring feature in BizTalk Server.</p></td></tr></table></div><A name="ID0E2CAE"></A><h3 class="subHeading">Configure BAM</h3><div class="subSection"><p><b>Step-by-step guide</b>: <a href="http://go.microsoft.com/fwlink/p/?LinkID=208597" alt="" target="_blank">Install and Configure BAM (Business Activity Monitoring) in a Multi-Computer Environment</a> (http://go.microsoft.com/fwlink/p/?LinkID=208597)</p><p>Open BizTalk Server Configuration and choose Custom Configuration. In Custom Configuration, you can configure advanced options and selectively configure or unconfigure each feature. See <a href="http://technet.microsoft.com/library/aa547917(v=bts.80).aspx" alt="" target="_blank">Custom Configuration</a> (http://technet.microsoft.com/library/aa547917(v=bts.80).aspx).</p></div><A name="ID0EZDAE"></A><h3 class="subHeading">Install and Configure SQL Server for BAM</h3><div class="subSection"><p><a href="http://msdn.microsoft.com/library/jj248697(v=bts.80).aspx" alt="" target="_blank">Hardware and Software Requirements for BizTalk Server 2013 and 2013 R2</a> lists the supported SQL Server versions. To install SQL Server, see <a href="http://technet.microsoft.com/library/jj248684(v=bts.80).aspx" alt="" target="_blank">BizTalk Server 2013: Preparing Your Computer for Installation</a> (http://technet.microsoft.com/library/jj248684(v=bts.80).aspx).</p><p>In addition to Database Services that required by the BizTalk Server core functions, BAM also requires the following:</p><ul><li class="unordered">
+									SQL Server Analysis Services (SSAS)<br /><br /></li><li class="unordered">
+									SQL Server Integration Services (SSIS)<br /><br /></li><li class="unordered">
+									SQL Server Database Mail or SQL Server Notification Services (SSNS)<br /><br /></li></ul><p><b>Configure SQL Server Integration Services (SSIS)</b>: If your SQL Server is installed on a computer other than the BizTalk Server, then configure SSIS. In this task, you configure the SSIS to use the msdb database on a remote SQL Server.</p><ol class="ordered"><li>
+									Open a Command Prompt.<br /><br /></li><li>
+									Change directory to %ProgramFiles%\Microsoft SQL Server\100\DTS\Binn.<br /><br /></li><li>
+									Run the following command:  <b>notepad MsDtsSrvr.ini.xml</b><br /><br /></li><li>
+									In Notepad, update the text inside the “&lt;ServerName&gt;” tag to the host name of the SQL Server. Save your changes.<br /><br /></li><li>
+									From the Command Prompt, execute the following command: <b>net stop MsDtsServer</b><br /><br /></li><li>
+									From the Command Prompt, execute the following command: <b> net start MsDtsServer</b><br /><br /></li></ol><p><b>Additional</b>:</p><ul><li class="unordered">
+									By default, the Integration Services service is configured to manage packages that are stored in the msdb database in a local, default instance of Database Engine. To manage packages that are stored in a named instance or a remote instance of the Database Engine, or in multiple instances of the Database Engine, modify the configuration file. For example, you can create more root folders of the type, SqlServerFolder, to manage packages in the msdb database of multiple instances of the Database Engine.If the service stops, you can also modify the configuration file to allow packages to continue running. This option displays more root folders in Object Explorer, or specifies a different folder or more folders in the file system managed by Integration Services service.<br /><br /></li><li class="unordered">
+									The registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTS\ServiceConfigFile specifies the location and name for the configuration file that Integration Services service uses. The default value of the registry key is C:\Program Files\Microsoft SQL Server\100\DTS\Binn\ MsDtsSrvr.ini.xml. You can update the value of the registry key to use a different name and location for the configuration file.<br /><br /></li></ul><h4 class="subHeading">Configure BAM Primary Import, BAM Archive, BAM Star Schema, BAM Analysis, and BAM Notification Services Application databases</h4><div class="subSection"><p>You can configure BAM Primary Import, BAM Archive, BAM Star Schema, BAM Analysis, and BAM Notification Services Application databases on different computers. The following are the software requirements when SQL Server is installed on a computer other than the BizTalk Server:</p><p><b></b></p><table><tr><th>
+													BAM feature
+												</th><th>
+													Feature configuration
+												</th><th>
+													BizTalk Server
+												</th><th>
+													SQL Server
+												</th></tr><tr><td><p>BAM Tools</p></td><td><p>BAM Primary Import Tables and BAM Archive database</p></td><td><p>ADOMD.NET SQL Server Integration Services</p></td><td><p>
+													SQL Server version listed at <a href="http://msdn.microsoft.com/library/jj248697(v=bts.80).aspx" alt="" target="_blank">Hardware and Software Requirements for BizTalk Server 2013 and 2013 R2</a>.</p></td></tr><tr><td><p>BAM Tools</p></td><td><p>Enable Analysis Services for BAM aggregations</p></td><td><p>
+													SQL Server Integration Services</p></td><td><p>
+													SQL Server Analysis Services</p></td></tr><tr><td><p>BAM Notification Services Application Database</p></td><td><p>BAM Alerts</p></td><td><p>BAM Alerts</p><p>Requirements listed at <a href="http://msdn.microsoft.com/library/jj248684(v=bts.80).aspx" alt="" target="_blank">Preparing Your Computer for Installation</a>.</p></td><td><p>If using SQL Server 2012 or SQL Server 2014, configure SQL Server Database Mail. If using SQL Server 2008 R2, install SQL Server 2005 Notification Services Engine Components.</p><p>The BAM Alerts requirements are documented at <a href="http://msdn.microsoft.com/library/jj248684(v=bts.80).aspx" alt="" target="_blank">Preparing Your Computer for Installation</a>.</p></td></tr></table><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>The service account used for the OLAP service should have db_datareader permissions on the BAM Star Schema database.</p></td></tr></table></div><h4 class="subHeading">Notification Services – BizTalk 2013 / SQL Server 2008 R2 Only</h4><div class="subSection"><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><p>This section only applies if SQL Server 2008 R2 is used.</p></td></tr></table><p>You can install SQL Server Notification Services in a multicomputer environment where the Provider, Generator, and Distributor roles of Notification Services are on different computers. The following describes the dependencies in that scenario:</p><ul><li class="unordered">
+											The AggregationEventProvider.dll should be installed on the computer that hosts the Provider role. This .dll file is installed when you install the BAM Alerts Aggregate Event Provider during the installation of BizTalk Server. The BAM Alerts Aggregate Event Provider is present if the BizTalk Runtime, Administration Tools, or Developer Tools and SDK are installed.<br /><br /></li><li class="unordered">
+											EmailNotification.xslt and FileNotification.xslt are required on the computer that hosts the Distributor role. You can copy the files in the following path from an existing BizTalk Server:
+&lt;System Drive&gt;:\Program Files\Microsoft BizTalk Server 2013\Tracking<br /><br /></li><li class="unordered">
+											Update the Notification Services Application definition file (.adf file) with the exact location of the .xslt files on the computer that hosts the Distributor role. <br /><br /><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To update the Application definition file (.adf file)</b></td></tr></table><ol class="ordered"><li><p>On the computer where BizTalk Server is installed, open the Notification Services command prompt.</p></li><li><p>Browse to <i>&lt;System Drive&gt;</i>:\Program Files\Microsoft BizTalk Server 2013\Tracking.</p></li><li><p>Execute ProcessBamNsFiles.vbs to create the initial .adf file.</p></li><li><p>Modify the .adf file with the path to the .xslt file.</p></li><li><p>Execute ProcessBamNsFiles.vbs again to update the .adf file.</p></li><li><p>Restart the BAMAlerts NT service.</p></li></ol></li></ul><div class="subSection"><h5 class="subHeading">BAM Scale-Out Alerts Topology</h5><p>If you are upgrading your existing BAM scale-out alerts topology to BizTalk Server 2013, then do the following steps on each server:</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b></b></td></tr></table><ol class="ordered"><li><p>Stop the Notification Service and then unregister an instance of Notification Service:</p><ol class="ordered"><li><p>In <b></b><b>Programs</b>, click <b>Microsoft SQL Server 2005</b>, click <b>Configuration Tools</b>, and then click <b>Notification Services Command Prompt</b>.</p></li><li><p>At the command prompt, type: <b>net stop NS$</b><i>&lt;instance_name&gt;</i>. For example, type: <b>net stop NS$BamAlerts</b>.</p></li><li><p>To unregister the instance, type the following command: <b> nscontrol unregister -name BamAlerts</b>. <br />Unregistering an instance removes the registry entries, removes the NS$instance_name service (if present), and deletes the performance counters for the service.</p></li></ol></li><li><p>Upgrade your servers that have Notification Services instances to a higher edition of SQL Server 2005 Notification Services.</p><p>Click or navigate to the <a href="http://go.microsoft.com/fwlink/?LinkID=154501" target="_blank" alt="" target="_blank">Feature Pack for Microsoft SQL Server 2005 - December 2008</a> (http://go.microsoft.com/fwlink/?LinkID=154501).</p></li><li><p>To migrate your BAM databases based on the SQL Server version you are upgrading from, run the migration database command bm.exe program located in the BizTalk Server Tracking folder. For example, if SQL Server 2005 is upgraded to SQL Server 2008 R2, run the following in the command prompt with administrative credentials: <b>bm.exe migrate-sql –From:sql2005 –To:sql2008 –NSUser:&lt;username&gt;</b>.</p></li><li><p>Reregister the Notification Service on all the servers except the server where the migration program (bm.exe) is being used.</p><ol class="ordered"><li><p>Click <b>Start</b>, click <b>Programs</b>, click <b>Microsoft SQL Server 2005</b>, click <b>Configuration Tools</b>, and then click <b>Notification Services Command Prompt</b>.</p></li><li><p>At the command prompt, type: <b>nscontrol register -name BamAlerts -server</b> &lt;NS DB Server&gt; -<b>service -serviceusername</b> "&lt;NSServiceUserName&gt;" <b>-servicepassword</b> "&lt;NSServicePassword&gt;"<br /> This enables Notification Services to log on to the correct database (this information is maintained in the registry of the service computer by nscontrol).</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><p>Remember to use the new Notification Services database server in the <b>-server</b> option when re-registering the service. In addition, use the same user name for the new Notification Services service as the old one.</p></td></tr></table></li></ol></li><li><p>Validate the BAM alerts: Open the <b>Notification Services Command Prompt</b> and type: <b>nscontrol.exe status –name BAMAlerts –server</b> &lt;NS DB Server&gt;.</p></li></ol></div></div></div><A name="ID0EUVAE"></A><h3 class="subHeading">BAM Portal</h3><div class="subSection"><p>The Portal Components are a set of services used by business people to communicate, collaborate, and make decisions that enable them to interact, configure, and monitor business processes and workflows. To use this feature, install Internet Information Services (IIS). <a href="http://msdn.microsoft.com/library/jj248684(v=bts.80).aspx" target="_blank" alt="" target="_blank">Preparing Your Computer for Installation</a> lists the IIS requirements.</p></div><A name="ID0EFWAE"></A><h3 class="subHeading">Enable BAM Add-in from Excel</h3><div class="subSection"><p>See <a href="http://msdn.microsoft.com/library/aa559526.aspx" alt="" target="_blank">Add the BAM Add-In to Microsoft Office Excel</a> (http://msdn.microsoft.com/library/aa559526.aspx).</p></div><A name="ID0EWWAE"></A><h3 class="subHeading">Configure Multiple BizTalk Groups to Reference a Single BAM Database</h3><div class="subSection"><p>Share the BAM databases across multiple BizTalk groups:</p><ol class="ordered"><li>
+									Configure the first BizTalk group with the BAM features. These features include BAM tools, the BAM Analysis database, BAM alerts, and the BAM portal.<br /><br /></li><li>
+									Configure the subsequent BizTalk groups and do the following in the BizTalk Server Configuration Wizard:<br /><br /><ol class="ordered"><li>
+											Select <b>BAM Tools</b> and then select the <b>Enable Business Activity Monitoring tools</b> and <b>Enable Analysis Services for BAM aggregations</b> check boxes.<br /><br /></li><li>
+											Change the <b>Server Name</b> and <b>Database Name</b> of the BAM data stores to match the same names used when configuring the first BizTalk group.<br /><br /></li><li>
+											Select <b>BAM Alerts</b> and then select <b>Enable BAM alerts</b>.<br /><br /></li><li>
+											Change the service account for BAM Alerts so it's a blank user name and password.<br /><br /></li><li>
+											Change the <b>BAM Alerts SMTP Server</b>, <b>BAM Alerts File Location</b>, <b>SQL Server for Alerts Database</b>, and <b>Prefix for Alerts Database Names</b> to match the same names used when configuring the first BizTalk group.<br /><br /><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>The same Primary Import Tables (PIT) can be used but with different BAM Archive, BAM Analysis, and Star Schema databases. However, this option impacts all groups that use the same PIT.</p></td></tr></table></li></ol></li><li>
+									Select <b>BAM Portal</b>, and then select the <b>Enable BAM Portal</b> check box.<br /><br /><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>All the fields on this screen are read-only because there is a one-to-one relationship between the BAM Primary Import database and the BAM portal. Multiple BizTalk groups share the BAM portal when configured against the same BAM databases.</p></td></tr></table></li><li>
+									Click <b>Apply Configuration</b>.<br /><br /></li></ol></div><A name="ID0EL2AE"></A><h3 class="subHeading">BAM Client Software Requirements</h3><div class="subSection"><ul><li class="unordered">
+									For the web client, you need Internet Explorer 8.0 or later and Office Web Components 11 version 4.0 or later.<br /><br /></li><li class="unordered">
+									If you are running the web client and using SQL Server 2008 R2 Analysis Services, install Microsoft SQL Server 2008 R2 Analysis Services 10.0 OLE DB Provider. <br /><br /></li><li class="unordered">
+									For the Excel client, you need Microsoft Excel® and the BAM Excel Add-in provided with BizTalk Server.<br /><br /></li></ul></div></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_Groups" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0EL3AE"></A>Windows Groups and Service Accounts</h1><div id="sectionSection5" class="section"><p>Manually create all of the domain groups and accounts before you configure BizTalk Server in a multicomputer installation. The following information is useful in creating these groups and accounts.</p><ul><li class="unordered">
+							In a multicomputer environment, BizTalk Server supports only domain groups and domain service accounts. <br /><br /></li><li class="unordered">
+							BizTalk Server supports only &lt;NetBIOSDomainName&gt;\&lt;User&gt; name formats for Windows groups and service accounts.<br /><br /></li><li class="unordered">
+							BizTalk Server supports only Active Directory domain groups and user accounts in multicomputer configurations. Domain groups include Domain Local groups, Global groups, and Universal groups, which are supported in both single computer and multicomputer environments.<br /><br /></li><li class="unordered">
+							In general, Domain Local Groups are not recommended because their use requires that all of the servers, including SQL Servers, in the BizTalk Server infrastructure belong to the same domain. This consideration does not apply to small networks where all of the servers and user accounts reside in a single domain. For more information about Active Directory groups, see <a href="http://technet.microsoft.com/library/cc733001.aspx" alt="" target="_blank">http://technet.microsoft.com/library/cc733001.aspx</a>.<br /><br /></li><li class="unordered">
+							Built-in accounts such as NT AUTHORITY\LOCAL SERVICE, NT AUTHORITY\NETWORK SERVICE, NT AUTHORITY\SERVICE, NT AUTHORITY\SYSTEM, and Everyone are not supported when you install and configure BizTalk Server in a multicomputer environment.<br /><br /></li><li class="unordered">
+							The user that runs the BizTalk Server configuration must belong to the following user groups: the Administrators group on the local computer, the System Administrators group on the SQL Server computer, the domain group used for the BizTalk Server Administrators group, and the domain group used for the SSO Administrators group.<br /><br /></li><li class="unordered">
+							Whenever possible, use the default account names created during setup. The BizTalk Server setup program automatically configures installed components to use the default accounts. Using the default names simplifies setup and configuration, but it is not always possible. For example, there can be multiple BizTalk Server groups within an Active Domain forest. In this situation, the account names must be modified to avoid conflicts. Or, your organization might use naming standards for service and user accounts so you change the default accounts to conform to the standard.<br /><br /></li></ul><A name="ID0EI5AE"></A><h3 class="subHeading">Windows Groups Used In BizTalk Server</h3><div class="subSection"><p>The following table lists the Windows groups and their membership used by BizTalk Server. It also identifies the SQL Server Roles or Database Roles for the group.</p><p><b></b></p><table><tr><th>
+											Group
+										</th><th>
+											Group Description
+										</th><th>
+											Membership
+										</th><th>
+											SQL Server Roles or Database Roles
+										</th></tr><tr><td><p>SSO Administrators</p></td><td><p>Administrator of the Enterprise Single Sign-On (SSO) service.For more information about SSO accounts, see "How to Specify SSO Administrator and Affiliate Administrators Accounts" at <a href="http://go.microsoft.com/fwlink/?LinkID=89383" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=89383</a>.</p></td><td><p>Contains service accounts for Enterprise Single Sign-On service. Contains users/groups that need to be able to configure and administer BizTalk Server and SSO service.Contains accounts used to run BizTalk Configuration Manager when configuring SSO master secret server.</p></td><td><p>db_owner SQL Server Database Role for the SSO.</p><p>securityadmin SQL Server Role for the SQL Server where SSO is located.</p></td></tr><tr><td><p>SSO Affiliate Administrators</p></td><td><p>Administrators of certain SSO affiliate applications. Can create/delete SSO affiliate applications, administer user mappings, and set credentials for affiliate application users.</p></td><td><p>Contains no service accounts. Contains account used for BizTalk Server Administrators.</p></td><td><p></p></td></tr><tr><td><p>BizTalk Server Administrators</p></td><td><p>Has the fewest privileges necessary to perform administrative tasks. Can deploy solutions, manage applications, and resolve message processing issues. To perform administrative tasks for adapters, receive and send handlers, and receive locations, the BizTalk Server Administrators must be added to the Single Sign-On Affiliate Administrators. For more information, see "Managing BizTalk Server Security" in at <a href="http://go.microsoft.com/fwlink/?linkid=110476" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=110476</a>.</p></td><td><p>Contains users/groups that need to be able to configure and administer BizTalk Server.</p></td><td><p>BTS_ADMIN_USERS SQL Server Database Role in the following databases:BizTalkMgmtDb,  BizTalkMsgBoxDb,  BizTalkRuleEngineDb,  BizTalkDTADb,  BAMPrimaryImport.  db_owner SQL Server Database Role for the following databases:BAMStarSchema, BAMPrimaryImport, BAMArchive, BAMAlertsApplication, BAMAlertsNSMain. NSAdmin SQL Server Database Role in the following databases: BAMAlertsApplication, BAMAlertsNSMain. SQL Server Database Role in the following databases: BizTalkDTADb, BizTalkMgmtDb. OLAP Administrators on the computer that hosts the BAMAnalysis OLAP database.</p></td></tr><tr><td><p>BizTalk Server Operators</p></td><td><p>Has a low privilege role with access only to monitoring and troubleshooting actions.</p></td><td><p>Contains user/groups that monitor solutions. Contains no service accounts.</p></td><td><p>BTS_OPERATORS SQL Server Database Role in the following databases: BizTalkDTADb, BizTalkEDIDb, BizTalkMgmtDb, BizTalkMsgBoxDb, BizTalkRuleEngineDb.</p></td></tr><tr><td><p>BizTalk Application Users</p></td><td><p>The default name of the first In-Process BizTalk Host Group created by Configuration Manager. Use one BizTalk Host Group for each In-Process host in your environment. Includes accounts with access to In-Process BizTalk Hosts (hosts processes in BizTalk Server, BTSNTSvc.exe).</p></td><td><p>Contains service accounts for the BizTalk In-Process host instance in the host that the BizTalk Host Group is designated for.</p></td><td><p>BTS_HOST_USERS SQL Server Database Role in the following databases:BizTalkMgmtDb, BizTalkMsgBoxDb, BizTalkRuleEngineDb, BizTalkDTADb, BAMPrimaryImport. BAM_EVENT_WRITER SQL Server Database Role in the BAMPrimaryImport.</p></td></tr><tr><td><p>BizTalk Isolated Host Users</p></td><td><p>The default name of the first Isolated BizTalk Host Group created by Configuration Manager. Isolated BizTalk hosts not running on BizTalk Server, such as HTTP and SOAP. Use one BizTalk Isolated Host Group for each Isolated Host in your environment.</p></td><td><p>Contains service accounts for the BizTalk Isolated host instance in the host that the Isolated BizTalk Host Group is designated for.</p></td><td><p>BTS_HOST_USERS SQL Server Database Role in the following databases: BizTalkMgmtDb, BizTalkMsgBoxDb, BizTalkRuleEngineDb, BizTalkDTADb, BAMPrimaryImport.</p></td></tr><tr><td><p>EDI Subsystem Users</p></td><td><p>Has access to the EDI database.</p></td><td><p>Contains service accounts for BizTalk Base EDI service.</p></td><td><p>EDI_ADMIN_USERS SQL Server Database Role in the BizTalkEDIDb.</p></td></tr><tr><td><p>BAM Portal Users</p></td><td><p>Has access to BAM Portal website.</p></td><td><p>Everyone group is used for this role by default.Contains no service accounts.</p></td><td><p></p></td></tr><tr><td><p>BizTalk SharePoint Adapter Enabled Hosts</p></td><td><p>Has access to Windows SharePoint Services Adapter Web Service.</p></td><td><p>Contains service accounts for the BizTalk host instance to use the SharePoint Adapter.</p></td><td><p></p></td></tr><tr><td><p>BizTalk B2B Operators Group</p></td><td><p>A new BizTalk role that reduces the onus on the Administrators to perform all Party management operation. This role allows windows users associated with the role to perform all party management operations.</p></td><td><p>Contains users/groups that must be able to configure and administer BizTalk Server TPM data and monitor solutions.</p></td><td><p>BTS_OPERATORS SQL Server Database Role in the following databases: BizTalkDTADb, BizTalkMgmtDb, BizTalkMsgBoxDb, BizTalkRuleEngineDb, and BAMPrimaryImport</p></td></tr></table></div><A name="ID0EQGAG"></A><h3 class="subHeading">User and Service Accounts Used In BizTalk Server</h3><div class="subSection"><p>The following table lists the Windows user or service accounts and group affiliations used by BizTalk Server. It also identifies the SQL Server Roles or Database Roles for the accounts.</p><p><b></b></p><table><tr><th>
+											User
+										</th><th>
+											User Description
+										</th><th>
+											Group Affiliation
+										</th><th>
+											SQL Server Roles or Database Roles
+										</th></tr><tr><td><p>Enterprise Single Sign-On Service</p></td><td><p>Service account used to run Enterprise Single Sign-On Service, which accesses the SSO database.</p></td><td><p>SSO Administrators</p></td><td><p></p></td></tr><tr><td><p>BizTalk Host Instance Account</p></td><td><p>Service account used to run BizTalk In-Process host instance (BTNTSVC).</p></td><td><p>BizTalk Application Users</p></td><td><p></p></td></tr><tr><td><p>BizTalk Isolated Host Instance Account</p></td><td><p>Service account used to run BizTalk Isolated host instance (HTTP/SOAP).</p></td><td><p>BizTalk Isolated Host UsersIIS_WPG</p></td><td><p></p></td></tr><tr><td><p>Rule Engine Update Service</p></td><td><p>Service account used to run Rule Engine Update Service, which receives notifications to deployment/undeployment policies from the Rule engine database.</p></td><td><p></p></td><td><p>RE_HOST_USERS SQL Server Database Role in the BizTalkRuleEngineDb.</p></td></tr><tr><td><p>BizTalk Base EDI service</p></td><td><p>Service account used to run BizTalk Base EDI service, which processes EDI documentations.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><p>The Base EDI adapter was deprecated in BizTalk Server 2006 R2. The Base EDI adapter can be used in upgrade scenarios, but for new installations of BizTalk Server, use the native EDI and AS2 functionality.</p></td></tr></table></td><td><p>EDI Subsystem UsersIn-Process BizTalk Host Groups hosting the Base EDI adapter.</p></td><td><p></p></td></tr><tr><td><p>BAM Notification Services User</p></td><td><p>Service account used to run BAM Notification Services, which accesses the BAM databases.</p></td><td><p>SQLServer2005NotificationServicesUser$&lt;ComputerName&gt;</p></td><td><p>NSRunService SQL Server Database Role in the following databases:BAMAlertsApplication, BAMAlertsNSMain.  BAM_ManagementNSReader SQL Server role for the BAMPrimaryImport.</p></td></tr><tr><td><p>BAM Management Web Service User</p></td><td><p>User account for BAM Management Web service (BAMManagementService) to access various BAM resources. BAM Portal calls BAMManagementService with the user credentials logged on the BAM Portal to manage alerts, get BAM definition XML and BAM views.</p></td><td><p>IIS_WPG</p></td><td><p>NSSubscriberAdmin SQL Server Database Role in the following databases:BAMAlertsApplication, BAMAlertsNSMain. BAM_ManagementWS SQL Server role for the BAMPrimaryImport.</p></td></tr><tr><td><p>BAM Application Pool Account</p></td><td><p>Application pool account for BAMAppPool, which hosts the BAM Portal website.</p></td><td><p>IIS_WPG</p></td><td><p></p></td></tr></table><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><p>For more information about Windows groups and service accounts used in BizTalk Server, see <a href="http://msdn.microsoft.com/library/aa577661(v=bts.80).aspx" target="_blank" alt="" target="_blank">Windows Groups and User Accounts in BizTalk Server</a>.</p></td></tr></table></div></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_Databases" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0EJOAG"></A>Databases Used by BizTalk Server</h1><div id="sectionSection6" class="section"><p>The following is the list of SQL Server databases used in BizTalk Server:</p><p><b></b></p><table><tr><th>
+									Data store name
+								</th><th>
+									Default database name
+								</th><th>
+									Volume
+								</th><th>
+									Growth
+								</th><th>
+									Description
+								</th></tr><tr><td><p>SSO Database</p></td><td><p>SSODB</p></td><td><p>Low</p></td><td><p>Low</p></td><td><p>This Enterprise Single Sign-On credential database securely stores the user name and password.</p></td></tr><tr><td><p>BizTalk Management Database</p></td><td><p>BizTalkMgmtDb</p></td><td><p>Low</p></td><td><p>Low</p></td><td><p>This database is the central meta-information store for all instances of BizTalk Server.</p></td></tr><tr><td><p>BizTalk MessageBox Database</p></td><td><p>BizTalkMsgBoxDb</p></td><td><p>High</p></td><td><p>Medium</p></td><td><p>The BizTalk Server engine uses this database for routing, queuing, instance management, and various other tasks.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>Auto Update Statistics, Auto Create Statistics, and the Parallelism setting are purposely turned off in the SQL Server database instance that hosts the BizTalk Server BizTalkMsgBoxDB database. Do not enable these settings.</p></td></tr></table></td></tr><tr><td><p>BizTalk Tracking Database</p></td><td><p>BizTalkDTADb</p></td><td><p>High</p></td><td><p>High</p></td><td><p>This database stores business and health monitoring data tracked by the BizTalk Server tracking engine.</p></td></tr><tr><td><p>Rule Engine Database</p></td><td><p>BizTalkRuleEngineDb</p></td><td><p>Low</p></td><td><p>Low</p></td><td><p>This database is a repository for policies, which are sets of related rules and vocabularies. Vocabularies are collections of user-friendly, domain-specific names for data references in rules.</p></td></tr><tr><td><p>BizTalk Base EDI Database</p></td><td><p>BizTalkEDIDb</p></td><td><p>Low</p></td><td><p>Low</p></td><td><p>This database stores state for the electronic data interchange (EDI) adapter. The Base EDI adapter was deprecated in BizTalk Server 2006 R2. The Base EDI adapter can be used in upgrade scenarios, but for new installations of BizTalk Server, use the native EDI and AS2 functionality.</p></td></tr><tr><td><p>BAM Primary Import Database</p></td><td><p>BAMPrimaryImport</p></td><td><p>Medium</p></td><td><p>Medium</p></td><td><p>This database collects raw BAM tracking data.</p></td></tr><tr><td><p>BAM Archive Database</p></td><td><p>BAMArchive</p></td><td><p>Medium</p></td><td><p>Medium</p></td><td><p>This database archives old business activity data. Create a BAM Archive database to minimizes the accumulation of business activity data in the BAM Primary Import database.</p></td></tr><tr><td><p>BAM Star Schema Database</p></td><td><p>BAMStarSchema</p></td><td><p>Medium</p></td><td><p>Medium</p></td><td><p>This database contains the staging table, and the measure and dimension tables.</p></td></tr><tr><td><p>BAM Notification Services Application database</p></td><td><p>BAMAlertsApplication</p></td><td><p>Medium</p></td><td><p>Medium</p></td><td><p>This database contains alert information for BAM notifications. For example, when you create an alert using the BAM portal, entries are inserted in this database that specify the conditions and events to which the alert pertains, as well as other supporting data for the alert.</p></td></tr><tr><td><p>BAM Notification Services Instance database</p></td><td><p>BAMAlertsNSMain</p></td><td><p>Medium</p></td><td><p>Medium</p></td><td><p>This database contains instance information that specifies how the notification services connect to the system that BAM is monitoring.</p></td></tr></table><p><b>SQL Server databases used by Windows SharePoint Services</b>:</p><p><b></b></p><table><tr><th>
+									Data store name
+								</th><th>
+									Default database name
+								</th><th>
+									Volume
+								</th><th>
+									Growth
+								</th><th>
+									Description
+								</th></tr><tr><td><p>Windows SharePoint Services configuration database</p></td><td><p>User-defined</p></td><td><p>Low</p></td><td><p>Low</p></td><td><p>This database contains all of the global settings for the server.</p></td></tr><tr><td><p>Windows SharePoint Services content database</p></td><td><p>User-defined</p></td><td><p>Medium</p></td><td><p>Medium</p></td><td><p>This database contains all of the site content, such as list items and documents.</p></td></tr></table></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_InstallBTS" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0EL2AG"></A>Install BizTalk Server in a Multiple Server environment</h1><div id="sectionSection7" class="section"><ol class="ordered"><li><b>Install Active Directory Domain Services</b> - The first step required to install BizTalk Server into a multiple server environment is to install Active Directory domain services for the various BizTalk Server groups and accounts. To create the Active Directory domain, refer to the following:<br /><br />
+							
+								Windows Server 2008 R2: <a href="http://go.microsoft.com/fwlink/p/?LinkID=160742" alt="" target="_blank">AD DS Installation and Removal Step-by-Step Guide</a>  (http://go.microsoft.com/fwlink/?LinkID=160742)<br /><br />
+							
+								Windows Server 2012: <a href="http://technet.microsoft.com/library/hh472162.aspx" target="_blank" alt="" target="_blank">Install Active Directory Domain Services</a> (http://technet.microsoft.com/library/hh472162.aspx)<br /><br /><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><p>The BizTalk Server groups described in the <b>User and Service Accounts Used In BizTalk Server</b> table must be created manually before installing BizTalk Server into a multiple server environment.</p></td></tr></table></li><li><b>Install Multiple Instances of SQL Server as needed</b> – If your load requirements dictate that you need multiple MessageBox databases or that you need to spread the BizTalk Server I/O load over multiple SQL Server instances, then install more SQL Server instances as required. For more information about performance testing your BizTalk Server environment, see <a href="http://go.microsoft.com/fwlink/p/?LinkID=150492" alt="" target="_blank">BizTalk Server Performance Optimizations Guide</a> (http://go.microsoft.com/fwlink/p/?LinkID=150492). For more information about optimizing BizTalk Server database performance, see <a href="http://go.microsoft.com/fwlink/p/?LinkID=153594" alt="" target="_blank">BizTalk Server Database Optimization whitepaper</a> (http://go.microsoft.com/fwlink/p/?LinkID=153594).<br /><br /></li><li><b>Install Multiple BizTalk Server computers into your BizTalk Server Group as needed</b> – If your load requirements dictate that you need multiple BizTalk Server computers into your BizTalk Server group, then use the BizTalk Server Enterprise Edition to scale out your processing requirements across multiple BizTalk Servers. For a table that lists each of the BizTalk Server Editions and their capabilities, see <a href="http://go.microsoft.com/fwlink/p/?LinkID=185239" alt="" target="_blank">BizTalk Server Editions page</a> (http://go.microsoft.com/fwlink/p/?LinkID=185239).<br /><br /><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><p>Many of the Enterprise level features of BizTalk Server such as clustering, adding multiple servers to a group, and native 64-bit processing are only available with the Enterprise edition of BizTalk Server.</p></td></tr></table></li><li><b>Install Cumulative Updates</b> - Cumulative updates are listed in Windows Update. <a href="http://support.microsoft.com/kb/2555976" alt="" target="_blank">KB article 2555976</a> lists available service packs and cumulative updates.<br /><br /></li></ol></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_Cluster" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0EL6AG"></A>Considerations for clustering BizTalk Server in a Multiple Server environment</h1><div id="sectionSection8" class="section"><ul><li class="unordered"><b>Clustering MSDTC</b> – The Microsoft Distributed Transaction Coordinator (MSDTC) is a central component of any BizTalk Server environment. If other components of the BizTalk Server environment are clustered, it is recommended to also cluster MSDTC. For more information about clustering MSDTC, see <a href="http://go.microsoft.com/fwlink/p/?LinkId=189514" alt="" target="_blank">How to Cluster MSDTC</a> (http://go.microsoft.com/fwlink/p/?LinkId=189514).<br /><br /></li><li class="unordered"><b>Install SQL Server Failover Clustering</b> – To provide high availability/fault tolerance for the BizTalk Server databases, it is recommended that the BizTalk Server databases are installed on a SQL Server failover cluster. For information on installing SQL Server failover cluster, refer to the following: <br /><br />
+							
+								SQL Server 2008 R2: <a href="http://msdn.microsoft.com/library/ms189134(v=sql.105).aspx" alt="" target="_blank">Getting Started with SQL Server 2008 R2 Failover Clustering</a> (http://msdn.microsoft.com/library/ms189134(v=sql.105).aspx).<br /><br />
+							
+								SQL Server 2012: <a href="http://msdn.microsoft.com/library/hh270278.aspx" alt="" target="_blank">Windows Server Failover Clustering (WSFC) with SQL Server</a> (http://msdn.microsoft.com/library/hh270278.aspx)<br /><br />
+							Once SQL Server is configured for high availability/fault tolerance, then the SQL Server clustered instance can be referenced just as any other SQL Server instance by the BizTalk Server configuration.<br /><br /></li><li class="unordered"><b>Configure the Enterprise Single Sign-On Master Secret Server as a cluster resource</b> – A failure of the Enterprise Single Sign-On Master Secret Server can cause a system-wide failure of the BizTalk Server environment. It is recommended to configure the Enterprise Single Sign-On Master Secret Server for high availability/fault tolerance by configuring the Master Secret Server as a cluster resource. Because the Master Secret Server is not a resource-intensive component of a BizTalk Server environment, it is recommended that the Master Secret Server be clustered on the same cluster nodes as the SQL Server instances.  For more information about configuring the Enterprise Single Sign-On Master Secret Server as a cluster resource, see <a href="http://go.microsoft.com/fwlink/p/?LinkId=189511" alt="" target="_blank">How to Cluster the Master Secret Server</a> (http://go.microsoft.com/fwlink/p/?LinkId=189511).<br /><br /></li><li class="unordered"><b>Configuring a BizTalk host as a cluster resource</b> – Running multiple instances of a BizTalk Server host provides high availability/fault tolerance. As a result, configuring a BizTalk host as a cluster resource is not recommended except in particular circumstances. For example, you can confgure a BizTalk host as a cluster resource when accommodating high availability/fault tolerance or for providing ordered delivery for certain BizTalk Server adapters. For more information about when it is appropriate to configure a BizTalk host as a cluster resource, see <a href="http://msdn.microsoft.com/library/aa561801(v=bts.80).aspx" alt="" target="_blank">Considerations for Running Adapter Handlers within a Clustered Host</a> (http://msdn.microsoft.com/library/aa561801(v=bts.80).aspx). For more information about how to configure a BizTalk host as a cluster resource see <a href="http://go.microsoft.com/fwlink/p/?LinkId=189512" alt="" target="_blank">How to Configure a BizTalk Host as a Cluster Resource</a> (http://go.microsoft.com/fwlink/p/?LinkId=189512).<br /><br /></li><li class="unordered"><b>Clustering Message Queuing</b> – For information about how to cluster Message Queuing, see <a href="http://go.microsoft.com/fwlink/p/?LinkId=189516" alt="" target="_blank">How to Cluster Message Queuing</a> (http://go.microsoft.com/fwlink/p/?LinkId=189516).<br /><br /></li><li class="unordered"><b>Clustering the File System</b> – For information about how to cluster the File System, see <a href="http://go.microsoft.com/fwlink/p/?LinkId=189517" alt="" target="_blank">How to Cluster the File System</a> (http://go.microsoft.com/fwlink/p/?LinkId=189517).<br /><br /></li></ul></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_SCOM" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0EMDBG"></A>Use SCOM to Monitor BizTalk Server</h1><div id="sectionSection9" class="section"><p>The BizTalk Server Management Pack for Operations Manager provides comprehensive discovery and monitoring of BizTalk Server components and applications that are running in multiple machines. For more information about the BizTalk Server Management Pack, see <a href="http://www.microsoft.com/download/details.aspx?id=39617" alt="" target="_blank">http://www.microsoft.com/download/details.aspx?id=39617</a>.</p></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><A name="ID0E4DBG"></A>Copyright</h1><div id="sectionSection10" class="section"><p>Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in examples herein are fictitious.  No association with any real company, organization, product, domain name, e-mail address, logo, person, place, or event is intended or should be inferred.  Complying with all applicable copyright laws is the responsibility of the user.  Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation. </p><p></p><p>Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document.  Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.</p><p></p><p>© 2014 Microsoft Corporation. All rights reserved.</p><p></p><p>Microsoft, MS-DOS, Visual Studio, Windows, Windows Server, Windows 7, Windows 8, and BizTalk are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.</p><p></p><p>All other trademarks are property of their respective owners.</p></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><span id="seeAlsoNoToggle">See Also</span></h1><div id="seeAlsoSection" class="section"><ul><li><a href="http://go.microsoft.com/fwlink/?LinkID=144722" target="_blank" alt="" target="_blank">Troubleshooting Problems with MSDTC</a></li><li><a href="http://go.microsoft.com/fwlink/?LinkID=144722" target="_blank" alt="" target="_blank">Improving Fault Tolerance in BizTalk Server by Using a Windows Server Cluster</a></li></ul></div></td></tr></table></div><div id="footer"><hr></hr><p></p></div></div></body></html>

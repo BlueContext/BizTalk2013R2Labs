@@ -1,0 +1,216 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "newVMName": {
+      "type": "string",
+      "defaultValue": "BTLAB1-TEMP"
+    },
+    "labName": {
+      "type": "string",
+      "defaultValue": "ETE-SCUS-BizTalkLab"
+    },
+    "size": {
+      "type": "string",
+      "defaultValue": "Standard_D1_v2"
+    },
+    "userName": {
+      "type": "string",
+      "defaultValue": "LabAdmin"
+    },
+    "password": {
+      "type": "securestring"
+    },
+    "Download_File_from_URI.URI": {
+      "type": "string",
+      "defaultValue": "http://gthou-wwsvc01d.energy.sug.pri:8089/Installers/Win8.1AndW2K12R2-KB3134758-x64.msu"
+    },
+    "Download_File_from_URI.FileDestination": {
+      "type": "string",
+      "defaultValue": "C:\\Installers\\Win8.1AndW2K12R2-KB3134758-x64.msu"
+    },
+    "Run_PowerShell.scriptFileUris": {
+      "type": "string",
+      "defaultValue": "[[\"http://gthou-wwsvc01d.energy.sug.pri:8089/Scripts/0_WMFInstaller.ps1\"]"
+    },
+    "Run_PowerShell.scriptToRun": {
+      "type": "string",
+      "defaultValue": "0_WMFInstaller.ps1"
+    },
+    "Run_PowerShell.scriptArguments": {
+      "type": "string"
+    },
+    "Run_PowerShell1.scriptFileUris": {
+      "type": "string",
+      "defaultValue": "[[\"http://gthou-wwsvc01d.energy.sug.pri:8089/Scripts/0_SetNetworkProfile.ps1\"]"
+    },
+    "Run_PowerShell1.scriptToRun": {
+      "type": "string",
+      "defaultValue": "0_SetNetworkProfile.ps1"
+    },
+    "Run_PowerShell1.scriptArguments": {
+      "type": "string"
+    },
+    "Download_File_from_URI1.URI": {
+      "type": "string",
+      "defaultValue": "http://gthou-wwsvc01d.energy.sug.pri:8089/DSCSources/BaseConfiguration.ps1"
+    },
+    "Download_File_from_URI1.FileDestination": {
+      "type": "string",
+      "defaultValue": "C:\\Installers\\BaseConfiguration.ps1"
+    },
+    "Run_PowerShell11.scriptFileUris": {
+      "type": "string",
+      "defaultValue": "[[\"http://gthou-wwsvc01d.energy.sug.pri:8089/Scripts/1_ConfigurePackageManagementAndDsc.ps1\",\"http://gthou-wwsvc01d.energy.sug.pri:8089/Scripts/DSCGenerator.ps1\",\"http://gthou-wwsvc01d.energy.sug.pri:8089/DSCSources/BaseConfiguration.ps1\"]"
+    },
+    "Run_PowerShell11.scriptToRun": {
+      "type": "string",
+      "defaultValue": "1_ConfigurePackageManagementAndDsc.ps1"
+    },
+    "Run_PowerShell11.scriptArguments": {
+      "type": "string"
+    },
+    "Run_PowerShell111.scriptFileUris": {
+      "type": "string",
+      "defaultValue": "[[\"http://gthou-wwsvc01d.energy.sug.pri:8089/Scripts/2_StartDsc.ps1\"]"
+    },
+    "Run_PowerShell111.scriptToRun": {
+      "type": "string",
+      "defaultValue": "2_StartDsc.ps1"
+    },
+    "Run_PowerShell111.scriptArguments": {
+      "type": "string"
+    }
+  },
+  "variables": {
+    "vmId": "[resourceId ('Microsoft.DevTestLab/labs/virtualMachines', parameters('labName'), parameters('newVMName'))]",
+    "vmName": "[concat(parameters('labName'), '/', parameters('newVMName'))]"
+  },
+  "resources": [
+    {
+      "apiVersion": "2016-05-15",
+      "type": "Microsoft.DevTestLab/labs/virtualMachines",
+      "name": "[variables('vmName')]",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "labVirtualNetworkId": "[resourceId('Microsoft.DevTestLab/labs/virtualnetworks', parameters('labName'), 'azure_dev_hybrid_2')]",
+        "notes": "Windows Server 2012 R2 Datacenter",
+        "galleryImageReference": {
+          "offer": "WindowsServer",
+          "publisher": "MicrosoftWindowsServer",
+          "sku": "2012-R2-Datacenter",
+          "osType": "Windows",
+          "version": "latest"
+        },
+        "size": "[parameters('size')]",
+        "userName": "[parameters('userName')]",
+        "password": "[parameters('password')]",
+        "isAuthenticationWithSshKey": false,
+        "artifacts": [
+          {
+            "artifactId": "[resourceId('Microsoft.DevTestLab/labs/artifactSources/artifacts', parameters('labName'), 'Public Repo', 'windows-download-sas-blob')]",
+            "parameters": [
+              {
+                "name": "URI",
+                "value": "[parameters('Download_File_from_URI.URI')]"
+              },
+              {
+                "name": "FileDestination",
+                "value": "[parameters('Download_File_from_URI.FileDestination')]"
+              }
+            ]
+          },
+          {
+            "artifactId": "[resourceId('Microsoft.DevTestLab/labs/artifactSources/artifacts', parameters('labName'), 'Public Repo', 'windows-run-powershell')]",
+            "parameters": [
+              {
+                "name": "scriptFileUris",
+                "value": "[parameters('Run_PowerShell.scriptFileUris')]"
+              },
+              {
+                "name": "scriptToRun",
+                "value": "[parameters('Run_PowerShell.scriptToRun')]"
+              },
+              {
+                "name": "scriptArguments",
+                "value": "[parameters('Run_PowerShell.scriptArguments')]"
+              }
+            ]
+          },
+          {
+            "artifactId": "[resourceId('Microsoft.DevTestLab/labs/artifactSources/artifacts', parameters('labName'), 'Public Repo', 'windows-run-powershell')]",
+            "parameters": [
+              {
+                "name": "scriptFileUris",
+                "value": "[parameters('Run_PowerShell1.scriptFileUris')]"
+              },
+              {
+                "name": "scriptToRun",
+                "value": "[parameters('Run_PowerShell1.scriptToRun')]"
+              },
+              {
+                "name": "scriptArguments",
+                "value": "[parameters('Run_PowerShell1.scriptArguments')]"
+              }
+            ]
+          },
+          {
+            "artifactId": "[resourceId('Microsoft.DevTestLab/labs/artifactSources/artifacts', parameters('labName'), 'Public Repo', 'windows-download-sas-blob')]",
+            "parameters": [
+              {
+                "name": "URI",
+                "value": "[parameters('Download_File_from_URI1.URI')]"
+              },
+              {
+                "name": "FileDestination",
+                "value": "[parameters('Download_File_from_URI1.FileDestination')]"
+              }
+            ]
+          },
+          {
+            "artifactId": "[resourceId('Microsoft.DevTestLab/labs/artifactSources/artifacts', parameters('labName'), 'Public Repo', 'windows-run-powershell')]",
+            "parameters": [
+              {
+                "name": "scriptFileUris",
+                "value": "[parameters('Run_PowerShell11.scriptFileUris')]"
+              },
+              {
+                "name": "scriptToRun",
+                "value": "[parameters('Run_PowerShell11.scriptToRun')]"
+              },
+              {
+                "name": "scriptArguments",
+                "value": "[parameters('Run_PowerShell11.scriptArguments')]"
+              }
+            ]
+          },
+          {
+            "artifactId": "[resourceId('Microsoft.DevTestLab/labs/artifactSources/artifacts', parameters('labName'), 'Public Repo', 'windows-run-powershell')]",
+            "parameters": [
+              {
+                "name": "scriptFileUris",
+                "value": "[parameters('Run_PowerShell111.scriptFileUris')]"
+              },
+              {
+                "name": "scriptToRun",
+                "value": "[parameters('Run_PowerShell111.scriptToRun')]"
+              },
+              {
+                "name": "scriptArguments",
+                "value": "[parameters('Run_PowerShell111.scriptArguments')]"
+              }
+            ]
+          }
+        ],
+        "labSubnetName": "default",
+        "disallowPublicIpAddress": true
+      }
+    }
+  ],
+  "outputs": {
+    "labVMId": {
+      "type": "string",
+      "value": "[variables('vmId')]"
+    }
+  }
+}

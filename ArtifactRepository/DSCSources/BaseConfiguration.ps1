@@ -8,6 +8,7 @@ configuration BaseConfiguration
 		[pscredential]$credential
 	)
 
+    Import-DscResource -ModuleName xTimeZone
 	Import-DscResource -Module xNetworking
 	Import-DscResource -Module xComputerManagement
 	
@@ -19,6 +20,12 @@ configuration BaseConfiguration
 			AddressFamily = 'IPv4'
 			InterfaceAlias = 'Ethernet'
 		}
+
+		xTimeZone SetTimeZone
+        {
+            IsSingleInstance = 'Yes'
+            TimeZone = "Central Standard Time"
+        }
 		
 		xComputer JoinComputer
 		{

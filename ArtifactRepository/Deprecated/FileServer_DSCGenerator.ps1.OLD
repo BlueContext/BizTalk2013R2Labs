@@ -1,14 +1,9 @@
-#Geneate MOF
-$hostname = $env:computername
-md c:\DSC
-#cd c:\Installers
-#./DSCGenerator.ps1 -targetNode $hostname
-
+#This functionality was moved into the 1_* script for each role
 Param
 (
 	[string]$targetNode,
-	[string]$targetConfiguration = "BaseConfiguration.ps1",
-	[string]$dnsServerAddress = "10.55.2.35",
+	[string]$targetConfiguration = "FileServerConfiguration.ps1",
+	[string]$dnsServerAddress = "10.56.10.5",
 	[string]$domainName = "BTS13R2DEV.lab",
 	[string]$userName = "BTS13R2DEV\LabAdmin",
 	[string]$password = "Welcome123456",
@@ -28,5 +23,5 @@ $cd = @{
 }
 
 
-. .\BaseConfiguration.ps1
-BaseConfiguration -targetNode $targetNode -dnsServerAddress $dnsServerAddress -domainName $domainName -credential $cred -ConfigurationData $cd -OutputPath $outputPath
+. .\FileServerConfiguration.ps1
+FileServerConfiguration -targetNode $targetNode -dnsServerAddress $dnsServerAddress -domainName $domainName -credential $cred -ConfigurationData $cd -OutputPath $outputPath

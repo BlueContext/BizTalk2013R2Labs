@@ -1,0 +1,749 @@
+﻿<html DIR="LTR" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink"><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8"></META><META NAME="save" CONTENT="history"></META><title>Installing Microsoft BizTalk Adapter for SQL Server</title><STYLE TYPE="text/css">
+/* RelNote */
+
+table#columnTable
+{
+    table-layout: fixed;
+    background:    #FFFFFF;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+td#EdgeBorderColumn
+{
+    width: 10px;
+    border: 0px;
+    margin: 0;    
+    height: 100%;
+    background-color:  #666666;
+}
+  
+td#ToCColumn
+{
+    background:    #FFFFFF;
+    width: 300px;
+    border: 0;
+    margin: 0;
+    vertical-align: top;
+    padding-left:    14px;
+    padding-right:   10px;
+    padding-top: 7px;
+    text-decoration: none;
+}
+
+td#contentColumn
+{
+    background:    #FFFFFF;	
+    border: 0;
+    margin: 0;
+    padding: 14px 5% 22px 10px;             		
+    vertical-align: top;
+    max-width: 590;	
+}
+
+.ToCLevel1
+{
+    font-weight: bold;
+    line-height: 140%;
+}
+
+.ToCLevel2
+{
+    margin-left: 8px;
+}
+	
+a
+{
+    color: #000000;
+}
+
+@media print
+{
+    P.TopOfPage
+    {
+    	margin: 5 0 18 0;		
+    }
+}
+
+@media screen
+{
+    P.TopOfPage
+    {
+    	margin: 0 0 18 0;		
+    }
+}
+
+#contentColumn A.TopOfPageLink
+{
+	text-decoration: none;	
+}
+
+#contentColumn A.TopOfPageLink:hover
+{
+    text-decoration: underline;
+}
+
+#ToCColumn A
+{
+    text-decoration: none;
+}
+
+#ToCColumn A:hover
+{
+    text-decoration: underline;
+}
+
+/* WSUA CHM presentation */
+
+
+/********/
+/* BODY */
+body
+{
+    background:#FFFFFF;
+    color:#000000;
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size:70%;
+    font-style:normal;
+    font-weight:normal;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    width:100%;
+    height: 100%;
+    border-style:none;
+    border-width:0;
+}
+
+
+/*********/
+/* LINKS */
+a
+{
+	color:#0000FF;
+}
+
+a:visited
+{
+	color:#0000FF;
+	text-decoration:underline;
+}
+
+a:link
+{
+	color:#0000FF;
+	text-decoration:underline;
+}
+
+a:hover
+{
+	color:#FF0000;
+	cursor:hand;
+	text-decoration:underline;
+}
+
+a:active
+{
+	color:#FF0000;
+	cursor:hand;
+	text-decoration:underline;
+}
+
+
+/************/
+/* SECTIONS */
+
+/* running header*/
+.runningHeader
+{
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+
+div#techCenterLink
+{
+	background-color:#5F5F5F;
+	color:#FFFFFF;
+	padding:5pt 12px 5pt 12px;
+	margin:0 0 0 0;
+	border-bottom:solid 1pt #919193;
+	width:100%;
+}
+
+div#techCenterLink a
+{
+	color:#FFFFFF;
+	text-decoration:underline;
+	cursor:hand;
+}
+
+div#techCenterLink a:active
+{
+	color:#FFFFFF;
+	text-decoration:underline;
+	cursor:hand;
+}
+
+/* title */
+div#header
+{
+	background-color:#666666;
+	padding:15 13 15 20;	
+	margin:0 0 0 0;
+	width:100%;
+	border-style: solid;
+	border-width: 1 0 0 0;
+	border-color: #333333;
+	vertical-align: middle;
+}
+
+div#header h1
+{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	color:#FFFFFF;
+	font-size:160%;
+}
+
+
+/* main section */
+div#mainSection
+{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	width:100%;
+        height: 100%;
+	border-width:0;
+}
+
+div#mainBody
+{
+	padding:0 9 0 0;
+	margin:0 0 0 0;
+	width:100%;
+        height: 100%;
+	border-style:none;
+	border-width:0;
+}
+
+
+/* footer */
+div#footer
+{
+	font-size:81%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	width:100%;
+	border:0;
+}
+
+
+/************/
+/* HEADINGS */
+div.section
+{
+	width:	100%;
+}
+
+.heading
+{
+	color:#000000;
+	margin:9px 0px 9px 0px;
+}
+
+h1.heading
+{
+	font-size:155%;
+}
+
+.subHeading
+{
+	color:#000000;
+	margin:9px 0px 9px 0px;
+}
+
+h3.subHeading
+{
+	font-size:130%;
+}
+
+td#ToCColumn h4.subHeading
+{
+	font-size:120%;
+}
+
+h4.subHeading
+{
+	font-size:110%;
+}
+
+h5.subHeading
+{
+	font-size:100%;
+}
+
+h6
+{
+	font-weight:normal;
+	font-size:100%;
+}
+
+img.procedure
+{
+	border: 0;
+	margin-right:8;
+}
+
+.howToHeadingTable
+{
+	background-color:Transparent;
+	border:0;
+	font-size:100%;
+	width:100%;
+}
+
+.howToHeadingImgCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding-bottom:0;
+	padding-top:3px;
+	padding-left:0;
+	padding-right:0;
+	vertical-align:top;
+	width:24px;
+}
+
+.howToHeadingTextCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	padding-left:0;
+	padding-right:0;
+	vertical-align:middle;
+}
+
+
+/**********/
+/* TABLES */
+table
+{
+	border:0;
+	font-size:100%;
+	margin:3 0 9 0;
+	width:100%;
+}
+
+th
+{
+	background-color:#DDDDDD;
+	vertical-align:bottom;
+	text-align:left;
+	font-weight:bold;
+	color:#000000;
+	padding:.2em;
+	padding-left:.45em;
+	padding-right:.5em;
+}
+
+td
+{
+	background-color:#EEEEEE;
+	vertical-align:top;
+	padding:.2em;
+	padding-left:.45em;
+	padding-right:.5em;
+}
+
+
+/**********/
+/* ALERTS */
+img.note
+{
+	border: 0;
+	margin-right:5;
+}
+
+span.alertTitle
+{
+	padding:0;
+	margin:0;
+	font-weight:bold;
+	vertical-align:text-bottom;
+	height:100px;
+	display:block;
+}
+
+.alertTable
+{
+	background-color:Transparent;
+	border:0;
+	font-size:100%;
+	margin:3 0 0 0;
+	width:85%;
+}
+
+.alertTable tr
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+.imgCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:top;
+	width:21px;
+}
+
+.txtCell
+{
+	background-color:Transparent;
+	font-weight:bold;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+.procHeadingCell
+{
+	background-color:Transparent;
+	font-weight:bold;
+	margin:0 0 0 0;
+	padding:1px 0 0 0;
+	vertical-align:middle;
+}
+
+.alertCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+p.alertImg
+{
+	border:0;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	vertical-align:top;
+	height:100%;
+	width:100%;
+}
+
+div.alert
+{
+	border:0;
+	/*padding-left:21px;*/
+	margin-right:15%;
+	width:100%;
+}
+
+div.alert ul
+{
+	margin:3px 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+/********/
+/* COMPUTEROUTPUT */
+div.computerOutput
+{
+	width: 98%;
+}
+div.computerOutput pre
+{
+    font-family:    Monospace, Courier New, Courier;
+    font-size: 105%;
+    color:  #000000;
+/*  word-wrap:  break-word;*/
+}
+
+computerOutput
+{
+    font-family:    Monospace, Courier New, Courier;
+    font-size: 105%;
+    color:  #000000;
+}
+
+
+/********/
+/* CODE */
+div.code
+{
+	padding:0;
+	margin:0;
+}
+
+div.code pre
+{
+	font-family:Courier New;
+	font-size:1.1em;
+	color:#000000;
+	padding:0;
+	margin:3 0 9 0;	
+	word-wrap: break-word;
+}
+
+code
+{
+	font-family:Courier New;
+	font-size:1.1em;
+	color:#000000;
+}
+
+
+/*********/
+/* LISTS */
+
+/* Definitions */
+dl
+{
+	margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+dt
+{
+    margin:3px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+dd
+{
+	margin-bottom:9px;
+    padding:0px 0px 0px 0px;
+}
+
+/* Lists */
+ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ul ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ol ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:decimal;
+}
+
+ol ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:lower-alpha;
+}
+
+ul ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:decimal;
+}
+
+li
+{
+	clear:both;
+	margin-bottom: 3;
+}
+
+
+/**************/
+/* PARAGRAPHS */
+p
+{
+    margin:3px 0px 9px 0px;
+}
+
+
+/*****************/
+/* MISCELLANEOUS */
+img.embedded
+{
+	padding:0;
+	margin:0;
+}
+
+img.selfstanding
+{
+	margin-top:3;
+	margin-bottom:9;
+}
+
+img.toggle
+{
+	border: 0;
+	margin-right: 5;
+}
+
+img#toggleAllImage
+{
+	margin-left: 4;
+	vertical-align: middle;
+}
+
+.tip
+{
+	font-style:italic;
+}
+
+.math
+{
+	font-family: Times New Roman;
+	font-size: 125%
+}
+
+.sourceCodeList
+{
+	font-family: Verdana;
+	font-size: 90%;	
+}
+
+pre.viewCode
+{
+	width: 100%;
+	overflow: auto;
+}
+
+/* * * End of file. * * */
+
+</STYLE>
+</head><body><a name="pagetop"></a><div id="header"><h1>Installing Microsoft BizTalk Adapter for SQL Server</h1></div><div id="mainSection"><div id="mainBody"><p class="runningHeader"></p><table cellspacing="0" id="columnTable"><tr><td id="EdgeBorderColumn" valign="top"></td><td id="ToCColumn" valign="top"><h4 class="subHeading"></h4><P class="ToCLevel1"><A href="#ID0EJB">Software Prerequisites</A></P><P class="ToCLevel2"><A href="#ID0EGC">Software Prerequisites When Using the SQL Adapter Through a .NET Application</A></P><P class="ToCLevel2"><A href="#ID0EPD">Software Prerequisites When Using the SQL Adapter with BizTalk Server</A></P><P class="ToCLevel1"><A href="#ID0EUG">Supported SQL Server Versions and Client Libraries</A></P><P class="ToCLevel1"><A href="#ID0E1BAC">Compatibility Matrix Between 32-bit and 64-bit Versions of the Adapter, BizTalk Server, and Operating System</A></P><P class="ToCLevel1"><A href="#ID0EKGAC">Installing the SQL Adapter</A></P><P class="ToCLevel2"><A href="#ID0EDIAC">Scenarios for Installing the SQL Adapter on 32-bit and 64-bit Platforms</A></P><P class="ToCLevel2"><A href="#ID0E6EAE">Installing the SQL Adapter in Interactive Mode</A></P><P class="ToCLevel2"><A href="#ID0EYJAE">Installing the SQL Adapter in Silent Mode</A></P><P class="ToCLevel2"><A href="#ID0EBNAE">After Installing the SQL Adapter</A></P><P class="ToCLevel1"><A href="#ID0ECVAE">Modifying the SQL Adapter Installation</A></P><P class="ToCLevel1"><A href="#ID0ET3AE">Removing the SQL Adapter</A></P><P class="ToCLevel2"><A href="#ID0EACAG">After Removing the SQL Adapter</A></P><P class="ToCLevel1"><A href="#ID0EJGAG">Copyright</A></P></td><td id="contentColumn" valign="top"><p>Welcome to the Microsoft BizTalk Adapter for SQL Server Installation Guide. This document provides software requirements and detailed instructions for installing the SQL adapter.</p><a name="BKMK_Prereqs" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0EJB"></A>Software Prerequisites</h1><div id="sectionSection0" class="section"><p>The SQL adapter can be used with:</p><ul><li class="unordered">
+							A .NET application<br /><br /></li><li class="unordered">
+							Microsoft BizTalk Server<br /><br /></li></ul><p>Based on how you use the adapters, the required software will vary.</p><a name="BKMK_prereq_NET" xmlns:tool="http://www.microsoft.com/tooltip"></a><A name="ID0EGC"></A><h3 class="subHeading">Software Prerequisites When Using the SQL Adapter Through a .NET Application</h3><div class="subSection"><p>You must ensure the following software is installed on the computer where you will be writing .NET applications on top of the SQL adapter. We recommend installing the software in the same order as listed here.</p><ul><li class="unordered">
+									Microsoft .NET Framework 4.5 and .NET Framework 4.5.1.<br /><br /></li><li class="unordered">
+									Microsoft Visual Studio 2012 or Visual Studio 2013<br /><br /></li><li class="unordered">
+									 The Microsoft Windows Communication Foundation (WCF) Line of Business (LOB) Adapter SDK (WCF LOB Adapter SDK).<br /><br /></li><li class="unordered">
+									SQL Server client libraries. For the list of SQL Server client libraries you must install on the same computer where you install the SQL adapter, see <a href="#BKMK_SuppLOB" xmlns:tool="http://www.microsoft.com/tooltip">Supported SQL Server Versions and Client Libraries</a>.<br /><br /></li></ul></div><a name="BKMK_prereq_BTS" xmlns:tool="http://www.microsoft.com/tooltip"></a><A name="ID0EPD"></A><h3 class="subHeading">Software Prerequisites When Using the SQL Adapter with BizTalk Server</h3><div class="subSection"><p>You must ensure the following software is installed on the computer where you will be using the SQL adapter with BizTalk Server. We recommend installing the software in the same order as listed here.</p><ul><li class="unordered">
+									 Microsoft .NET Framework 4.5 and .NET Framework 4.5.1.<br /><br /></li><li class="unordered">
+									Microsoft Visual Studio 2012 (BizTalk Server 2013) or Visual Studio 2013 (BizTalk Server 2013 R2)<br /><br /></li><li class="unordered">
+									 The Microsoft Windows Communication Foundation (WCF) Line of Business (LOB) Adapter SDK (WCF LOB Adapter SDK).<br /><br /><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><ul><li>You must also install a BizTalk add-in (Consume Adapter Service BizTalk Project Add-in) for Visual Studio that is shipped with the WCF LOB Adapter SDK. To install this add-in, you must perform a <b>Custom</b> or <b>Complete</b> installation of the WCF LOB Adapter SDK. Under the <b>Custom</b> option, select <b>BizTalk Server Addin</b>. </li><li>Also, to install the add-in, you must install Visual Studio before installing the WCF LOB Adapter SDK.</li></ul></td></tr></table></li><li class="unordered">
+									Microsoft BizTalk Server 2013 or Microsoft BizTalk Server 2013 R2<br /><br /><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Tip </td></tr><tr><td class="alertCell"><p>The SQL Adapter is deprecated. Use the WCF-based SQL adapter available in the BizTalk Adapter Pack.</p></td></tr></table></li><li class="unordered">
+									SQL Server client libraries. For the list of SQL Server client libraries you must install on the same computer where you install the SQL adapter, see <a href="#BKMK_SuppLOB" xmlns:tool="http://www.microsoft.com/tooltip">Supported SQL Server Versions and Client Libraries</a>.<br /><br /></li></ul></div></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_SuppLOB" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0EUG"></A>Supported SQL Server Versions and Client Libraries</h1><div id="sectionSection1" class="section"><p>The following section presents the supported SQL Server versions and the client libraries required by the SQL adapter.</p><ul><li class="unordered"><b>Supported server versions</b>: SQL Server 2005, SQL Server 2008 SP1, SQL Server 2008 R2, SQL Server 2012<br /><br /></li><li class="unordered"><b>Supported client versions</b>: Microsoft .NET Framework 4.5 bundles the client DLLs required to connect to SQL Server. You do not need to explicitly install any client DLLs on your computer.<br /><br /></li><li class="unordered"><b>Required drivers</b>:<br /><br /><ul><li class="unordered">
+									If you use the UDTs shipped with the SQL Server versions, for example, Geography, make sure the following DLLs are present on the computer where you use the adapter to perform operations on SQL Server. For example, if you create BizTalk projects to perform operations on SQL Server, these DLLs must be present on the computer where BizTalk Server is running.<br /><br /><ul><li class="unordered">
+											Make sure Microsoft.SqlServer.Types.dll is added to the GAC.<br /><br /></li><li class="unordered">
+											Make sure SqlServerSpatial.dll is available in the System32 folder.<br /><br /></li></ul>
+									You can install these DLLs on the computer by running the SQL Server setup and selecting <b>Management Tools – Basic</b> and <b>Management Tools – Complete</b> in the <b>Feature Selection</b> page of the wizard.<br /><br /></li><li class="unordered">
+									If you use the adapter to perform operations on columns of FILESTREAM data types, make sure you have SQL Client Connectivity SDK installed. You can install the SQL Client Connectivity SDK by running the SQL Server setup and selecting <b>SQL Client Connectivity SDK</b> in the <b>Feature Selection</b> page of the wizard. The adapter uses the sqlncli10.dll, installed with the SQL Client Connectivity SDK, to perform FILESTREAM operations.<br /><br /></li><li class="unordered">
+									If you create your own UDTs in SQL Server, make sure the respective assemblies for the UDTs are added to the GAC.<br /><br /></li></ul></li></ul></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_Compat" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0E1BAC"></A>Compatibility Matrix Between 32-bit and 64-bit Versions of the Adapter, BizTalk Server, and Operating System</h1><div id="sectionSection2" class="section"><p>The following table presents a compatibility matrix between the 32-bit and 64-bit versions of the operating system, SQL adapter, and BizTalk Server.</p><p><b></b></p><table><tr><th colspan="1"></th><th colspan="1">
+									SQL Adapter + BizTalk Server
+								</th></tr><tr><td colspan="1"><p><b></b></p><table><tr><th colspan="1">
+												Operating System
+											</th></tr><tr><td colspan="1"><p>32-bit</p></td></tr><tr><td colspan="1"><p>64-bit</p></td></tr></table></td><td><p><b></b></p><table><tr><th colspan="1">
+												32-bit
+											</th><th colspan="1">
+												64-bit
+											</th></tr><tr><td colspan="1"><p>Yes</p></td><td colspan="1"><p>N/A</p></td></tr><tr><td colspan="1"><p>Yes</p></td><td colspan="1"><p>Yes</p></td></tr></table></td></tr></table><p><b>Legend</b></p><ul><li class="unordered"><b>Yes</b> = Supported<br /><br /></li><li class="unordered"><b>No</b> = Not supported<br /><br /></li><li class="unordered"><b>N/A</b> = Not Applicable<br /><br /></li></ul><p>For more information about the supported installation scenarios for the 32-bit and 64-bit SQL adapter, see <a href="#BKMK_Install_Scenarios" xmlns:tool="http://www.microsoft.com/tooltip">Scenarios for Installing the SQL Adapter on 32-bit and 64-bit Platforms</a>.</p></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_Install_Adap" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0EKGAC"></A>Installing the SQL Adapter</h1><div id="sectionSection3" class="section"><p>Make sure you have the prerequisites installed before installing the SQL adapter. For more information, see <a href="#BKMK_Prereqs" xmlns:tool="http://www.microsoft.com/tooltip">Software Prerequisites</a>. </p><p>You can install the SQL adapter in the following two ways:</p><ul><li class="unordered"><b>In interactive mode</b> by running the setup wizard.<br /><br /></li><li class="unordered"><b>In silent mode</b> by using the command line.<br /><br /><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><p>You must have administrative privileges on the computer where you will install the SQL adapter, irrespective of whether you are installing by using the wizard or the command line.</p></td></tr></table></li></ul><a name="BKMK_Install_Scenarios" xmlns:tool="http://www.microsoft.com/tooltip"></a><A name="ID0EDIAC"></A><h3 class="subHeading">Scenarios for Installing the SQL Adapter on 32-bit and 64-bit Platforms</h3><div class="subSection"><p>With BizTalk Server, the SQL adapter can be used for:</p><ul><li class="unordered">
+									
+										Visual Studio design time (when generating metadata for operations).<br /><br /></li><li class="unordered">
+									BizTalk Server Administration console design time (for creating physical ports).<br /><br /><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>BizTalk Server Administration console runs as a 32-bit Microsoft Management Console (MMC) application.</p></td></tr></table></li><li class="unordered">
+									BizTalk run time (when sending and receiving messages from LOB applications). <br /><br /></li></ul><p>You can have an installation where you perform all these tasks on the same computer or different computers. Because both Visual Studio and BizTalk MMC are 32-bit processes, you must install the 32-bit SQL adapter on the computer where you want to perform the design-time tasks. The following scenarios are supported for installing the SQL adapter on 32-bit and 64-bit platforms.</p><h4 class="subHeading">Scenarios for Installing the SQL Adapter on a 32-bit Platform</h4><div class="subSection"><p>The following scenarios are supported when installing the SQL adapter on a 32-bit platform.</p><p><b></b></p><table><tr><th colspan="1">
+													Visual Studio design time
+												</th><th colspan="1">
+													BizTalk MMC design time
+												</th><th colspan="1">
+													BizTalk run time
+												</th><th colspan="1">
+													Visual Studio design time<br />and/or<br />  BizTalk MMC design time + BizTalk run time
+												</th></tr><tr><td colspan="1"><ul><li class="unordered">
+														Install 32-bit WCF LOB Adapter SDK.<br /><br /></li><li class="unordered">
+														Install 32-bit SQL adapter.<br /><br /></li><li class="unordered">
+														Install 32-bit client and other required DLLs.<br /><br /></li></ul></td><td colspan="1"><ul><li class="unordered">
+														Install 32-bit WCF LOB Adapter SDK.<br /><br /></li><li class="unordered">
+														Install 32-bit SQL adapter.<br /><br /></li><li class="unordered">
+														Install 32-bit client and other required DLLs.<br /><br /></li></ul></td><td colspan="1"><ul><li class="unordered">
+														Install 32-bit WCF LOB Adapter SDK.<br /><br /></li><li class="unordered">
+														Install 32-bit SQL adapter.<br /><br /></li><li class="unordered">
+														Install 32-bit client and other required DLLs.<br /><br /></li></ul></td><td colspan="1"><ul><li class="unordered">
+														Install 32-bit WCF LOB Adapter SDK.<br /><br /></li><li class="unordered">
+														Install 32-bit SQL adapter.<br /><br /></li><li class="unordered">
+														Install 32-bit client and other required DLLs.<br /><br /></li></ul></td></tr></table></div><h4 class="subHeading">Scenarios for Installing the SQL Adapter on a 64-bit Platform</h4><div class="subSection"><p>The following scenarios are supported when installing the SQL adapter on a 64-bit platform. </p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>On any computer where you want to perform design-time tasks using either Visual Studio or BizTalk MMC, you must install the 32-bit SQL adapter.</p></td></tr></table><p><b></b></p><table><tr><th colspan="1">
+													Visual Studio design time
+												</th><th colspan="1">
+													BizTalk MMC design time
+												</th><th colspan="1">
+													BizTalk run time
+												</th><th colspan="1">
+													Visual Studio design time<br />and/or<br />BizTalk MMC design time + BizTalk run time
+												</th></tr><tr><td colspan="1"><ul><li class="unordered">
+														Install 64-bit WCF LOB Adapter SDK.<br /><br /></li><li class="unordered">
+														Install 32-bit SQL adapter.<br /><br /></li><li class="unordered">
+														Install 32-bit client and other required DLLs.<br /><br /></li></ul></td><td colspan="1"><ul><li class="unordered">
+														Install 64-bit WCF LOB Adapter SDK.<br /><br /></li><li class="unordered">
+														Install 32-bit SQL adapter.<br /><br /></li><li class="unordered">
+														Install 32-bit client and other required DLLs.<br /><br /></li></ul></td><td colspan="1"><p><b>For a 32-bit BizTalk process</b>:</p><ul><li class="unordered">
+														Install 64-bit WCF LOB Adapter SDK.<br /><br /></li><li class="unordered">
+														Install 32-bit SQL adapter.<br /><br /></li><li class="unordered">
+														Install 32-bit client and other required DLLs.<br /><br /></li></ul><p><b>For a 64-bit BizTalk process</b>:</p><ul><li class="unordered">
+														Install 64-bit WCF LOB Adapter SDK.<br /><br /></li><li class="unordered">
+														Install 64-bit SQL adapter.<br /><br /></li><li class="unordered">
+														Install 64-bit client and other required DLLs.<br /><br /></li></ul></td><td colspan="1"><p><b>For a 32-bit BizTalk process</b>:</p><ul><li class="unordered">
+														Install 64-bit WCF LOB Adapter SDK.<br /><br /></li><li class="unordered">
+														Install 32-bit SQL adapter.<br /><br /></li><li class="unordered">
+														Install 32-bit client and other required DLLs.<br /><br /></li></ul><p><b>For a 64-bit BizTalk process</b>:</p><ul><li class="unordered">
+														Install 64-bit WCF LOB Adapter SDK.<br /><br /></li><li class="unordered">
+														Install 64-bit SQL adapter.<br /><br /></li><li class="unordered">
+														Install 64-bit client and other required DLLs.<br /><br /></li><li class="unordered">
+														Install 32-bit SQL adapter.<br /><br /></li><li class="unordered">
+														Install 32-bit client and other required DLLs.<br /><br /></li></ul></td></tr></table></div></div><a name="BKMK_Install_wizard" xmlns:tool="http://www.microsoft.com/tooltip"></a><A name="ID0E6EAE"></A><h3 class="subHeading">Installing the SQL Adapter in Interactive Mode</h3><div class="subSection"><p>Perform the following steps to install the SQL adapter using the setup wizard.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To install the SQL Adapter in interactive mode</b></td></tr></table><ol class="ordered"><li><p>Run the installer.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>If you are installing the SQL adapter on a virtual machine, the setup wizard might not proceed beyond a dialog box informing that the setup is checking for available disk space. In such cases, we recommend that you use the silent installation option. For more information, see <a href="#BKMK_SilentInst" xmlns:tool="http://www.microsoft.com/tooltip">Installing the SQL Adapter in Silent Mode</a>.</p></td></tr></table></li><li><p>Read the information on the Welcome screen, and then click <b>Next</b>.</p></li><li><p>Read and accept the end-user license agreement (EULA), and then click <b>Next</b>.</p></li><li><p>In the <b>Destination Folder</b> dialog box, specify the location where you want to install the SQL adapter, click <b>Next</b>, and then click <b>Install</b>.</p></li><li><p>In the <b>Customer Experience Improvement Program</b> dialog box, specify whether you would like to enroll for the Customer Experience Improvement Program (CEIP). As part of CEIP for SQL adapter, you will share the following data with Microsoft:</p><ul><li class="unordered">
+													Data related to the computer hardware on which you are installing the SQL adapter.<br /><br /></li><li class="unordered">
+													Data related to the SQL Server versions you are using to connect using the SQL adapter.<br /><br /></li></ul><p>Specify your choice and click <b>OK</b>.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>You can always change your preference regarding enrolling for CEIP by running the Setup in Repair mode from the Control Panel.</p></td></tr></table></li><li><p>Click <b>Finish</b>.</p></li></ol></div><a name="BKMK_SilentInst" xmlns:tool="http://www.microsoft.com/tooltip"></a><A name="ID0EYJAE"></A><h3 class="subHeading">Installing the SQL Adapter in Silent Mode</h3><div class="subSection"><p>The following procedure demonstrates how to perform a silent installation of SQL adapter using the <i>msiexec</i> command.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To install the SQL Adapter in silent mode</b></td></tr></table><ol class="ordered"><li><p>Open a command prompt, and navigate to the folder where you have the installer.</p></li><li><p>Run the following command to install the SQL adapter:</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>To perform silent installation on an x64-based platform, in the following commands, replace SqlAdapterSetup.msi with SqlAdapterSetup64.msi.</p></td></tr></table><div class="code"><pre>msiexec /i SqlAdapterSetup.msi /qn</pre></div><p>You can also choose to enroll for CEIP as part of the silent installation. As part of CEIP for SQL adapter, you will share the following data with Microsoft:</p><ul><li class="unordered">
+													The computer hardware on which you are installing the SQL adapter.<br /><br /></li><li class="unordered">
+													The SQL Server versions you are using to connect using the SQL adapter.<br /><br /></li></ul><p>To enroll for CEIP, run the following command:</p><div class="code"><pre>msiexec /i SqlAdapterSetup.msi /qn CEIP_OPTIN=true</pre></div><p>By default, the option is false.</p><p>For more information about the <i>msiexec</i> command, type <b>msiexec</b> on the command line and press <b>ENTER</b> or see <a href="http://go.microsoft.com/fwlink/?LinkID=103199" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=103199</a>.</p></li></ol></div><a name="BKMK_PostInst" xmlns:tool="http://www.microsoft.com/tooltip"></a><A name="ID0EBNAE"></A><h3 class="subHeading">After Installing the SQL Adapter</h3><div class="subSection"><p>If the SQL adapter setup fails to register the bindings during installation, you must register the bindings manually using the following procedure.</p><a name="BKMK_Register_Bindings" xmlns:tool="http://www.microsoft.com/tooltip"></a><h4 class="subHeading">Registering the Bindings</h4><div class="subSection"><p>Perform these steps <i>only</i> if the setup wizard fails to register the adapter bindings in the machine.config file.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To register the bindings</b></td></tr></table><ol class="ordered"><li><p>Navigate to the machine.config file on the computer. For example, on a 32-bit platform, the machine.config is available under &lt;system drive&gt;:\WINDOWS\Microsoft.NET\Framework\&lt;version&gt;\CONFIG.</p><ul><li class="unordered">
+															For Microsoft .NET Framework 3.5 SP1, &lt;<i>version</i>&gt; is the version v2.0.50727 of the .NET Framework. <br /><br /></li><li class="unordered">
+															For Microsoft .NET Framework 4.5, &lt;<i>version</i>&gt; is the version v4.0.30319 of the .NET Framework.<br /><br /></li></ul></li><li><p>Open the file using a text editor.</p></li><li><p>To register the adapter bindings:</p><ol class="ordered"><li>
+															Search for the element "system.serviceModel" and add the following under it:<br /><br /><div class="code"><pre>&lt;client&gt;
+  &lt;endpoint binding="sqlBinding" contract="IMetadataExchange" name="mssql" /&gt;
+&lt;/client&gt;</pre></div></li><li>
+															Search for the element "bindingElementExtensions" under system.serviceModel\extensions. <br /><br /></li><li>
+															Add the following section under the "bindingElementExtensions" node.<br /><br />
+															For the SQL adapter, add:<br /><br /><div class="code"><pre>&lt;add name="sqlAdapter" type="Microsoft.Adapters.Sql.SqlAdapterBindingElementExtensionElement,Microsoft.Adapters.Sql, Version=&lt;version&gt;, Culture=neutral, PublicKeyToken=&lt;public key&gt;" /&gt;</pre></div></li><li>
+															Search for the element "bindingExtensions" under system.serviceModel\extensions.<br /><br /></li><li>
+															Add the following section under the "bindingExtensions" node.<br /><br />
+															For SQL adapter, add:<br /><br /><div class="code"><pre>&lt;add name="sqlBinding" type="Microsoft.Adapters.Sql.SqlAdapterBindingCollectionElement,Microsoft.Adapters.Sql, Version=&lt;version&gt;, Culture=neutral, PublicKeyToken=&lt;public key&gt;" /&gt;</pre></div></li></ol><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>For information about how to determine the public key, see <a href="#BKMK_PubKey" xmlns:tool="http://www.microsoft.com/tooltip">Determining the Public Key and Version</a>.</p></td></tr></table></li><li><p>Save and close the machine.config file.</p></li></ol></div><a name="BKMK_PubKey" xmlns:tool="http://www.microsoft.com/tooltip"></a><h4 class="subHeading">Determining the Public Key and Version</h4><div class="subSection"><p>Perform the following steps to determine the public key and version for the SQL adapter.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To determine the public key</b></td></tr></table><ol class="ordered"><li><p>Navigate to the Windows directory, typically C:\WINDOWS\assembly.</p></li><li><p>Right-click the DLL for which you want the public key, and then select <b>Properties</b>. The following table lists the name of the DLLs for the SQL adapter.</p><p><b></b></p><table><tr><th colspan="1">
+																	Adapter
+																</th><th colspan="1">
+																	Name of the DLL
+																</th></tr><tr><td colspan="1"><p>
+																	SQL adapter
+																</p></td><td colspan="1"><p>Microsoft.Adapters.Sql.dll</p></td></tr></table></li><li><p>On the <b>General</b> tab, the value against the <b>Public Key Token</b> label specifies the public key for the DLL. Similarly, the value against the <b>Version</b> label specifies the version number for the DLL.</p></li><li><p>Copy the public key, and then click <b>Cancel</b>.</p></li></ol></div></div></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_Modify_Adap" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0ECVAE"></A>Modifying the SQL Adapter Installation</h1><div id="sectionSection4" class="section"><p>Perform the following steps to modify the SQL adapter installation. Make sure you have the SQL adapter installed before you run the setup wizard to modify the SQL adapter installation.</p><p>You can modify the SQL adapter installation in the following two ways:</p><ul><li class="unordered"><b>In interactive mode</b> by running the setup wizard.<br /><br /></li><li class="unordered"><b>In silent mode</b> by using the command line.<br /><br /></li></ul><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To modify the SQL Adapter installation in interactive mode</b></td></tr></table><ol class="ordered"><li><p>Click <b>Start</b>, and then click <b>Control Panel</b>.</p></li><li><p>In Control Panel, double-click <b>Programs and Features</b>.</p></li><li><p>In the <b>Programs and Features</b> window, select <b>Microsoft BizTalk Adapter for SQL Server</b>, and then click <b>Change</b>.</p></li><li><p>Read the information on the Welcome screen, and then click <b>Next</b>.</p></li><li><p>In the <b>Change, repair, or remove installation</b> dialog box, click <b>Repair</b>.</p></li><li><p>In the <b>Ready to repair Microsoft BizTalk Adapter for SQL Server</b> dialog box, click <b>Repair</b>.</p></li><li><p>If required, change your preferences regarding opting for CEIP, and then click <b>OK</b>.</p></li><li><p>Click <b>Finish</b>.</p></li></ol><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To modify the SQL Adapter installation in silent mode</b></td></tr></table><ol class="ordered"><li><p>Open a command prompt, and navigate to the root directory of the SQL adapter installer.</p></li><li><p>Run the following command:</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>To modify the SQL adapter installation in silent mode on an x64-based platform, in the following commands, replace SqlAdapterSetup.msi with SqlAdapterSetup64.msi.</p></td></tr></table><div class="code"><pre>msiexec /i SqlAdapterSetup.msi /qn /f</pre></div><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell"><p>While modifying the SQL adapter installation in the silent mode, you cannot change your preferences for opting in or out of CEIP. The preferences will remain the same as you specified during the installation, even if you explicitly set the CEIP_OPTIN to true or false.</p></td></tr></table><p>For more information about the <i>msiexec</i> command type <b>msiexec</b> on the command line and press <b>ENTER</b> or see <a href="http://go.microsoft.com/fwlink/?LinkId=103199" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=103199</a>.</p></li></ol></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_Remove_Adap" xmlns:tool="http://www.microsoft.com/tooltip"></a><h1 class="heading"><A name="ID0ET3AE"></A>Removing the SQL Adapter</h1><div id="sectionSection5" class="section"><p>Perform the following steps to remove the SQL adapter from your computer. Make sure you have the WCF LOB Adapter SDK installed before you run the setup wizard to remove the SQL adapter.</p><p>You can remove the SQL adapter in the following two ways:</p><ul><li class="unordered"><b>In interactive mode</b> by running the setup wizard.<br /><br /></li><li class="unordered"><b>In silent mode</b> by using the command line.<br /><br /></li></ul><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To remove the SQL Adapter in interactive mode</b></td></tr></table><ol class="ordered"><li><p>Click <b>Start</b>, and then click <b>Control Panel</b>.</p></li><li><p>In Control Panel, double-click <b> Programs and Features</b>.</p></li><li><p>In the <b>Add or Remove Programs</b> window, select <b>Microsoft BizTalk Adapter for SQL Server</b>, and then click <b>Remove</b>.</p></li><li><p>In the dialog box, click <b>Yes</b>.</p></li></ol><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To remove the SQL Adapter in silent mode</b></td></tr></table><ol class="ordered"><li><p>Open a command prompt, and navigate to the root directory of the SQL adapter installer.</p></li><li><p>Run the following command:</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell"><p>To remove the SQL adapter in silent mode on an x64-based platform, in the following commands, replace SqlAdapterSetup.msi with SqlAdapterSetup64.msi.</p></td></tr></table><div class="code"><pre>msiexec /x SqlAdapterSetup.msi /qn</pre></div><p>This command removes the SQL adapter from the computer. </p><p>For more information about the <i>msiexec</i> command, type <b>msiexec</b> on the command line and press <b>ENTER</b> or see <a href="http://go.microsoft.com/fwlink/?LinkId=103199" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkId=103199</a>.</p></li></ol><a name="BKMK_PostRemove" xmlns:tool="http://www.microsoft.com/tooltip"></a><A name="ID0EACAG"></A><h3 class="subHeading">After Removing the SQL Adapter</h3><div class="subSection"><p>If the SQL adapter setup fails to remove the adapter bindings while removing the SQL adapter, you must remove them manually. The following section describes how to manually remove the bindings for the SQL adapter.</p><a name="BKMK_Remove_Binding" xmlns:tool="http://www.microsoft.com/tooltip"></a><h4 class="subHeading">Removing the Bindings</h4><div class="subSection"><p>Perform these steps <i>only</i> if the setup wizard fails to remove the adapter bindings from the machine.config file.</p><table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To remove the adapter bindings</b></td></tr></table><ol class="ordered"><li><p>Navigate to the machine.config file on the computer. For example, on a 32-bit platform, the machine.config is available under &lt;system drive&gt;:\WINDOWS\Microsoft.NET\Framework\&lt;version&gt;\CONFIG.</p><ul><li class="unordered">
+															For Microsoft .NET Framework 3.5 SP1, &lt;<i>version</i>&gt; is the version v2.0.50727 of the .NET Framework. <br /><br /></li><li class="unordered">
+															For Microsoft .NET Framework 4.5, &lt;<i>version</i>&gt; is the version v4.0.30319 of the .NET Framework. <br /><br /></li></ul></li><li><p>Open the file using a text editor.</p></li><li><p>To remove the adapter binding registration:</p><ol class="ordered"><li>
+															Search for the element "system.serviceModel" and remove the following from under the element:<br /><br /><div class="code"><pre>&lt;client&gt;
+  &lt;endpoint binding="sqlBinding" contract="IMetadataExchange" name="mssql" /&gt;
+&lt;/client&gt;
+</pre></div></li><li>
+															Search for the element "bindingElementExtensions" under system.serviceModel\extensions. <br /><br /></li><li>
+															Remove the following section under the "bindingElementExtensions" node.<br /><br />
+															For SQL adapter, remove:<br /><br /><div class="code"><pre>&lt;add name="sqlAdapter" type="Microsoft.Adapters.Sql.SqlAdapterBindingElementExtensionElement,Microsoft.Adapters.Sql, Version=&lt;version&gt;, Culture=neutral, PublicKeyToken=&lt;public key&gt;" /&gt;</pre></div></li><li>
+															Search for the element "bindingExtensions" under system.serviceModel\extensions.<br /><br /></li><li>
+															Remove the following section under the "bindingExtensions" node.<br /><br />
+															For SQL adapter, remove:<br /><br /><div class="code"><pre>&lt;add name="sqlBinding" type="Microsoft.Adapters.Sql.SqlAdapterBindingCollectionElement,Microsoft.Adapters.Sql, Version=&lt;version&gt;, Culture=neutral, PublicKeyToken=&lt;public key&gt;" /&gt;</pre></div></li></ol></li><li><p>Save and close the machine.config file.</p></li></ol></div></div></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><A name="ID0EJGAG"></A>Copyright</h1><div id="sectionSection6" class="section"><p>Information in this document, including URL and other Internet Web site references, is subject to change without notice.  Unless otherwise noted, the companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in examples herein are fictitious.  No association with any real company, organization, product, domain name, e-mail address, logo, person, place, or event is intended or should be inferred.  Complying with all applicable copyright laws is the responsibility of the user.  Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation. </p><p></p><p>Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document.  Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.</p><p></p><p>© 2014 Microsoft Corporation. All rights reserved.</p><p></p><p>Microsoft, MS-DOS, SQL Server, Visual Studio, Windows, Windows Server, Windows Vista, and BizTalk are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.</p><p></p><p>All other trademarks are property of their respective owners.</p></div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p></td></tr></table></div><div id="footer"><hr></hr><p></p></div></div></body></html>

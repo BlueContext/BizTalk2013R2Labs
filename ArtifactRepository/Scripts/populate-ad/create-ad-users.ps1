@@ -1,45 +1,32 @@
-###########################################################
-# AUTHOR  : Kevin Baker 
-# DATE    : 26-05-2016
-###########################################################
+param
+(
+    [string]$pointless = " "
+)
 
-# ERROR REPORTING ALL
-Set-StrictMode -Version latest
-
-#----------------------------------------------------------
-# LOAD ASSEMBLIES AND MODULES
-#----------------------------------------------------------
+# MODULES
 Try
 {
   Import-Module ActiveDirectory -ErrorAction Stop
 }
 Catch
 {
-  Write-Host "[ERROR]`t ActiveDirectory Module couldn't be loaded. Script will stop!"
+#  Write-Host "[ERROR]`t ActiveDirectory Module couldn't be loaded. Script will stop!"
   Exit 1
 }
 
-#----------------------------------------------------------
 #STATIC VARIABLES
-#----------------------------------------------------------
 $path     = Split-Path -parent $MyInvocation.MyCommand.Definition
 $newpath  = $path + "\import_create_ad_users.csv"
-$newsvcpath = $path + "\import_create_ad_svcaccts.csv"
 $log      = $path + "\create_ad_users.log"
 $date     = Get-Date
 $addn     = (Get-ADDomain).DistinguishedName
 $dnsroot  = (Get-ADDomain).DNSRoot
 $i        = 1
 
-#----------------------------------------------------------
 #START FUNCTIONS
-#----------------------------------------------------------
 Function Start-Commands
 {
   Create-Users
-  Create-ServiceAccounts
-  Assign-Admins
-  Create-Groups
 }
 
 Function Create-Users
@@ -51,7 +38,7 @@ Function Create-Users
     {
       If (($_.GivenName -eq "") -Or ($_.LastName -eq ""))
       {
-        Write-Host "[ERROR]`t Please provide valid GivenName, LastName and Initials. Processing skipped for line $($i)`r`n"
+#        Write-Host "[ERROR]`t Please provide valid GivenName, LastName and Initials. Processing skipped for line $($i)`r`n"
         "[ERROR]`t Please provide valid GivenName, LastName and Initials. Processing skipped for line $($i)`r`n" | Out-File $log -append
       }
       Else
@@ -62,8 +49,6 @@ Function Create-Users
         If (($_.PasswordNeverExpires.ToLower()) -eq "true") { $expires = $True } Else { $expires = $False }
         If (($_.DomainAdmin.ToLower()) -eq "true") { $domainAdmin = $True} Else {$domainAdmin = $False}
 
-        # Replace dots / points (.) in names, because AD will error when a 
-        # name ends with a dot (and it looks cleaner as well)
         $replace = $_.Lastname.Replace(".","")
         $lastname = $replace
         # Create sAMAccountName according to this 'naming convention':
@@ -80,7 +65,7 @@ Function Create-Users
 
           Try
           {
-            Write-Host "[INFO]`t Creating user : $($sam)"
+#            Write-Host "[INFO]`t Creating user : $($sam)"
             "[INFO]`t Creating user : $($sam)" | Out-File $log -append
             New-ADUser $sam -GivenName $_.GivenName `
             -Surname $_.LastName -DisplayName ($_.LastName + "," + " " + $_.GivenName) `
@@ -88,22 +73,8 @@ Function Create-Users
             -UserPrincipalName ($sam + "@" + $dnsroot) `
             -AccountPassword $setpass  `
             -Enabled $enabled -PasswordNeverExpires $expires
-            Write-Host "[INFO]`t Created new user : $($sam)"
+#            Write-Host "[INFO]`t Created new user : $($sam)"
             "[INFO]`t Created new user : $($sam)" | Out-File $log -append
-     
-            #$dn = (Get-ADUser $sam).DistinguishedName
-            # Set an ExtensionAttribute
-            #If ($_.ExtensionAttribute1 -ne "" -And $_.ExtensionAttribute1 -ne $Null)
-            #{
-            #  $ext = [ADSI]"LDAP://$dn"
-            #  $ext.Put("extensionAttribute1", $_.ExtensionAttribute1)
-            #  Try   { $ext.SetInfo() }
-            #  Catch { Write-Host "[ERROR]`t Couldn't set the Extension Attribute : $($_.Exception.Message)" }
-            #}
-
-            # Set ProxyAdresses
-            #Try { $dn | Set-ADUser -Add @{proxyAddresses = ($_.ProxyAddresses -split ";")} -ErrorAction Stop }
-            #Catch { Write-Host "[ERROR]`t Couldn't set the ProxyAddresses Attributes : $($_.Exception.Message)" }
        
             # Move the user to the OU ($location) you set above. If you don't
             # want to move the user(s) and just create them in the global Users
@@ -126,7 +97,7 @@ Function Create-Users
             # character restriction
             $newdn = (Get-ADUser $sam).DistinguishedName
             Rename-ADObject -Identity $newdn -NewName ($_.GivenName + " " + $_.LastName)
-            Write-Host "[INFO]`t Renamed $($sam) to $($_.GivenName) $($_.LastName)`r`n"
+#            Write-Host "[INFO]`t Renamed $($sam) to $($_.GivenName) $($_.LastName)`r`n"
             "[INFO]`t Renamed $($sam) to $($_.GivenName) $($_.LastName)`r`n" | Out-File $log -append
             #Add-AdGroupMember -Identity Administrators -Members $sam
             If($domainAdmin -eq $True)
@@ -137,19 +108,19 @@ Function Create-Users
           }
           Catch
           {
-            Write-Host "[ERROR]`t Oops, something went wrong: $($_.Exception.Message)`r`n"
+#            Write-Host "[ERROR]`t Oops, something went wrong: $($_.Exception.Message)`r`n"
           }
         }
         Else
         {
-          Write-Host "[SKIP]`t User $($sam) ($($_.GivenName) $($_.LastName)) already exists or returned an error!`r`n"
+#          Write-Host "[SKIP]`t User $($sam) ($($_.GivenName) $($_.LastName)) already exists or returned an error!`r`n"
           "[SKIP]`t User $($sam) ($($_.GivenName) $($_.LastName)) already exists or returned an error!" | Out-File $log -append
         }
       }
     }
     Else
     {
-      Write-Host "[SKIP]`t User ($($_.GivenName) $($_.LastName)) will be skipped for processing!`r`n"
+#      Write-Host "[SKIP]`t User ($($_.GivenName) $($_.LastName)) will be skipped for processing!`r`n"
       "[SKIP]`t User ($($_.GivenName) $($_.LastName)) will be skipped for processing!" | Out-File $log -append
     }
     $i++
@@ -159,7 +130,7 @@ Function Create-Users
 
 
 
-Add-DomainAdmin
+Function Add-DomainAdmin
 {
     param
     (
@@ -169,6 +140,6 @@ Add-DomainAdmin
     Add-AdGroupMember -Identity "Domain Admins" -Member $sam
 }
 
-Write-Host "STARTED SCRIPT`r`n"
+#Write-Host "STARTED SCRIPT`r`n"
 Start-Commands
-Write-Host "STOPPED SCRIPT"
+#Write-Host "STOPPED SCRIPT"  

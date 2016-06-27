@@ -1,8 +1,9 @@
+#this functionality has been moved into the 1_* script for the base role
 Param
 (
 	[string]$targetNode,
 	[string]$targetConfiguration = "BaseConfiguration.ps1",
-	[string]$dnsServerAddress = "10.55.2.35",
+	[string]$dnsServerAddress = "10.56.10.5",
 	[string]$domainName = "BTS13R2DEV.lab",
 	[string]$userName = "BTS13R2DEV\LabAdmin",
 	[string]$password = "Welcome123456",
