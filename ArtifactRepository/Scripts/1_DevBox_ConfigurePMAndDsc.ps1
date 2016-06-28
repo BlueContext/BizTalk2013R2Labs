@@ -16,6 +16,7 @@ Import-Module PSDesiredStateConfiguration
 Import-Module ServerManager
 Import-Module ServerCore
 Install-PackageProvider Chocolatey -Force
+
 Set-PackageSource PSGallery
 install-package xDnsServer -Force
 Install-Package xActiveDirectory -Force
@@ -23,6 +24,9 @@ Install-Package xStorage -Force
 Install-Package xNetworking -Force
 Install-Package xComputerManagement -Force
 Install-Package xTimeZone -Force
+
+Set-PackageSource Chocolatey
+Install-Package 
 
 md c:\DSC
 

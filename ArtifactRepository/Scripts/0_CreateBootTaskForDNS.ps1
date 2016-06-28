@@ -3,7 +3,7 @@ param
     [string]$pointless = " "
 )
 
-$url1 = "http://gthou-wwsvc01d.energy.sug.pri:8089/Scripts/0_SetNetworkProfile.ps1"
+$url1 = "http://10.71.184.182:8089/Scripts/0_SetNetworkProfile.ps1"
 $output1 = "C:\Scripts\0_SetNetworkProfile.ps1"
 
 $test = Test-Path "C:\Scripts"
@@ -22,4 +22,4 @@ $action = New-ScheduledTaskAction -Execute 'Powershell.exe' -Argument '-NoProfil
 $trigger = New-ScheduledTaskTrigger -AtStartup
 Register-ScheduledTask -Action $action -Trigger $trigger -Settings (New-ScheduledTaskSettingsSet) -TaskName "NicConfiguration" -Description "Sets DNS address and network profile if needed" -Principal $principal
 
-Start-ScheduleTask -TaskName "NicConfiguration"
+Start-ScheduledTask -TaskName "NicConfiguration"
